@@ -1,0 +1,62 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  min-width: 21rem;
+}
+
+.nav-icon {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 6px;
+}
+
+
+header {
+  display: grid;
+  grid-template-columns: 24px auto 44px;
+  padding: 5px 0 5px 10px;
+  border-bottom: solid 1px #ddd;
+  gap: 8px;
+  align-items: center;
+}
+
+.navigation{
+  display: none;
+}
+
+.navigation ul{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.navigation a{
+  text-decoration: none;
+}
+
+.navigation.show{
+  display: block;
+  grid-column: 2/3;
+}
+
+.hamburger{
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.hamburger::before {
+  content: "\2630";
+  font-size: 1.5rem;
+}
+.hamburger.show::before {
+  content: "\00D7";
+  font-size: 3rem;
+}
