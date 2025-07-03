@@ -27,6 +27,13 @@
 
     .navigation a{
         padding: .5rem;
+        border-radius: .5rem;
         border: none;
     }
+
+    .navigation li.current{
+        border-bottom: solid 1px black;
+        border-radius: .5rem;
+    }
+
 }
