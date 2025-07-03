@@ -12,37 +12,46 @@ body{
     display: block;
     width: 100%;
     height: auto;
-    padding-bottom: 6px;
+    padding-left: 8px;
 }
-
 
 header {
   display: grid;
   grid-template-columns: 24px auto 44px;
-  padding: 5px 0 5px 10px;
   border-bottom: solid 1px #ddd;
-  gap: 8px;
   align-items: center;
+}
+
+header h1{
+  padding-left: 8px;
 }
 
 .navigation{
   display: none;
+  
 }
 
 .navigation ul{
-  display: flex;
   list-style: none;
-  justify-content: center;
-  gap: .5rem;
 }
 
 .navigation a{
   text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  display: block;
+  padding: .75rem 8px;
+  border-bottom: solid 1px black;
+}
+
+.navigation a:hover{
+  color: red;
+  background-color: #ddd;
 }
 
 .navigation.show{
   display: block;
-  grid-column: 2/3;
+  grid-column: 1/-1;
 }
 
 .hamburger{
@@ -59,4 +68,8 @@ header {
 .hamburger.show::before {
   content: "\00D7";
   font-size: 3rem;
+}
+
+.navigation li.current{
+  background-color: #eee;
 }
