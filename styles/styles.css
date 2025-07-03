@@ -8,31 +8,32 @@ body{
   min-width: 21rem;
 }
 
-.nav-icon {
-    display: block;
-    width: 100%;
-    height: auto;
-    padding-left: 8px;
-}
+/********** Header **********/
 
 header {
   display: grid;
   grid-template-columns: 24px auto 48px;
   border-bottom: solid 1px #ddd;
   align-items: center;
-}
-
-header h1{
-  padding-left: 8px;
-}
-
-h2{
   padding: 8px;
+}
+
+.nav-icon {
+    display: block;
+    width: 100%;
+    height: 3rem;
+}
+
+header span{
+  padding-left: 8px;
+  font-size: 1.5rem;
 }
 
 .navigation{
   display: none;
-  
+  background-color: #24292e;
+  width: 100%;
+
 }
 
 .navigation ul{
@@ -46,6 +47,7 @@ h2{
   display: block;
   padding: .75rem 8px;
   border-bottom: solid 1px black;
+  color: white;
 }
 
 .navigation a:hover{
@@ -75,7 +77,45 @@ h2{
 }
 
 .navigation li.current{
-  background-color: #eee;
+  text-decoration: underline;
+  color: red;
+}
+
+/********** Main **********/
+
+.grid{
+  display: grid;
+  gap: 1em;
+  padding: 8px;
+}
+
+h1{
+  margin: 0;
+  padding: 0 8px;
+}
+
+h2{
+  background-color: #24292e;
+  color: white;
+  text-align: center;
+  padding: 4px;
+  border-top: 2px solid red;
+}
+
+section{
+  border: solid #eee 1px;
+  border-radius: .5rem;
+  background-color: #ddd;
+}
+
+section p{
+  padding: 4px;
+}
+
+/********** Footer **********/
+
+footer p{
+  background-color: #ddd;
 }
 
 .socials{
