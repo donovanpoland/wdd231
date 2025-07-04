@@ -43,16 +43,18 @@ header span{
 .navigation a{
   text-decoration: none;
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   display: block;
-  padding: .75rem 8px;
+  padding: .5rem 8px;
   border-bottom: solid 1px black;
   color: white;
+  transition: .3s;
 }
 
 .navigation a:hover{
   color: red;
   background-color: #ddd;
+  box-shadow: 4px 6px 12px black;
 }
 
 .navigation.show{
@@ -103,19 +105,53 @@ h2{
 }
 
 section{
-  border: solid #eee 1px;
+  border: solid #aaa 1px;
   border-radius: .5rem;
   background-color: #ddd;
+  min-height: 300px;
 }
 
 section p{
   padding: 4px;
 }
 
+section img{
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #bbb;
+  padding: 8px;
+  border: #aaa;
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: .5rem;
+  padding: 8px 8px;
+}
+
+.buttons button{
+  background-color: #bbb;
+  box-shadow: 4px 6px 12px black;
+  border: 2px #aaa solid;
+  border-radius: .5rem;
+  padding: .5rem;
+  font-size: 1.55rem;
+  transition: .3s;
+  cursor: pointer;
+}
+
+button:hover{
+  color: red;
+  background-color: #ddd;
+  box-shadow: 0px 2px 8px black;
+}
+
 /********** Footer **********/
 
-footer p{
-  background-color: #ddd;
+footer{
+  border-top: solid 1px #aaa;
 }
 
 .socials{
@@ -132,6 +168,7 @@ footer p{
   border-radius: 24px;
   padding: .5rem;
   color: #333;
+  background-color: #eee;
 }
 
 .linkedin-icon{

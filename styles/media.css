@@ -7,7 +7,7 @@
 
     header{
         grid-template-columns: 24px auto;
-        
+        border: none;
     }
     
     .hamburger{
@@ -41,7 +41,7 @@
         grid-template-columns: 2fr 1fr;
     }
 
-    .last-section{
+    .courses{
         grid-column: 1/-1;
     }
 
