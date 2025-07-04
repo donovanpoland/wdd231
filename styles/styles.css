@@ -48,7 +48,7 @@ header span{
   padding: .5rem 8px;
   border-bottom: solid 1px black;
   color: white;
-  transition: .3s;
+  transition: box-shadow 0.3s ease;
 }
 
 .navigation a:hover{
@@ -102,6 +102,7 @@ h2{
   text-align: center;
   padding: 4px;
   border-top: 2px solid red;
+  margin: -4px;
 }
 
 section{
@@ -117,9 +118,10 @@ section p{
 
 section img{
   display: block;
-  width: 100%;
+  width: 90%;
   height: auto;
   background-color: #bbb;
+  margin: 8px auto;
   padding: 8px;
   border: #aaa;
 }
@@ -138,7 +140,7 @@ section img{
   border-radius: .5rem;
   padding: .5rem;
   font-size: 1.55rem;
-  transition: .3s;
+  transition: color 0.3s ease-in, box-shadow 0.3s ease-out;
   cursor: pointer;
 }
 
