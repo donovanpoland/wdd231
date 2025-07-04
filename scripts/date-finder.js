@@ -1,7 +1,5 @@
 createFooterInfo();
 
-
-
 // get the current year and the last date/time the page was modified
 function getYearAndLastModified() {
   const currentYear = document.querySelector("#current-year");

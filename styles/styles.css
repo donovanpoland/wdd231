@@ -4,8 +4,12 @@
   margin: 0;
 }
 
+/* <weight>: Use a value from 100 to 900 */
 body{
   min-width: 21rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
 /********** Header **********/
