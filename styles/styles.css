@@ -113,7 +113,8 @@ section{
 }
 
 section p{
-  padding: 4px;
+  padding: 8px;
+  text-align: justify;
 }
 
 section img{
