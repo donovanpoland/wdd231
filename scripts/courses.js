@@ -1,3 +1,5 @@
+
+//create courses array
 const courses = [
     {
         subject: 'CSE',
@@ -77,3 +79,78 @@ const courses = [
         completed: false
     }
 ]
+
+//create empty array
+let currentCourses = [];
+
+//get the all buttons with the class of filter-btn, add click listener for each dataset
+document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', () => {
+    //get the subject of the button  
+    const subject = button.dataset.subject;
+
+    //if click is all add course list
+    if (subject === "All") {
+        currentCourses = courses;
+    } else {
+        //else filter by subject
+        currentCourses = courses.filter(course => course.subject === subject);
+    }
+
+        //count courses
+        getCourseCount(currentCourses);
+        //display course info
+        displayCourse(currentCourses);
+    });
+});
+
+//display current course information
+function displayCourse(coursesArray) {
+    const courseList = document.querySelector(".course-list");
+    //empty the list first
+    courseList.innerHTML = "";
+    //add info to array
+    coursesArray.forEach(course => createListItem(course));
+};
+
+
+//create list item and add course info to content
+function createListItem(course) {
+    const courseList = document.querySelector(".course-list");
+    const listItem = document.createElement("li");
+    //check if course is completed
+    if (getCourseCompletion(course) === true) {
+        listItem.classList = "true";
+    }
+    else {
+        listItem.classList = "false";
+    }
+    //add course content to the list item
+    listItem.textContent = getCourse(course);
+    courseList.appendChild(listItem);
+}
+
+//get the course subject and number
+function getCourse(course) {
+    return `${course.subject} ${course.number}`;
+}
+
+function getCourseCompletion(course) {
+    return course.completed;
+}
+
+function getCourseCount(coursesArray) {
+    const paragraph = document.querySelector(".course-count");
+    paragraph.innerHTML = `<strong>The number of courses listed below is ${coursesArray.length}</strong>`;
+}
+
+
+//create a list item ✔
+//add classes for CSS control✔
+//insert content to the list item✔
+
+//crate a class for true or false of completion✔
+
+//count number of credits
+//count number of course completed
+//display counts

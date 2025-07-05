@@ -11,6 +11,7 @@
 <!-- Scripts -->
 <script src="scripts/navigation.js" defer></script>
 <script src="scripts/date-finder.js" defer></script>
+<script src="scripts/courses.js" defer></script>
 <!-- CSS style sheets -->
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/styles.css">
@@ -39,7 +40,13 @@
     <div class="grid">
         <section>
             <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda neque, vitae, doloribus temporibus esse dignissimos architecto ullam, provident dolorem eaque excepturi doloremque. At, praesentium repudiandae!</p>
+            <p class="indent">My Name is Donovan, I love the problem solving that programming offers. 
+                I find both front-end and back-end fascinating with all of their capabilities. 
+                Front-end is satisfying because you are able to see everything you make clearly.
+                Back-end is extremely powerful and capable of so many things its unbelievable.
+                I am Married and have a growing family, my first is 13 months old and my second is due at the end of August.
+                I'm excited to learn more and look forward to this course.
+            </p>
         </section>
         <section>
             <h2>Student Photo</h2>
@@ -48,10 +55,14 @@
         <section class="courses">
             <h2>Web Certificate Courses</h2>
             <div class="buttons">
-                <button>All</button>
-                <button>CSE</button>
-                <button>WDD</button>
+                <button class="filter-btn" data-subject="All">All</button>
+                <button class="filter-btn" data-subject="CSE">CSE</button>
+                <button class="filter-btn" data-subject="WDD">WDD</button>
             </div>
+            <p class="course-count"></p>
+            <ul class="course-list">
+                <!-- Course list items inserted here by JS -->
+            </ul>
 
         </section>
     </div>
@@ -88,6 +99,7 @@
             </svg>
         </a>
     </div>
+    <!-- date, name, last modified inhered here by JS -->
 </footer>
 </body>
 </html>
