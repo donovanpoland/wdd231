@@ -38,11 +38,19 @@
     }
 
     .grid{
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1.5fr;
     }
 
     .courses{
         grid-column: 1/-1;
+    }
+
+    footer{
+        border: none;
+    }
+
+    .course-list li{
+        width: 30%;
     }
 
 }
