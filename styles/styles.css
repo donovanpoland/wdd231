@@ -83,7 +83,8 @@ header span{
 }
 
 .navigation li.current{
-  text-decoration: underline;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
   color: red;
 }
 
@@ -122,8 +123,8 @@ section{
 
 section p{
   padding: 1rem;
-  text-align: justify;
-  color: #24292e;
+  color: black;
+  line-height: 1.5;
 }
 
 section img{
