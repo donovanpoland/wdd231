@@ -99,6 +99,8 @@ document.querySelectorAll('.filter-btn').forEach(button => {
 
         //count courses
         getCourseCount(currentCourses);
+        //count credits
+        getTotalCredits(currentCourses);
         //display course info
         displayCourse(currentCourses);
     });
@@ -144,13 +146,18 @@ function getCourseCount(coursesArray) {
     paragraph.innerHTML = `<strong>The number of courses listed below is ${coursesArray.length}</strong>`;
 }
 
+function getTotalCredits(coursesArray) {
+    let totalCredits = coursesArray.reduce((total, course) => total + course.credits, 0)
+    const paragraph = document.querySelector(".credits");
+    paragraph.innerHTML = `<strong> Total number of credits required: ${totalCredits}</strong>`;
+}
 
 //create a list item ✔
-//add classes for CSS control✔
-//insert content to the list item✔
+//add classes for CSS control ✔
+//insert content to the list item ✔
 
-//crate a class for true or false of completion✔
+//crate a class for true or false of completion ✔
 
-//count number of credits
-//count number of course completed
-//display counts
+//count number of credits ✔
+//count number of course completed ✔
+//display counts ✔

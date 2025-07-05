@@ -198,8 +198,9 @@ li.false::before{
   content: "❌";
   margin-right: 8px;
 }
-.course-count{
+.course-count, .credits{
   text-align: center;
+  padding: .25rem;
 }
 
 /********** Footer **********/
