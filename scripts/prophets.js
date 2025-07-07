@@ -8,7 +8,7 @@ async function getProphetData() {
     const response = await fetch(url);
     const data = await response.json();
     //log data(jason file) to console in table format to the console
-    // console.table(data.prophets)
+    console.table(data.prophets)
     displayProphets(data.prophets);
 }
 
@@ -24,9 +24,14 @@ function displayProphets(prophets) {
         const fullName = document.createElement("h2");
         fullName.textContent = `${prophet.name} ${prophet.lastname}`
 
+        //order
+        const order = document.createElement("p");
+        order.classList.add("order");
+        order.innerHTML = `<strong>${prophet.order}</strong>`;
+
         //separator
-        const div = document.createElement("div");
-        div.classList.add("prophet-data");
+        const prophetData = document.createElement("div");
+        prophetData.classList.add("prophet-data");
 
         //DOB
         const dateOfBirth = document.createElement("p");
@@ -36,6 +41,10 @@ function displayProphets(prophets) {
         const placeOfBirth = document.createElement("p");
         placeOfBirth.textContent = `Place of Birth: ${prophet.birthplace}`;
 
+        //children
+        const children = document.createElement("p");
+        children.textContent = `Number of Children: ${prophet.numofchildren}`;
+
         //image
         const portrait = document.createElement("img");
         portrait.setAttribute("src", prophet.imageurl);
@@ -44,12 +53,32 @@ function displayProphets(prophets) {
         portrait.setAttribute("width", "200");
         portrait.setAttribute("height", "300");
 
+        //death
+        const death = document.createElement("p");
+        if (prophet.death === null) {
+            death.textContent = `Date of Death: (Living Prophet)`;
+        }
+        else {
+            death.textContent = `Date of Death: ${prophet.death}`;
+        }
+        
+
+        //years of service
+        const service = document.createElement("p");
+        service.textContent = `Years of Service: ${prophet.length}`;
+
         //add to card element
         card.appendChild(fullName);
-        card.appendChild(div);
-        div.appendChild(dateOfBirth);
-        div.appendChild(placeOfBirth);
-        div.appendChild(portrait);
+        card.appendChild(prophetData);
+        card.appendChild(order);
+
+        //separate from name
+        prophetData.appendChild(dateOfBirth);
+        prophetData.appendChild(placeOfBirth);
+        prophetData.appendChild(children);
+        prophetData.appendChild(portrait);
+        prophetData.appendChild(death);
+        prophetData.appendChild(service);
 
         //add each card to cards div
         cards.appendChild(card);
