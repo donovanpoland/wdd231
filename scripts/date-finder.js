@@ -42,7 +42,7 @@ function getYearAndLastModified() {
     //Add GMT offset
     const offsetMinutes = today.getTimezoneOffset();
     const offsetHours = -offsetMinutes / 60;
-    const formattedOffset = `GMT${offsetHours >= 0 ? "+" : ""}${offsetHours}`;
+    const formattedOffset = `MT${offsetHours >= 0 ? "+" : ""}${offsetHours}`;
 
     //display the info
     lastMod.innerHTML =
