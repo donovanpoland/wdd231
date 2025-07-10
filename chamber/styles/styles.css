@@ -86,8 +86,14 @@ section{
     border-radius: .5rem;
 }
 
-address::before{
+address::after{
     content: "📍";
+    margin-right: .5rem;
+}
+
+.ch-address{
+    padding: .25rem;
+    text-align: left;
 }
 
 footer{
