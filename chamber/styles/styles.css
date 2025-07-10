@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #2E86AB;
+    --secondary-color: #F5B041;
+    --bg-color: #F8F9F9;
+    --text-color: #2C3E50;
+    --font: 'Open Sans', Arial, sans-serif;
+}
 
 *{
     padding: 0;
@@ -5,10 +12,20 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font);
+}
+
 header{
     display: grid;
     grid-template-columns: 48px 1fr;
     padding: 3rem;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
 }
 
 .menu-items{

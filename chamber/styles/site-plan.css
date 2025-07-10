@@ -1,0 +1,73 @@
+:root {
+    --primary-color: #2E86AB;
+    --secondary-color: #F5B041;
+    --bg-color: #F8F9F9;
+    --text-color: #2C3E50;
+    --font: 'Open Sans', Arial, sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font);
+}
+
+h1, h2{
+    text-align: center;
+    color: var(--primary-color);
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+/* get the last section and expand the grid to all columns */
+main > section:last-of-type{
+  grid-column: 1/-1;
+}
+
+section{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: 1rem;
+    color: var(--text-color);
+}
+
+ul{
+    margin-left: 8px;
+    text-align: left;
+}
+
+li{
+    padding: .5rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav li{
+    padding: .1rem;
+}
+
+
+
