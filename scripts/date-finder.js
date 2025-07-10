@@ -54,8 +54,10 @@ function getYearAndLastModified() {
 function createFooterInfo() {
   //get footer tag
   const footer = document.querySelector("footer");
-  //center all footer text
-  footer.style.textAlign = "center";
+
+  //create container
+  const container = document.createElement("section");
+  container.style.textAlign = "center";
 
   //create paragraph with id current year
   const paragraph1 = document.createElement("p");
@@ -66,7 +68,8 @@ function createFooterInfo() {
   paragraph2.setAttribute("id", "last-modified");
 
   //add to page
-  footer.appendChild(paragraph1);
-  footer.appendChild(paragraph2);
+  container.appendChild(paragraph1);
+  container.appendChild(paragraph2);
+  footer.appendChild(container);
   getYearAndLastModified();
 }
