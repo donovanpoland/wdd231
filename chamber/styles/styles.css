@@ -1,0 +1,41 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    padding: 3rem;
+}
+
+.menu-items{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    justify-content: right;
+}
+
+.menu-items a{
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 1rem;
+    min-width: 48px;
+    border: 1px solid black;
+    border-radius: .5rem;
+}
+
+.view-switch{
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    padding: .5rem;
+}
+
+.view-switch button{
+    padding: .5rem;
+    border-radius: .5rem;
+}
