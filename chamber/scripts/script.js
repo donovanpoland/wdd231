@@ -39,9 +39,11 @@ function displayMembers(members) {
 
         // Address
         const address = document.createElement("p");
-        address.classList.add("address")
-        address.innerHTML = `${member.address?.street}<br>`;
-        console.log(member.address[0]);
+        address.classList.add("address");
+        address.innerHTML =
+            `${member.address.street}<br>${member.address.city}
+                ${member.address.state}, ${member.address.zip}`;
+        
 
         // Phone
         const phone = document.createElement("p");
@@ -59,6 +61,7 @@ function displayMembers(members) {
         addTag.appendChild(address);
         addTag.appendChild(phone);
         addTag.appendChild(website);
+        
 
         // Add address tag to the card
         card.appendChild(addTag)

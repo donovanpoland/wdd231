@@ -30,8 +30,6 @@ h1, h2, h3 {
     color: var(--primary-color);
 }
 
-
-
 main{
     display: flex;
     flex-direction: column;
@@ -101,9 +99,21 @@ a{
     border-radius: .5rem;
 }
 
+.flex-parent{
+    display: flex;
+    justify-content: center;
+}
+
+.address{
+    position: relative;
+    display: inline-block;
+}
+
 .address::after{
     content: "📍";
-    margin-left: .5rem;
+    position: absolute;
+    right: -15px;
+    top: 0;
 }
 
 .ch-address{

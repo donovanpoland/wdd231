@@ -2,14 +2,13 @@
   "members": [
     {
       "name": "Sunrise Café",
-      "address": [
+      "address":
         {
           "street": "123 Main St",
           "city": "Mapleton",
           "state": "UT",
           "zip": "84664"
-        }
-      ],
+        },
       "phone": "801-123-4567",
       "url": "https://sunrisecafe.com",
       "image": "images/businesses/sunrise-cafe.webp",
@@ -18,14 +17,13 @@
     },
     {
       "name": "Bright Future Tech",
-      "address": [
+      "address":
         {
           "street": "456 Innovation Dr",
           "city": "Mapleton",
           "state": "UT",
           "zip": "84664"
-        }
-      ],
+        },
       "phone": "801-987-6543",
       "url": "https://brightfuturetech.com",
       "image": "images/businesses/bright-future-tech.webp",
@@ -34,14 +32,13 @@
     },
     {
       "name": "Green Thumb Nursery",
-      "address": [
+      "address":
         {
           "street": "789 Garden Ln",
           "city": "Mapleton",
           "state": "UT",
           "zip": "84664"
-        }
-      ],
+        },
       "phone": "801-555-1212",
       "url": "https://greenthumbnursery.com",
       "image": "images/businesses/green-thumb.webp",
@@ -50,14 +47,13 @@
     },
     {
       "name": "Ace Fitness",
-      "address": [
+      "address":
         {
           "street": "1010 Fit St",
           "city": "Mapleton",
           "state": "UT",
           "zip": "84664"
-        }
-      ],
+        },
       "phone": "801-444-1111",
       "url": "https://acefitness.com",
       "image": "images/businesses/ace-fitness.webp",
@@ -66,14 +62,13 @@
     },
     {
       "name": "Book Nook",
-      "address": [
+      "address":
         {
           "street": "22 Reading Rd",
           "city": "Mapleton",
           "state": "UT",
           "zip": "84664"
-        }
-      ],
+        },
       "phone": "801-222-3333",
       "url": "https://booknook.com",
       "image": "images/businesses/book-nook.webp",
@@ -82,14 +77,13 @@
     },
     {
       "name": "Happy Trails Travel",
-      "address": [
+      "address": 
         {
           "street": "11 Explorer Blvd",
           "city": "Mapleton",
           "state": "UT",
           "zip": "84664"
-        }
-      ],
+        },
       "phone": "801-333-4444",
       "url": "https://happytrailstravel.com",
       "image": "images/businesses/happy-trails.webp",
@@ -98,14 +92,13 @@
     },
     {
       "name": "Starlight Cinema",
-      "address": [
+      "address":
         {
           "street": "99 Movie Pkwy",
           "city": "Mapleton",
           "state": "UT",
           "zip": "84664"
-        }
-      ],
+        },
       "phone": "801-777-8888",
       "url": "https://starlightcinema.com",
       "image": "images/businesses/starlight-cinema.webp",
