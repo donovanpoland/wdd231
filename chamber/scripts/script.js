@@ -1,14 +1,15 @@
 
-//get data from json file name
+// name url data from json file name
 const url = `data/members.json`;
-//find directory insertion class in html
+// Find directory insertion class in html
 const cards = document.querySelector(".directory");
 
-//load file
+// Load file
 async function getMemberData() {
+    // Get data from json file
     const response = await fetch(url);
     const data = await response.json();
-    //log data(jason file) to console in table format to the console
+    // Log data(jason file) to console in table format to the console
     console.table(data.members);
     displayMembers(data.members);
 }
@@ -17,11 +18,11 @@ getMemberData();
 
 function displayMembers(members) {
     members.forEach(member => {
-        //create a new card
+        // Create a new card
         const card = document.createElement("section");
         card.classList.add("card");
 
-        //image
+        // Image
         const img = document.createElement("img");
         img.setAttribute("src", `Logo of ${member.name}`)
         img.setAttribute("loading", "lazy");
@@ -32,7 +33,7 @@ function displayMembers(members) {
         const name = document.createElement("h3");
         name.textContent = member.name;
 
-        //create address tag for convention
+        // Create address tag for convention
         const addTag = document.createElement("address");
 
         // Address
@@ -44,23 +45,23 @@ function displayMembers(members) {
         const phone = document.createElement("p");
         phone.textContent = member.phone;
 
-        //website
+        // Website
         const website = document.createElement("a");
         website.setAttribute("href", member.url);
         website.setAttribute("target", "_blank");
         website.textContent = member.url;
 
-        //add elements to address
+        // Add elements to address
         addTag.appendChild(name);
         addTag.appendChild(img);
         addTag.appendChild(address);
         addTag.appendChild(phone);
         addTag.appendChild(website);
 
-        //add address tag to the card
+        // Add address tag to the card
         card.appendChild(addTag)
 
-        //add the card to the page
+        // Add the card to the page
         cards.appendChild(card);
     });
 }
