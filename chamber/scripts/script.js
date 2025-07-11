@@ -24,9 +24,10 @@ function displayMembers(members) {
 
         // Image
         const img = document.createElement("img");
-        img.setAttribute("src", `Logo of ${member.name}`)
+        img.setAttribute("src", member.image)
+        img.setAttribute("alt", `Logo of ${member.name}`)
         img.setAttribute("loading", "lazy");
-        img.setAttribute("width", "200");
+        img.setAttribute("width", "300");
         img.setAttribute("height", "300");
 
         // Business Name
@@ -39,7 +40,8 @@ function displayMembers(members) {
         // Address
         const address = document.createElement("p");
         address.classList.add("address")
-        address.textContent = member.address;
+        address.innerHTML = `${member.address?.street}<br>`;
+        console.log(member.address[0]);
 
         // Phone
         const phone = document.createElement("p");
