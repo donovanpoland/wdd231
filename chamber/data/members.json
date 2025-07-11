@@ -4,7 +4,7 @@
       "name": "Sunrise Café",
       "address": "123 Main St, Mapleton, UT 84664",
       "phone": "801-123-4567",
-      "url": "https://sunrisecafe.example.com",
+      "url": "https://sunrisecafe.com",
       "image": "images/sunrise-cafe.jpg",
       "membership": 2,
       "description": "A cozy family-owned café in downtown Mapleton known for fresh coffee and homemade pastries."
@@ -13,7 +13,7 @@
       "name": "Bright Future Tech",
       "address": "456 Innovation Dr, Mapleton, UT 84664",
       "phone": "801-987-6543",
-      "url": "https://brightfuturetech.example.com",
+      "url": "https://brightfuturetech.com",
       "image": "images/bright-future-tech.jpg",
       "membership": 3,
       "description": "Mapleton's go-to technology company offering web development and cloud services for local businesses."
@@ -22,7 +22,7 @@
       "name": "Green Thumb Nursery",
       "address": "789 Garden Ln, Mapleton, UT 84664",
       "phone": "801-555-1212",
-      "url": "https://greenthumbnursery.example.com",
+      "url": "https://greenthumbnursery.com",
       "image": "images/green-thumb.jpg",
       "membership": 1,
       "description": "Locally-owned nursery in Mapleton offering a wide selection of native plants and gardening supplies."
@@ -31,7 +31,7 @@
       "name": "Ace Fitness",
       "address": "1010 Fit St, Mapleton, UT 84664",
       "phone": "801-444-1111",
-      "url": "https://acefitness.example.com",
+      "url": "https://acefitness.com",
       "image": "images/ace-fitness.jpg",
       "membership": 2,
       "description": "Modern gym and wellness center offering group classes and personal training in Mapleton."
@@ -40,7 +40,7 @@
       "name": "Book Nook",
       "address": "22 Reading Rd, Mapleton, UT 84664",
       "phone": "801-222-3333",
-      "url": "https://booknook.example.com",
+      "url": "https://booknook.com",
       "image": "images/book-nook.jpg",
       "membership": 1,
       "description": "Independent bookstore in Mapleton specializing in rare and out-of-print titles."
@@ -49,7 +49,7 @@
       "name": "Happy Trails Travel",
       "address": "11 Explorer Blvd, Mapleton, UT 84664",
       "phone": "801-333-4444",
-      "url": "https://happytrailstravel.example.com",
+      "url": "https://happytrailstravel.com",
       "image": "images/happy-trails.jpg",
       "membership": 3,
       "description": "Mapleton-based travel agency offering curated vacation packages and adventure planning."
@@ -58,7 +58,7 @@
       "name": "Starlight Cinema",
       "address": "99 Movie Pkwy, Mapleton, UT 84664",
       "phone": "801-777-8888",
-      "url": "https://starlightcinema.example.com",
+      "url": "https://starlightcinema.com",
       "image": "images/starlight-cinema.jpg",
       "membership": 2,
       "description": "Retro-style cinema in Mapleton showing classic and indie films with gourmet concessions."
