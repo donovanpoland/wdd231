@@ -51,9 +51,9 @@ function displayMembers(members) {
 
         // Website
         const website = document.createElement("a");
-        website.setAttribute("href", member.url);
+        website.setAttribute("href", member.https);
         website.setAttribute("target", "_blank");
-        website.textContent = member.url;
+        website.textContent = member.website;
 
         // Add elements to address
         addTag.appendChild(name);
