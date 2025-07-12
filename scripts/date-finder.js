@@ -11,7 +11,7 @@ function getYearAndLastModified() {
   //check current year id is found on page
   if (currentYear) {
     //display the info
-    currentYear.innerHTML = "&copy; " + today.getFullYear() + " Donovan Poland - Salt Lake City, Utah";
+    currentYear.innerHTML = "&copy; " + today.getFullYear() + " Donovan Poland<br>Salt Lake City, Utah";
   }
 
   //check if last modified id is found the page
@@ -46,8 +46,8 @@ function getYearAndLastModified() {
 
     //display the info
     lastMod.innerHTML =
-      `Last modified: ${localFormatted} ${formattedOffset}<br>` +
-      `Last modified: ${utcFormatted} UTC`;
+      `Last modified:<br>${localFormatted} ${formattedOffset}<br>` +
+      `Last modified:<br>${utcFormatted} UTC`;
   }
 }
 
