@@ -51,7 +51,6 @@ section{
     padding: 1rem;
     width: 100%;
     gap: 1rem;
-    word-break: break-all;
 }
 
 .directory{
@@ -60,8 +59,8 @@ section{
     gap: 1rem;
 }
 
-.card{
-    width: 100%;
+.card img{
+    margin: 0 auto;
 }
 
 .menu-items{

@@ -56,14 +56,14 @@ function displayMembers(members) {
         website.textContent = member.website;
 
         // Add elements to address
-        addTag.appendChild(name);
-        addTag.appendChild(img);
         addTag.appendChild(address);
         addTag.appendChild(phone);
         addTag.appendChild(website);
         
 
         // Add address tag to the card
+        card.appendChild(name);
+        card.appendChild(img);
         card.appendChild(addTag)
 
         // Add the card to the page
