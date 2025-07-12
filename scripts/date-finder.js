@@ -46,8 +46,7 @@ function getYearAndLastModified() {
 
     //display the info
     lastMod.innerHTML =
-      `Last modified:<br>${localFormatted} ${formattedOffset}<br>` +
-      `Last modified:<br>${utcFormatted} UTC`;
+      `Last modified:<br>${localFormatted} ${formattedOffset}<br>${utcFormatted} UTC`;
   }
 }
 
