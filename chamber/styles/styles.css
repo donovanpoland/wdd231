@@ -3,7 +3,6 @@
     --secondary-color: #F5B041;
     --bg-color: #E6F2F7;
     --text-color: #2C3E50;
-    --font: 'Open Sans', Arial, sans-serif;
 }
 
 *{
@@ -15,9 +14,12 @@
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: var(--font);
+
     display: grid;
     gap: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 header{
