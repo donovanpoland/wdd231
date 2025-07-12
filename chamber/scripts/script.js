@@ -1,55 +1,20 @@
 
-// name url data from json file name
+// Name url data from json file name
 const url = `data/members.json`;
-// Find directory insertion class in html
+// Find directory insertion class on document
 const cards = document.querySelector(".directory");
+// Find grid and list view ids on document
 const gridView = document.querySelector("#grid-view");
 const listView = document.querySelector("#list-view");
 
 
-// Load file
-async function getMemberData() {
-    
-    // Get data from json file
-    const response = await fetch(url);
-    const data = await response.json();
-    // Log data(jason file) to console in table format to the console
-    console.table(data.members);
-
-    // Default selection
-    displayGrid(data.members);
-    // displayList(data.members);
-    
-    // If user selects list view
-    listView.addEventListener("click", () => {
-        // Adjust aria attributes
-        gridView.setAttribute("aria-pressed", "false");
-        listView.setAttribute("aria-pressed", "true");
-
-        // Erase all old data
-        document.querySelector(".directory").innerHTML = "";
-
-        // Replace with grid data
-        displayList(data.members);
-    });
-
-     // If user selects grid view
-    gridView.addEventListener("click", () => {
-        // Adjust aria attributes
-        gridView.setAttribute("aria-pressed", "true");
-        listView.setAttribute("aria-pressed", "false");
-
-        // Erase all old data
-        document.querySelector(".directory").innerHTML = "";
-
-        // Replace with grid data
-        displayGrid(data.members);
-    });
-        
-}
-
+// Call functions
 getMemberData();
 
+
+// Create functions
+
+// Display in grid format
 function displayGrid(members) {
     const cards = document.querySelector(".directory");
     cards.style.display = "grid"
@@ -110,7 +75,7 @@ function displayGrid(members) {
     });
 }
 
-
+// Display in list format
 function displayList(members) {
     const cards = document.querySelector(".directory");
     cards.style.display = "flex";
@@ -161,3 +126,42 @@ function displayList(members) {
     });
 }
 
+// Load file
+async function getMemberData() {
+    
+    // Get data from json file
+    const response = await fetch(url);
+    const data = await response.json();
+    // Log data(jason file) to console in table format to the console
+    console.table(data.members);
+
+    // Default selection
+    displayGrid(data.members);
+    // displayList(data.members);
+    
+    // If user selects list view
+    listView.addEventListener("click", () => {
+        // Adjust aria attributes
+        gridView.setAttribute("aria-pressed", "false");
+        listView.setAttribute("aria-pressed", "true");
+
+        // Erase all old data
+        document.querySelector(".directory").innerHTML = "";
+
+        // Replace with grid data
+        displayList(data.members);
+    });
+
+    // If user selects grid view
+    gridView.addEventListener("click", () => {
+        // Adjust aria attributes
+        gridView.setAttribute("aria-pressed", "true");
+        listView.setAttribute("aria-pressed", "false");
+
+        // Erase all old data
+        document.querySelector(".directory").innerHTML = "";
+
+        // Replace with grid data
+        displayGrid(data.members);
+    });
+}
