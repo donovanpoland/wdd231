@@ -77,9 +77,9 @@ function displayGrid(members) {
 
 // Display in list format
 function displayList(members) {
-    const cards = document.querySelector(".directory");
-    cards.style.display = "flex";
-    cards.style.flexDirection = "column";
+    const row = document.querySelector(".directory");
+    row.style.display = "flex";
+    row.style.flexDirection = "column";
 
     // Create member info
     members.forEach(member => {
@@ -87,7 +87,6 @@ function displayList(members) {
         // Create a new card
         const listStyle = document.createElement("section")
         listStyle.classList.add("list-style");
-        listStyle.style.flexDirection = "row";
 
         // List items
         const items = [
@@ -122,7 +121,7 @@ function displayList(members) {
         listStyle.appendChild(list);
 
         // Add to page
-        cards.appendChild(listStyle);
+        row.appendChild(listStyle);
     });
 }
 
