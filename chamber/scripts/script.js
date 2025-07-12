@@ -3,7 +3,7 @@
 const url = `data/members.json`;
 // Find directory insertion class on document
 const cards = document.querySelector(".directory");
-// Find grid and list view ids on document
+// Find grid and list view ids on document for listeners
 const gridView = document.querySelector("#grid-view");
 const listView = document.querySelector("#list-view");
 
@@ -12,7 +12,7 @@ const listView = document.querySelector("#list-view");
 getMemberData();
 
 
-// Create functions
+/* Create functions */
 
 // Display in grid format
 function displayGrid(members) {
