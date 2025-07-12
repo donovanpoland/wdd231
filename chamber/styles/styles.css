@@ -1,7 +1,7 @@
 :root {
     --primary-color: #2E86AB;
     --secondary-color: #F5B041;
-    --bg-color: #F8F9F9;
+    --bg-color: #E6F2F7;
     --text-color: #2C3E50;
     --font: 'Open Sans', Arial, sans-serif;
 }
@@ -59,6 +59,11 @@ section{
     gap: 1rem;
 }
 
+.card ul{
+    list-style: none;
+    display: flex;
+}
+
 .card img{
     margin: 0 auto;
 }
@@ -78,12 +83,17 @@ section{
     min-width: 48px;
     border: 1px solid black;
     border-radius: .5rem;
+    background-color: var(--secondary-color);
 }
 
 a{
     color: var(--secondary-color);
     text-decoration: none;
     font-size: 1.5rem;
+}
+
+button{
+    background-color: var(--secondary-color);
 }
 
 .view-switch{
@@ -96,6 +106,7 @@ a{
 .view-switch button{
     padding: .5rem;
     border-radius: .5rem;
+    
 }
 
 .flex-parent{
