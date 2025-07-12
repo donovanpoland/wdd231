@@ -17,8 +17,9 @@ async function getMemberData() {
     console.table(data.members);
 
     // Default selection
-    displayGrid(data.members);
-
+    // displayGrid(data.members);
+    displayList(data.members);
+    
     // If user selects list view
     listView.addEventListener("click", () => {
         // Adjust aria attributes
@@ -50,6 +51,12 @@ async function getMemberData() {
 getMemberData();
 
 function displayGrid(members) {
+    const cards = document.querySelector(".directory");
+    cards.style.display = "grid"
+    cards.style.gridTemplateColumns = "repeat(auto-fit, minmax(350px, 1fr))";
+    cards.style.gap = "1rem"
+
+    // Create member info
     members.forEach(member => {
         // Create a new card
         const card = document.createElement("section");
@@ -104,16 +111,20 @@ function displayGrid(members) {
 
 
 function displayList(members) {
+    const cards = document.querySelector(".directory");
+    cards.style.display = "flex";
+    cards.style.flexDirection = "column";
+
+    // Create member info
     members.forEach(member => {
-        const cards = document.querySelector(".directory");
-        cards.style.display = "flex"
+        
         // Create a new card
         const card = document.createElement("section")
         card.classList.add("card");
         card.style.flexDirection = "row";
 
         const items = [
-            member.name,
+            `<h3>${member.name}</h3>`,
             `${member.address.street}<br>${member.address.city}
                 ${member.address.state}, ${member.address.zip}`,
             member.phone,

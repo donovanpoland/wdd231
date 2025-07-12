@@ -53,15 +53,17 @@ section{
     gap: 1rem;
 }
 
-.directory{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax( 350px, 1fr));
-    gap: 1rem;
-}
-
 .card ul{
     list-style: none;
     display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.card:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .card img{
@@ -106,7 +108,7 @@ button{
 .view-switch button{
     padding: .5rem;
     border-radius: .5rem;
-    
+    cursor: pointer;
 }
 
 .flex-parent{
