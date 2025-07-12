@@ -17,8 +17,8 @@ async function getMemberData() {
     console.table(data.members);
 
     // Default selection
-    // displayGrid(data.members);
-    displayList(data.members);
+    displayGrid(data.members);
+    // displayList(data.members);
     
     // If user selects list view
     listView.addEventListener("click", () => {
@@ -61,6 +61,7 @@ function displayGrid(members) {
         // Create a new card
         const card = document.createElement("section");
         card.classList.add("card");
+
 
         // Image
         const img = document.createElement("img");
@@ -119,31 +120,44 @@ function displayList(members) {
     members.forEach(member => {
         
         // Create a new card
-        const card = document.createElement("section")
-        card.classList.add("card");
-        card.style.flexDirection = "row";
+        const listStyle = document.createElement("section")
+        listStyle.classList.add("list-style");
+        listStyle.style.flexDirection = "row";
 
+        // List items
         const items = [
             `<h3>${member.name}</h3>`,
             `${member.address.street}<br>${member.address.city}
                 ${member.address.state}, ${member.address.zip}`,
-            member.phone,
-            member.website
+            member.phone
         ];
 
+        // Create a list
         const list = document.createElement("ul");
 
+        // Add items to the list
         items.forEach((item) => {
             const listItem = document.createElement("li");
             listItem.innerHTML = item;
             list.appendChild(listItem);
         });
+
+        // Website data
+        const website = document.createElement("a");
+        website.setAttribute("href", member.https);
+        website.setAttribute("target", "_blank");
+        website.textContent = member.website;
+
+        // Create another list item
+        const websiteItem = document.createElement("li");
+        websiteItem.appendChild(website);
+        list.appendChild(websiteItem);
         
         // Add to card
-        card.appendChild(list);
+        listStyle.appendChild(list);
 
         // Add to page
-        cards.appendChild(card);
+        cards.appendChild(listStyle);
     });
 }
 
