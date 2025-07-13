@@ -1,0 +1,63 @@
+.directory section{
+    min-height: fit-content;
+    position: relative;
+}
+
+.list-style img{
+    position: absolute;
+    right: .5rem;
+    border-radius: .5rem;
+}
+
+.list-style ul{
+    list-style: none;
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    min-width: 300px;
+    width: 100%;
+    line-height: 1.5;
+}
+
+.list-style ul li{
+    text-align: left;
+    justify-content: left;
+    align-items: center;
+    text-shadow: 0px 3px 9px var(--bg-accent1);
+}
+
+.list-style:nth-child(even){
+    background-color: var(--bg-accent2);
+}
+
+.card:hover,
+#grid-view:hover,
+#list-view:hover{
+    scale: 1.05;
+}
+
+.list-style:hover{
+        scale: 1.01;
+}
+
+.card img{
+    margin: 0 auto;
+}
+
+.view-switch{
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    padding: .5rem;
+}
+
+.list-style ul li:nth-child(4){
+        margin-top: .1rem;
+        margin-left: -.5rem;
+}
+
+.list-style ul li:nth-child(4):hover{
+        scale: 1.1;
+        margin-top: .1rem;
+        margin-left: .5rem;
+}

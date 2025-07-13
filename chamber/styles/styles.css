@@ -1,10 +1,11 @@
 :root {
-    --primary-color: #154360;
+    --primary-color: #184781;
     --secondary-color: #F5B041;
     --accent1: #F8C978;
-    --accent2: #4A90E2;
-    --bg-color: #D6EAF8;
-    --bg-accent: #B3D8EE;
+    --accent2: #123E6D;
+    --bg-color: #EAF4FB;
+    --bg-accent1: #D1E7F5;
+    --bg-accent2: #8BC3E4;
     --text-color: #2C3E50;
 }
 
@@ -52,64 +53,11 @@ section{
     margin: 0 auto;
     border: 2px solid var(--secondary-color);
     border-radius: .5rem;
-    background-color: var(--bg-accent);
+    background-color: var(--bg-accent1);
     padding: 1rem;
     width: 100%;
     gap: 1rem;
     box-shadow: 0px 2px 8px black;
-}
-
-.directory section{
-    min-height: fit-content;
-    position: relative;
-}
-
-.list-style img{
-    position: absolute;
-    right: .5rem;
-    border-radius: .5rem;
-}
-
-.list-style ul{
-    list-style: none;
-    display: grid;
-    align-items: center;
-    justify-content: left;
-    min-width: 300px;
-    width: 100%;
-
-}
-
-.list-style #member-image{
-        display: none;
-    }
-
-.list-style ul li{
-    text-align: left;
-    justify-content: left;
-    align-items: center;
-}
-
-.list-style:nth-child(even){
-    background-color: #eee;
-}
-
-.card:hover,
-.list-style:hover,
-#grid-view:hover,
-#list-view:hover{
-    scale: 1.05;
-}
-
-.card img{
-    margin: 0 auto;
-}
-
-.view-switch{
-    display: flex;
-    gap: .5rem;
-    justify-content: center;
-    padding: .5rem;
 }
 
 .address{

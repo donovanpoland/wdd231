@@ -37,7 +37,7 @@ function displayGrid(members) {
         img.setAttribute("height", "300");
 
         // Business Name
-        const name = document.createElement("h3");
+        const name = document.createElement("h2");
         name.textContent = member.name;
 
         // Create address tag for convention
@@ -90,7 +90,7 @@ function displayList(members) {
 
         // List items
         const items = [
-            `<h3>${member.name}</h3>`,
+            `<h2>${member.name}</h2>`,
             `${member.address.street}<br>${member.address.city}
                 ${member.address.state}, ${member.address.zip}`,
             member.phone
