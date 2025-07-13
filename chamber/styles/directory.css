@@ -2,13 +2,14 @@
     min-height: fit-content;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
     gap: .5rem;
+    
 }
 
 .card {
     height: 500px;
-    width: 300px;
+    width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -49,6 +50,10 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.list-style{
+    width: 100%;
 }
 
 .list-style img{

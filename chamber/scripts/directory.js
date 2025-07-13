@@ -5,6 +5,8 @@ const url = `data/members.json`;
 const gridView = document.querySelector("#grid-view");
 const listView = document.querySelector("#list-view");
 
+// Keep track of the number of active timeouts
+let activeTimeouts = [];
 
 // Load content after DOM has loaded to avoid layout shifts
 window.addEventListener("DOMContentLoaded", getMemberData);
@@ -17,64 +19,20 @@ function displayGrid(members) {
     const cards = document.querySelector(".directory");
     cards.style.display = "grid"
 
+
     // Erase all old data
     cards.innerHTML = "";
 
+    console.log("Injecting first card:", members[0].name);
+    createCard(members[0], 0, cards);
 
     // Create member info
-    members.forEach((member, index) => {
-        setTimeout(() => {
-            // Create a new card
-            const card = document.createElement("section");
-            card.classList.add("card");
-
-            // Image
-            const img = document.createElement("img");
-            img.setAttribute("src", member.image)
-            img.setAttribute("alt", `Logo of ${member.name}`)
-            img.setAttribute("loading", "lazy");
-            img.setAttribute("width", "300");
-            img.setAttribute("height", "300");
-
-            // Business Name
-            const name = document.createElement("h2");
-            name.textContent = member.name;
-
-            // Create address tag for convention
-            const addTag = document.createElement("address");
-
-            // Address
-            const address = document.createElement("p");
-            address.classList.add("address");
-            address.innerHTML =
-                `${member.address.street}<br>${member.address.city}
-                    ${member.address.state}, ${member.address.zip}`;
-            
-            // Phone
-            const phone = document.createElement("p");
-            phone.classList.add("phone");
-            phone.textContent = member.phone;
-
-            // Website
-            const website = document.createElement("a");
-            website.setAttribute("href", member.https);
-            website.setAttribute("target", "_blank");
-            website.textContent = member.website;
-
-            // Add elements to address
-            addTag.appendChild(address);
-            addTag.appendChild(phone);
-            
-            // Add address tag to the card
-            card.appendChild(name);
-            card.appendChild(img);
-            card.appendChild(addTag)
-            card.appendChild(website);
-
-            // Add the card to the page
-            cards.appendChild(card);
+    members.slice(1).forEach((member, index) => {
+        const timeout = setTimeout(() => {
+            createCard(member, index + 1, cards);
         }, index * 700);
-    }); 
+        activeTimeouts.push(timeout);
+    });
 }
 
 // Display in list format
@@ -88,7 +46,7 @@ function displayList(members) {
 
     // Create member info
     members.forEach((member, index) => {
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
         
         // Create a new card
         const listStyle = document.createElement("section")
@@ -143,6 +101,7 @@ function displayList(members) {
         // Add to page
         row.appendChild(listStyle);
         }, index * 300);
+        activeTimeouts.push(timeout);
     }); 
 }
 
@@ -162,6 +121,9 @@ async function getMemberData() {
     
     // If user selects list view
     listView.addEventListener("click", () => {
+        // Cancel running timeouts
+        clearScheduled(); 
+
         // Adjust aria attributes
         gridView.setAttribute("aria-pressed", "false");
         listView.setAttribute("aria-pressed", "true");
@@ -172,14 +134,81 @@ async function getMemberData() {
 
     // If user selects grid view
     gridView.addEventListener("click", () => {
+        // Cancel running timeouts
+        clearScheduled(); 
+
         // Adjust aria attributes
         gridView.setAttribute("aria-pressed", "true");
         listView.setAttribute("aria-pressed", "false");
 
-        // Erase all old data
-        document.querySelector(".directory").innerHTML = "";
-
         // Replace with grid data
         displayGrid(data.members);
     });
+}
+
+// Clear list of timers
+function clearScheduled() {
+  activeTimeouts.forEach(timeout => clearTimeout(timeout));
+  activeTimeouts = [];
+}
+
+// Create new card
+function createCard(member, index, container) {
+    // Create a new card
+    const card = document.createElement("section");
+    card.classList.add("card");
+
+    // Image
+    const img = document.createElement("img");
+    img.setAttribute("src", member.image);
+    img.setAttribute("alt", `Logo of ${member.name}`);
+    img.setAttribute("width", "300");
+    img.setAttribute("height", "300");
+
+    // Only preload the first image, lazy load all other images
+    if (index === 0) {
+        img.setAttribute("id", "first-image");
+        img.setAttribute("fetchpriority", "high");
+        console.log('Rendering first card')
+    } else {
+        img.setAttribute("loading", "lazy");
+    }
+
+    // Business Name
+    const name = document.createElement("h2");
+    name.textContent = member.name
+
+    // Create address tag for convention
+    const addTag = document.createElement("address");
+
+    // Address
+    const address = document.createElement("p");
+    address.classList.add("address");
+    address.innerHTML =
+        `${member.address.street}<br>${member.address.city}
+        ${member.address.state}, ${member.address.zip}`;
+
+    // Phone
+    const phone = document.createElement("p");
+    phone.classList.add("phone");
+    phone.textContent = member.phone;
+
+    // Website
+    const website = document.createElement("a");
+    website.setAttribute("href", member.https);
+    website.setAttribute("target", "_blank");
+    website.textContent = member.website;
+
+    // Add elements to address
+    addTag.appendChild(address);
+    addTag.appendChild(phone);
+
+    // Add address tag to the card
+    card.appendChild(name);
+    card.appendChild(img);
+    card.appendChild(addTag);
+    card.appendChild(website);
+
+    // Add the card to the page
+    container.appendChild(card);
 }
