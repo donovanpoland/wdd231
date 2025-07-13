@@ -14,6 +14,12 @@
     box-sizing: border-box;
 }
 
+
+header, main, footer{
+        min-width: 550px;
+    }
+
+
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -35,7 +41,6 @@ main{
     margin-left: 1rem;
     margin-right: 1rem;
     justify-content: center;
-    min-width: 550px;
     padding: 1rem;
 }
 
@@ -56,20 +61,31 @@ section{
 
 .directory section{
     min-height: fit-content;
+    position: relative;
 }
 
-.list-style{
-    height: 100px;
+.list-style img{
+    position: absolute;
+    right: .5rem;
+    border-radius: .5rem;
 }
 
 .list-style ul{
     list-style: none;
     display: grid;
-    grid-template-columns: 200px 225px 120px 1fr;
-    gap: 1rem;
     align-items: center;
+    justify-content: left;
+    min-width: 300px;
     width: 100%;
+}
 
+.list-style ul li{
+    text-align: left;
+    justify-content: left;
+}
+
+.list-style:nth-child(even){
+    background-color: #eee;
 }
 
 .card:hover,
@@ -77,22 +93,6 @@ section{
 #grid-view:hover,
 #list-view:hover{
     scale: 1.05;
-}
-
-
-/* select first list item */
-.list-style ul li{
-    text-align: left;
-}
-
-
-.list-style ul li:last-child{
-    text-align: right;
-
-}
-
-.list-style:nth-child(even){
-    background-color: #eee;
 }
 
 .card img{
@@ -107,15 +107,13 @@ section{
 }
 
 .address{
-    position: relative;
+    /* position: relative; */
     display: inline-block;
 }
 
 .address::after{
     content: "📍";
-    position: absolute;
-    right: -15px;
-    top: 0;
+    margin-left: 1rem;
 }
 
 .ch-address{
@@ -135,6 +133,7 @@ footer section{
     max-width: fit-content;
     gap: 0;
     box-shadow: none;
+    font-size: .9rem;
 }
 
 .center{

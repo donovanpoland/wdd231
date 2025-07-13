@@ -96,6 +96,14 @@ function displayList(members) {
             member.phone
         ];
 
+        // Image
+        const img = document.createElement("img");
+        img.setAttribute("src", member.image)
+        img.setAttribute("alt", `Logo of ${member.name}`)
+        img.setAttribute("loading", "lazy");
+        img.setAttribute("width", "125");
+        img.setAttribute("height", "125");
+
         // Create a list
         const list = document.createElement("ul");
 
@@ -104,6 +112,10 @@ function displayList(members) {
             const listItem = document.createElement("li");
             listItem.innerHTML = item;
             list.appendChild(listItem);
+
+            if (item.includes(member.address.street)) {
+                listItem.classList.add("address");
+            }
         });
 
         // Website data
@@ -121,6 +133,7 @@ function displayList(members) {
         listStyle.appendChild(list);
 
         // Add to page
+        listStyle.appendChild(img);
         row.appendChild(listStyle);
     });
 }

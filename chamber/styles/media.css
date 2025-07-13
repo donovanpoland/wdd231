@@ -32,4 +32,21 @@
     .navigation li.current{
         border-radius: .5rem;
     }
+
+}
+
+@media only screen and (min-width: 900px){
+    .list-style ul{
+        display: grid;
+        grid-template-columns: 250px 225px 125px 1fr;
+    }
+
+    .list-style ul li:last-child{
+        text-align: right;
+    }
+
+    .list-style img{
+        display: none;
+    }
+    
 }
