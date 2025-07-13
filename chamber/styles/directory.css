@@ -1,10 +1,54 @@
-.directory section{
+.directory{
     min-height: fit-content;
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: .5rem;
+}
+
+.card {
+    height: 500px;
+    width: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 1rem;
+    transition: transform 0.2s ease;
+    opacity: 0;
+    transform: translateX(350px);
+    animation: fadeInUp 0.7s ease forwards;
+    position: relative;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  height: auto;
+}
+
+.card img{
+    margin: 0 auto;
+}
+
+.card a{
+    position: absolute;
+    bottom: .5rem;
 }
 
 .card a:hover{
     scale: 1.05;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .list-style img{
@@ -34,18 +78,13 @@
     background-color: var(--bg-accent2);
 }
 
-.card:hover,
 #grid-view:hover,
 #list-view:hover{
-    scale: 1.04;
+    transform: scale(1.04);
 }
 
-.list-style:hover{
+.list-style:hover, .card:hover{
         scale: 1.01;
-}
-
-.card img{
-    margin: 0 auto;
 }
 
 .view-switch{
