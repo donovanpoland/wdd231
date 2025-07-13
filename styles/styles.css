@@ -88,7 +88,7 @@ header span{
   color: red;
 }
 
-  .navigation li.current:hover{
+.navigation li.current:hover{
     border: none;
   }
 

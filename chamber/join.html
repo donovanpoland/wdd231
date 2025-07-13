@@ -13,6 +13,8 @@
     <script src="../scripts/navigation.js" defer></script>
     <!-- CSS style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/media.css">
     <!-- Font links-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,15 +28,15 @@
 </head>
 <body>
 <header>
-    <h1></h1>
-    <div class="hamburger" aria-label="navigation"></div>
-    <button>&#9776;</button>
-    <nav>
-        <ul class="menu-items">
+    <img src="images/chamber.webp" alt="Site Logo" class="nav-icon" width="64px" height="64px">
+    <h1>Become a Member</h1>
+    <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+    <nav id="nav-bar" class="navigation">
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="discover.html">Discover</a></li>
             <li><a href="directory.html">Directory</a></li>
-            <li><a href="#" aria-current="page">Join</a></li>
+            <li class="current" aria-current="page"><a href="#">Join</a></li>
         </ul>
     </nav>
 </header>

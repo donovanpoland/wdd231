@@ -1,0 +1,103 @@
+a{
+    color: var(--accent2);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+button{
+    background-color: var(--secondary-color);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .5rem;
+    box-shadow: 0px 2px 8px black;
+}
+
+button:hover{
+    background-color: var(--accent1);
+}
+
+header{
+    display: grid;
+    grid-template-columns: 64px 139px 1fr;
+    padding: 3rem;
+    align-items: center;
+    height: auto;
+    min-width: 575px;
+    padding: 8px;
+}
+
+.nav-icon{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: .25rem;
+    box-shadow: 0px 2px 8px black;
+}
+
+header h1{
+    padding-left: 1rem;
+}
+
+.navigation{
+    display: none;
+    background-color: transparent;
+    width: 100%;
+    
+}
+
+.navigation ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+}
+
+.navigation.show{
+    display: block;
+    grid-row: 2;
+    grid-column: 1/-1;
+    padding: 1rem;
+}
+
+.hamburger{
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    width: 64px;
+    height: 64px;
+    justify-self: right;
+    background-color: var(--secondary-color);
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.5rem;
+}
+.hamburger.show::before {
+    content: "\00D7";
+    font-size: 3rem;
+}
+
+.navigation a{
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 1rem;
+    min-width: 48px;
+    border: 1px solid black;
+    border-radius: .5rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 2px 8px black;
+    transition: box-shadow 0.3s ease;
+}
+
+.navigation a:hover{
+    background-color: var(--accent1);
+    box-shadow: 4px 6px 12px black;
+}
+
+
+

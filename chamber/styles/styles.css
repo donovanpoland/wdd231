@@ -17,63 +17,15 @@
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
-
-    display: grid;
-    gap: 1rem;
+    min-width: 21rem;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
 
-header{
-    display: grid;
-    grid-template-columns: 48px 1fr;
-    padding: 3rem;
-}
 
 h1, h2, h3 {
     color: var(--primary-color);
-}
-
-.menu-items{
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    justify-content: right;
-}
-
-.menu-items a{
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 1rem;
-    min-width: 48px;
-    border: 1px solid black;
-    border-radius: .5rem;
-    background-color: var(--secondary-color);
-    box-shadow: 0px 2px 8px black;
-}
-
-a{
-    color: var(--accent2);
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
-.menu-items a:hover{
-    background-color: var(--accent1);
-}
-
-button{
-    background-color: var(--secondary-color);
-    border-radius: .5rem;
-    cursor: pointer;
-    padding: .5rem;
-    box-shadow: 0px 2px 8px black;
-}
-
-button:hover{
-    background-color: var(--accent1);
 }
 
 main{
@@ -82,6 +34,9 @@ main{
     gap: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    justify-content: center;
+    min-width: 550px;
+    padding: 1rem;
 }
 
 section{
@@ -93,7 +48,6 @@ section{
     border: 2px solid var(--secondary-color);
     border-radius: .5rem;
     background-color: var(--bg-accent);
-    max-width: 900px;
     padding: 1rem;
     width: 100%;
     gap: 1rem;
@@ -118,7 +72,10 @@ section{
 
 }
 
-.card:hover, .list-style:hover{
+.card:hover,
+.list-style:hover,
+#grid-view:hover,
+#list-view:hover{
     scale: 1.05;
 }
 
@@ -147,11 +104,6 @@ section{
     gap: .5rem;
     justify-content: center;
     padding: .5rem;
-}
-
-.flex-parent{
-    display: flex;
-    justify-content: center;
 }
 
 .address{
