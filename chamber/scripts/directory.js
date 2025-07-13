@@ -63,12 +63,12 @@ function displayGrid(members) {
         // Add elements to address
         addTag.appendChild(address);
         addTag.appendChild(phone);
-        addTag.appendChild(website);
         
         // Add address tag to the card
         card.appendChild(name);
         card.appendChild(img);
         card.appendChild(addTag)
+        card.appendChild(website);
 
         // Add the card to the page
         cards.appendChild(card);

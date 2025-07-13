@@ -3,6 +3,10 @@
     position: relative;
 }
 
+.card a:hover{
+    scale: 1.05;
+}
+
 .list-style img{
     position: absolute;
     right: .5rem;
@@ -33,7 +37,7 @@
 .card:hover,
 #grid-view:hover,
 #list-view:hover{
-    scale: 1.05;
+    scale: 1.04;
 }
 
 .list-style:hover{
