@@ -29,7 +29,7 @@ button:hover{
 
 header{
     display: grid;
-    grid-template-columns: 64px minmax(350px, 1fr) 64px;
+    grid-template-columns: 1fr 1fr;
     padding: 3rem;
     align-items: center;
     max-width: fit-content;
@@ -46,12 +46,16 @@ header{
     box-shadow: 0px 2px 8px black;
     width: 64px;
     height: 64px;
+    grid-column: 1/2;
 }
 
 header span{
     display: flex;
     flex-wrap: wrap;
     font-size: 2rem;
+    grid-row: 2;
+    grid-column: 1/-1;
+    text-align: center;
 }
 
 .navigation{

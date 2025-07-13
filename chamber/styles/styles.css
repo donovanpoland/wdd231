@@ -76,8 +76,8 @@ section{
 }
 
 footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     border-top: dotted 1px black;
 }
 

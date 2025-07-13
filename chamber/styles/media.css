@@ -7,7 +7,20 @@
     }
 
     header{
-        grid-template-columns: 64px 1fr 1fr;
+        grid-template-columns: 64px 1fr auto;
+        align-items: center;
+    }
+
+    header span{
+        grid-row: 1;
+        grid-column: 2/3;
+        justify-content: start;
+        text-align: left;
+
+    }
+
+    .nav-icon{
+
     }
 
     .hamburger{
@@ -16,12 +29,13 @@
 
     .navigation{
         display: block;
+        grid-column: 3/4;
     }
 
     .navigation ul{
         display: flex;
         gap: .5rem;
-        justify-content: right;
+        justify-content: flex-end;
     }
 
     .navigation a{
@@ -40,6 +54,10 @@
 
     .card{
         max-width: 300px;
+    }
+
+    footer{
+        flex-direction: row;
     }
 
 }
