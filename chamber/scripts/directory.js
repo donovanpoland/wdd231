@@ -164,6 +164,9 @@ function createCard(member, index, container) {
     // Create a new card
     const card = document.createElement("section");
     card.classList.add("card");
+    if (index > 3) {
+        card.classList.add("animate");
+    }
 
     // Image
     const img = document.createElement("img");

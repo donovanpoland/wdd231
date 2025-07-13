@@ -49,9 +49,6 @@
     align-items: center;
     padding: 1rem;
     transition: transform 0.2s ease;
-    opacity: 0;
-    transform: translateX(350px);
-    animation: fadeInUp 0.7s ease forwards;
     position: relative;
 }
 
@@ -75,6 +72,12 @@
 
 .card a:hover{
     scale: 1.05;
+}
+
+.card .animate{
+    opacity: 0;
+    transform: translateX(350px);
+    animation: fadeInUp 0.7s ease forwards;
 }
 
 @keyframes fadeInUp {
