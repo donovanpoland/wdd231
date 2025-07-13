@@ -30,6 +30,7 @@ button:hover{
 header{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
     padding: 3rem;
     align-items: center;
     max-width: fit-content;
@@ -53,9 +54,10 @@ header span{
     display: flex;
     flex-wrap: wrap;
     font-size: 2rem;
-    grid-row: 2;
+    grid-row: 3;
     grid-column: 1/-1;
     text-align: center;
+    color: var(--primary-color);
 }
 
 .navigation{
