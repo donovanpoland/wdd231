@@ -23,11 +23,18 @@ function displayGrid(members) {
     // Erase all old data
     cards.innerHTML = "";
 
-    console.log("Injecting first card:", members[0].name);
+    // Inject first 4 cards right away to avoid large layout shifts, slowly load others
+    // console.log("Injecting first card:", members[0].name);
     createCard(members[0], 0, cards);
+    // console.log("Injecting second card:", members[1].name);
+    createCard(members[1], 1, cards);
+    // console.log("Injecting third card:", members[2].name);
+    createCard(members[2], 2, cards);
+    // console.log("Injecting fourth card:", members[3].name);
+    createCard(members[3], 3, cards);
 
     // Create member info
-    members.slice(1).forEach((member, index) => {
+    members.slice(4).forEach((member, index) => {
         const timeout = setTimeout(() => {
             createCard(member, index + 1, cards);
         }, index * 700);
@@ -115,7 +122,7 @@ async function getMemberData() {
     // Log data(jason file) to console in table format to the console
     // console.table(data.members);
 
-    // Default selection
+    // Default display selection
     displayGrid(data.members);
     // displayList(data.members);
     
@@ -169,7 +176,7 @@ function createCard(member, index, container) {
     if (index === 0) {
         img.setAttribute("id", "first-image");
         img.setAttribute("fetchpriority", "high");
-        console.log('Rendering first card')
+        // console.log('Rendering first card')
     } else {
         img.setAttribute("loading", "lazy");
     }
