@@ -192,7 +192,7 @@ function createCard(member, index, container) {
     const address = document.createElement("p");
     address.classList.add("address");
     address.innerHTML =
-        `${member.address.street}<br>${member.address.city}
+        `${member.address.street}, ${member.address.city}<br>
         ${member.address.state}, ${member.address.zip}`;
 
     // Phone

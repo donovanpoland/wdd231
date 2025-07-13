@@ -61,10 +61,6 @@ section{
     min-width: 15rem;
 }
 
-.address{
-    display: inline-block;
-}
-
 .address::after{
     content: "📍";
     margin-left: 1rem;

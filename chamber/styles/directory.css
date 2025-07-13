@@ -7,6 +7,37 @@
     
 }
 
+.page-intro{
+    padding: 1rem;
+    text-indent: 1rem;
+    position: relative;
+}
+
+.page-intro:before{
+    position: absolute;
+    content: '“';
+    font-size: 3rem;
+    color: var(--secondary-color);
+    left:0;
+    top: 0;
+}
+.page-intro:after{
+    position: absolute;
+    content: '„';
+    font-size: 3rem;
+    color: var(--secondary-color);
+    right:0;
+    bottom: 0;
+}
+
+.view-switch{
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    padding: 1rem;
+    border-bottom: dotted;
+}
+
 .card {
     height: 500px;
     width: 100%;
@@ -92,12 +123,6 @@
         scale: 1.01;
 }
 
-.view-switch{
-    display: flex;
-    gap: .5rem;
-    justify-content: center;
-    padding: .5rem;
-}
 
 .list-style ul li:nth-child(4){
         margin-top: .1rem;

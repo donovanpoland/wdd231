@@ -48,10 +48,10 @@ header{
     height: 64px;
 }
 
-header h1{
+header span{
     display: flex;
     flex-wrap: wrap;
-
+    font-size: 2rem;
 }
 
 .navigation{
