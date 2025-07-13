@@ -29,7 +29,7 @@ button:hover{
 
 header{
     display: grid;
-    grid-template-columns: 64px 139px 1fr;
+    grid-template-columns: 64px 1fr 1fr;
     padding: 3rem;
     align-items: center;
     height: auto;

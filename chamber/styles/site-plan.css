@@ -1,7 +1,11 @@
 :root {
-    --primary-color: #2E86AB;
+    --primary-color: #184781;
     --secondary-color: #F5B041;
-    --bg-color: #E6F2F7;
+    --accent1: #F8C978;
+    --accent2: #123E6D;
+    --bg-color: #EAF4FB;
+    --bg-accent1: #D1E7F5;
+    --bg-accent2: #8BC3E4;
     --text-color: #2C3E50;
 }
 
@@ -24,7 +28,7 @@ body{
     font-style: normal;
 }
 
-h1, h2{
+h1, h2, h3{
     text-align: center;
     color: var(--primary-color);
 }
@@ -41,13 +45,16 @@ main > section:last-of-type{
 }
 
 section{
-    text-align: center;
-    border: 1px solid black;
+    text-align: left;
+    border: 1px solid var(--secondary-color);
     border-radius: .5rem;
     padding: 1rem;
     color: var(--text-color);
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-accent1);
+}
 
+section:nth-child(even){
+    background-color: var(--bg-accent2);
 }
 
 ul{
