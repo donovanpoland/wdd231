@@ -96,14 +96,6 @@ function displayList(members) {
             member.phone
         ];
 
-        // Image
-        const img = document.createElement("img");
-        img.setAttribute("src", member.image)
-        img.setAttribute("alt", `Logo of ${member.name}`)
-        img.setAttribute("loading", "lazy");
-        img.setAttribute("width", "125");
-        img.setAttribute("height", "125");
-
         // Create a list
         const list = document.createElement("ul");
 
@@ -124,16 +116,25 @@ function displayList(members) {
         website.setAttribute("target", "_blank");
         website.textContent = member.website;
 
-        // Create another list item
+        // Create website list item
         const websiteItem = document.createElement("li");
         websiteItem.appendChild(website);
         list.appendChild(websiteItem);
+
+        // create image list item
+        const imageItem = document.createElement("img");
+        imageItem.setAttribute("src", member.image)
+        imageItem.setAttribute("alt", `Logo of ${member.name}`)
+        imageItem.setAttribute("loading", "lazy");
+        imageItem.setAttribute("id", "image-item");
+        imageItem.setAttribute("width", "125");
+        imageItem.setAttribute("height", "125");
+        list.appendChild(imageItem);
         
         // Add to card
         listStyle.appendChild(list);
 
         // Add to page
-        listStyle.appendChild(img);
         row.appendChild(listStyle);
     });
 }

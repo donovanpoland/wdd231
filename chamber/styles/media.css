@@ -35,18 +35,19 @@
 
 }
 
-@media only screen and (min-width: 900px){
+@media only screen and (min-width: 64.1rem){
     .list-style ul{
         display: grid;
-        grid-template-columns: 250px 225px 125px 1fr;
+        grid-template-columns: 250px 225px 125px 1fr 100px;
+        min-height: 50px;
     }
 
-    .list-style ul li:last-child{
+    .list-style ul li:nth-child(4){
         text-align: right;
     }
-
-    .list-style img{
-        display: none;
-    }
     
+    img#image-item{
+        width: 75px;
+        height: auto;
+    }
 }

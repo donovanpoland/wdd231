@@ -77,11 +77,17 @@ section{
     justify-content: left;
     min-width: 300px;
     width: 100%;
+
 }
+
+.list-style #member-image{
+        display: none;
+    }
 
 .list-style ul li{
     text-align: left;
     justify-content: left;
+    align-items: center;
 }
 
 .list-style:nth-child(even){
