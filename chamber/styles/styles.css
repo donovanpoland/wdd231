@@ -67,7 +67,11 @@ section{
 
 .address::after{
     content: "📍";
-    margin-bottom: .5rem;
+    margin-left: 1rem;
+}
+
+.phone::after{
+    content: "📱";
     margin-left: 1rem;
 }
 

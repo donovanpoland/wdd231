@@ -52,6 +52,7 @@ function displayGrid(members) {
         
         // Phone
         const phone = document.createElement("p");
+        phone.classList.add("phone");
         phone.textContent = member.phone;
 
         // Website
