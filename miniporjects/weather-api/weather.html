@@ -1,11 +1,45 @@
-<h1>OpenWeatherMap.org API Test</h1>
-<main>
-  <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
-  <figure>
-    <img id="weather-icon" src="" alt="">
-    <figcaption></figcaption>
-  </figure>
-</main>
-<footer>
-  [Donovan Poland] | OpenWeatherMap.org | CC BY-SA 4.0
-</footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page Title goes here</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Keywords go here.">
+    <meta name="author" content="Donovan Poland">
+    <meta name="description" content="replace with page description">
+    <meta name="robots" content="index, follow">
+    <!-- Scripts -->
+    <script type="module" src="scripts/weather.js"></script>
+    <!-- CSS style sheets -->
+    <link rel="stylesheet" href="styles/weather.css">
+    <!-- Font links-->
+    <link rel="preconnect" href="">
+    <link rel="preconnect" href="" crossorigin>
+    <link href="" rel="stylesheet">
+    <!-- Open Graph protocol meta tags -->
+    <meta property="og:description" content="replace with page description">
+    <meta property="og:image" content="link to image here">
+    <meta property="og:locale" content="en_US">
+    <!-- Favicon.ico -->
+    <link rel="icon" href="">
+</head>
+<body>
+  <header>
+
+  </header>
+  <h1>OpenWeatherMap.org API Test</h1>
+  <main>
+    <div class="weather">
+      <p>The current temperature in <span id="name"></span> is <span id="current-temp"></span></p>
+      <figure>
+        <img id="weather-icon" src="" alt="">
+        <figcaption></figcaption>
+      </figure>
+    </div>
+  </main>
+  <footer>
+    [Donovan Poland] | OpenWeatherMap.org | CC BY-SA 4.0
+  </footer>
+</body>
+</html>
+
