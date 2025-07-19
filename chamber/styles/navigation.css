@@ -34,7 +34,7 @@ header{
     grid-template-rows: auto auto auto;
     padding: 3rem;
     align-items: center;
-    max-width: fit-content;
+    width: 500px;
     height: auto;
     padding: 8px;
     gap: 1rem;
