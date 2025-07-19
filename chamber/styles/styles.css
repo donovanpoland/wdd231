@@ -36,7 +36,9 @@ h1, h2, h3 {
     text-align: center;
     width: 100%;
 }
+
 /* min-width: 15rem; */
+
 main{
     display: flex;
     flex-direction: column;
@@ -47,7 +49,7 @@ main{
     padding: 1rem;
 }
 
-section{
+section, .section{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -72,6 +74,65 @@ section{
     margin-left: 1rem;
 }
 
+
+.hero-image{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.card {
+    height: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 1rem;
+    transition: transform 0.2s ease;
+    position: relative;
+    margin: 0 auto;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  height: auto;
+}
+
+.card img{
+    margin: 0 auto;
+}
+
+.card a{
+    position: absolute;
+    bottom: .5rem;
+}
+
+.card a:hover{
+    scale: 1.05;
+}
+
+.card .animate{
+    opacity: 0;
+    transform: translateX(350px);
+    animation: fadeInUp 0.7s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Footer */
+
 .ch-address{
     text-align: left;
 }
@@ -90,11 +151,4 @@ footer section{
     gap: 0;
     box-shadow: none;
     font-size: .9rem;
-}
-
-.hero-image{
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
 }

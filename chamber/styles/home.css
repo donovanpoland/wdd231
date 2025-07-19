@@ -41,3 +41,24 @@
     object-fit: cover;
     border-radius: .5rem;
 }
+
+.highlights, .weather, .reviews{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
+.highlights h2:first-child, .weather h2:first-child, .reviews h2:first-child{
+    grid-column: 1/-1;
+}
+
+.socials ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.socials ul li a{
+    display: hidden;
+}
