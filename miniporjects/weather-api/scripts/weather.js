@@ -8,7 +8,7 @@ import { displayResults } from './output.js';
 if (canMakeApiCall() && hasCooldownPassed()) {
     apiFetch();
 } else {
-    console.log("Cooldown active or limit hit.");
+    console.log("Cooldown active or limit hit. Refresh in 10 seconds.");
 }
 
 async function apiFetch() {

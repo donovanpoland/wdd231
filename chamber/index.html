@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/navigation.css">
     <link rel="stylesheet" href="styles/media.css">
+    <link rel="stylesheet" href="styles/home.css">
     <!-- Font links-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,20 +42,62 @@
     </nav>
 </header>
 <main>
-    <section>
-        <h1>mission</h1>
-        <img src="" alt="">
-        <button>Join</button>
-        <p>The home page will contain some attention grabbing information along with community information, weather, calls to action, and business spotlights.</p>
+    <section class="hero">
+        <div class="hero-image">
+            <h1>Connect. Grow. Thrive — Right Here in Mapleton.</h1>
+            <picture>
+                <source
+                    srcset=
+                        "images/hero/mapleton-hero-480 480w,
+                        images/hero/mapleton-hero-768.webp 768w,
+                        images/hero/mapleton-hero-1200.webp 1200w"
+
+                    type="image/webp"
+                    sizes="(max-width: 600px) 100vw, 1200px">
+                <img 
+                    src="images/hero/mapleton-hero-1200.webp" 
+                    alt="Welcome to Mapleton, Utah" 
+                    width="1200" height="800" 
+                    loading="eager" 
+                    fetchpriority="high">
+            </picture>
+            <button>Become A Member Today</button>
+        </div>
     </section>
 
-    <section>
-        <h2>Highlights</h2>
+    <section class="mission">
+        <h2>Our Mission</h2>
+        <p>To support local businesses, foster community growth, and promote economic development in Mapleton through meaningful partnerships and proactive outreach.</p>
     </section>
 
-    <section>
+    <section class="weather">
         <h2>Weather</h2>
+        <div>
+            <section>
+                <h3>Current Weather</h3>
+                <p id="temp"></p>
+                <p id="desc"></p>
+                <p id="high"></p>
+                <p id="low"></p>
+                <p id="humidity"></p>
+                <p id="sunrise"></p>
+                <p id="sunset"></p>
+            </section>
+            <br>
+            <section>
+                <h3>Three Day Forecast</h3>
+                <p id="now"></p>
+                <p id="next-day"></p>
+                <p id="day-after"></p>
+            </section>
+        </div>
     </section>
+
+    <section>
+        <h2>Business Highlights</h2>
+    </section>
+
+    
         
     <section>
         <h2>What our members say</h2>
@@ -78,9 +121,9 @@
         <h3>Contact us</h3>
         <p><strong>Chamber of Commerce</strong></p>
         <address class="ch-address">
-            <p>Phone: 801-555-7890</p>
             <p class="address">125 Civic Center Drive</p>
             <p>Mapleton, UT 84664</p>
+            <p class="phone">801-555-7890</p>
             <p>Email: info@mapletonchamber.org</p>
         </address>
     </section>

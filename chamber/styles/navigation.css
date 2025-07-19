@@ -8,6 +8,7 @@ a{
     background-color: var(--bg-color);
 }
 
+
 a:hover,
 a:focus {
   color: var(--primary-color);
@@ -83,6 +84,15 @@ header span{
     padding: 1rem;
 }
 
+.navigation .current a{
+    background-color: var(--accent1);
+    border-bottom: .5rem var(--primary-color) solid;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 4px 6px 12px black;
+}
+
+
 .hamburger{
     background: none;
     border: none;
@@ -108,12 +118,12 @@ header span{
     cursor: pointer;
     text-decoration: none;
     padding: 1rem;
-    min-width: 48px;
     border: 1px solid black;
     border-radius: .5rem;
     background-color: var(--secondary-color);
     box-shadow: 0px 2px 8px black;
     transition: box-shadow 0.3s ease;
+    font-size: 1.3rem;
 }
 
 .navigation a:hover{
