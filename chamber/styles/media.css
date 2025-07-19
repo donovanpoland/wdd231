@@ -16,11 +16,14 @@
         grid-column: 2/3;
         justify-content: start;
         text-align: left;
-
     }
 
     .hamburger{
         display: none;
+    }
+
+    .hero-image img{
+        max-width: 1300px;
     }
 
     .navigation{
@@ -44,12 +47,25 @@
         border-radius: .5rem;
     }
 
-    .directory{
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
     .card{
         max-width: 300px;
+    }
+
+    .hero h1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+    }
+
+    .hero-image img {
+        border-radius: .5rem;
+    }
+
+    .hero-image button{
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
 
     footer{

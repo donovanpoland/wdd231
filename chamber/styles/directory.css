@@ -1,5 +1,5 @@
 .directory{
-    min-height: fit-content;
+    min-height: auto;
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -38,7 +38,6 @@
     padding: 1rem;
     border-bottom: dotted;
 }
-
 
 .list-style{
     width: 100%;
