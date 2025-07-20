@@ -1,6 +1,6 @@
-import url from './url.js';
-import { canMakeApiCall, hasCooldownPassed } from './apicall.js';
-import { displayResults } from './output.js';
+import url from './url.mjs';
+import { canMakeApiCall, hasCooldownPassed } from './apicall.mjs';
+import { displayResults } from './output.mjs';
 
 
 

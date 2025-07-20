@@ -11,6 +11,8 @@
     <!-- Scripts -->
     <script src="../scripts/date-finder.js" defer></script>
     <script src="../scripts/navigation.js" defer></script>
+    <!-- <script type="module" src="scripts/weather-modules/weather.js"></script>
+    <script type="module" src="scripts/weather-modules/map.js"></script> -->
     <!-- CSS style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/navigation.css">
@@ -42,7 +44,7 @@
     </nav>
 </header>
 <main>
-    <section class="section hero">
+    <div class="section hero">
         <div class="hero-image">
             <h1>Connect. Grow. Thrive — Right Here in Mapleton.</h1>
             <picture>
@@ -63,7 +65,7 @@
             </picture>
             <button>Become A Member Today</button>
         </div>
-    </section>
+    </div>
 
     <section class="mission">
         <h2>Our Mission</h2>
@@ -71,29 +73,38 @@
     </section>
 
     <div class="section weather">
-        <h2>Mapleton, UT</h2>
-        <section class="card">
-            <h2>Current Event</h2>
-            <img src="" alt="" width="150px" height="100px">
-            <p>event details</p>
-            <button>RSVP</button>
-            <button>Check Calender</button>
+        <h2 id="city"></h2>
+        <section class="card map">
+            <h3>Weather Map</h3>
+            <label for="layer-select">Track weather in the greater Utah area:</label>
+            <select id="layer-select">
+                <option value="clouds_new">Clouds</option>
+                <option value="precipitation_new">Precipitation</option>
+                <option value="temp_new" selected>Temperature</option>
+                <option value="wind_new">Wind</option>
+                <option value="pressure_new">Pressure</option>
+            </select>
+            <div id="map"></div>
         </section>
-        <section class="card">
+        <section class="card weather-card">
             <h3>Current Weather</h3>
             <p id="temp"></p>
-            <p id="desc"></p>
-            <p id="high"></p>
-            <p id="low"></p>
-            <p id="humidity"></p>
-            <p id="sunrise"></p>
-            <p id="sunset"></p>
+            <figure class="weather-icon">
+                <figcaption id="desc"></figcaption>
+                <img id="weather-icon" src="images/cloud-solid.svg" alt="Cloudy" title="Cloudy">
+            </figure>
+            <p id="high">High: 0</p>
+            <p id="low">Low: 0</p>
+            <p id="humidity">Humidity: 0%</p>
+            <p id="time">Local time: 00:00 AM</p>
+            <p id="sunrise">06:00 AM</p>
+            <p id="sunset">18:00 PM</p>
         </section>
         <section class="card">
             <h3>Three Day Forecast</h3>
-            <p id="now"></p>
-            <p id="next-day"></p>
-            <p id="day-after"></p>
+            <p><span id="forecastTomorrow">Monday:</span> <span id="tomorrowHigh">High: 0</span> <span id="tomorrowLow">Low: 0</span></p>
+            <p><span id="forecastNext">"Tuesday:</span> <span id="nextHigh">High: 0</span> <span id="nextLow">Low: 0</span></p>
+            <p><span id="forecastAfter">Wednesday:</span> <span id="afterHigh">High: 0</span> <span id="afterLow">Low: 0</span></p>
         </section>
     </div>
 
@@ -175,5 +186,10 @@
         </address>
     </section>
 </footer>
+<!-- Load Google Maps -->
+<!-- <script 
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA__NMUt5ZQZziALBweGuU0_tGVnMhA_UQ&callback=initMap"
+    async defer loading="lazy"> -->
+</script>
 </body>
 </html>

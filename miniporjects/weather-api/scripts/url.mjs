@@ -1,4 +1,4 @@
-import { apiKey } from '../../../scripts/api-key.js';
+import { apiKey } from '../../../scripts/api-key.mjs';
 
 // Trier, Germany
 const lat = 49.75;
