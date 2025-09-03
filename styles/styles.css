@@ -1,0 +1,144 @@
+/** 
+    ---------------- Color scheme ----------------------- 
+        primary color: 
+        secondary color: 
+
+**/
+
+/* Page wide */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(70, 83, 107, .25);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header, footer{
+    background-color: rgba(70, 83, 107, .5);
+}
+
+/** Header **/
+
+header {
+  display: grid;
+  grid-template-columns: 24px auto 44px;
+  gap: 8px;
+  align-items: center;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-left: .5rem;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: black;
+    margin-left: .5rem;
+}
+
+/** Hamburger **/
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+  content: "\2630";
+  font-size: 2rem;
+}
+
+.hamburger.show::before {
+  content: "\00D7";
+}
+
+/** Navigation **/
+
+.navigation {
+    grid-column: 1/-1;
+    
+}
+
+.navigation ul {
+    list-style: none;
+    background-color: rgba(70, 83, 107);
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation a {
+    display: block;
+    color: white;
+    padding: .8rem 10px;
+    border-bottom: 1px solid #ddd;
+    transition: box-shadow 0.3s ease;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.current a {
+    color: yellow;
+}
+
+.navigation li:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+/** Footer **/
+
+footer {
+    border-top: solid black 1px;
+    padding: .5rem;
+    text-align: center;
+}
+
+/* section.modified from date-finder.js */
+/* .modified {
+    
+} */
+
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.socials a{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials img{
+    border: 2px solid black;
+    border-radius: 2rem;
+    padding: .25rem; /* 4px */
+}
+
+.socials img:hover{
+    border-color: yellow;
+}
+
+
+

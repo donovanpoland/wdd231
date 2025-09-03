@@ -1,0 +1,45 @@
+@media only screen and (min-width: 38rem){
+
+    header, main, nav{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header{
+        grid-template-columns: 24px auto;
+        height: 80px;
+    }
+
+    header span::before{
+        content: "WDD 231 - ";
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul{
+        flex-direction: row;
+    }
+
+    .navigation a{
+        border: none;
+    }
+
+    .navigation li:hover{
+    box-shadow: 4px 6px 12px black;
+    }
+
+    .navigation li.current:hover {
+    box-shadow: 4px 6px 12px yellow;
+    }
+
+    footer .social img:hover{
+        box-shadow: 4px 6px 12px black;
+    }
+
+}
