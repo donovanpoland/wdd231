@@ -6,26 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Keywords go here.">
     <meta name="author" content="Donovan Poland">
-    <meta name="description" content="replace with page description">
+    <meta name="description" content="Landing profile page for Donovan Poland for WDD231.">
     <meta name="robots" content="index, follow">
     <!-- Scripts -->
     <script src="scripts/scripts.js" defer></script>
-    <script src="scripts/date-finder.js" defer></script>
+    <script src="scripts/last-modified.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
     <!-- CSS style sheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/media.css">
-    <!-- Font links-->
-    <link rel="preconnect" href="">
+    <!-- Font links (commented out)-->
+    <!-- <link rel="preconnect" href="">
     <link rel="preconnect" href="" crossorigin>
-    <link href="" rel="stylesheet">
+    <link href="" rel="stylesheet"> -->
     <!-- Open Graph protocol meta tags -->
-     <meta property="og:title" content="WDD231 - Home - Donovan Poland">
+    <meta property="og:title" content="WDD231 - Home - Donovan Poland">
     <meta property="og:image" content="link to image here">
-    <meta property="og:description" content="replace with page description">
+    <meta property="og:description" content="Landing profile page for Donovan Poland for WDD231.">
     <meta property="og:locale" content="en_US">
     <!-- Favicon.ico -->
-    <link rel="icon" href="">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
 <header>
@@ -42,13 +43,43 @@
     </nav>
 </header>
 <main>
-    <h1></h1>
+    <div class="layout">
+        <h1>Home</h1>
+        <section>
+            <h2>About Me</h2>
+            <p class="indent">My Name is Donovan, I love the problem solving that programming offers. 
+                    I find both front-end and back-end fascinating with all of their capabilities. 
+                    Front-end is satisfying because you are able to see everything you make clearly.
+                    Back-end is extremely powerful and capable of so many things its beautiful and I love it.
+                    I am Married and have a growing family, my daughter is <span id="daughter"></span> and my son is only <span id="son"></span>.
+                    I'm excited to learn more and look forward to this course.
+                </p>
+        </section>
+        <section>
+            <h2>Student Photo</h2>
+            <img src="images/portrait.webp" alt="Portrait of Donovan Poland" width="400" height="320">
+        </section>
+        <section>
+            <h2>Web & Computer Programming Certificate Courses</h2>
+            <p class="center">Click a Button to see current courses and requirements.</p>
+            <div class="buttons">
+                <button class="filter-btn" data-subject="All">All</button>
+                <button class="filter-btn" data-subject="CSE">CSE</button>
+                <button class="filter-btn" data-subject="WDD">WDD</button>
+            </div>
+            <p class="course-count"></p>
+            <p class="credits"></p>
+            <ul class="course-list">
+                <!-- Course list items inserted here by JS -->
+            </ul>
+        </section>
+    </div>
 </main>
 <footer>
     <div class="socials">
-        <a href="" target="_blank"><img src="images/linkedin-brands.svg" alt="LinkedIn" width="39px" height="39px"></a>
-        <a href="" target="_blank"><img src="images/github-brands.svg" alt="Github" width="39px" height="39px"></a>
-        <a href="" target="_blank"><img src="images/codepen-brands.svg" alt="CodePen" width="39px" height="39px"></a>
+        <a href="https://www.linkedin.com/in/donovanpoland/" target="_blank"><img src="images/linkedin-brands.svg" alt="LinkedIn" width="39px" height="39px"></a>
+        <a href="https://github.com/donovanpoland" target="_blank"><img src="images/github-brands.svg" alt="Github" width="39px" height="39px"></a>
+        <a href="https://codepen.io/Donovan-Poland" target="_blank"><img src="images/codepen-brands.svg" alt="CodePen" width="39px" height="39px"></a>
     </div>
     <!-- date, name, last modified section inserted here by JS -->
 </footer>

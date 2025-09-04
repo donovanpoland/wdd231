@@ -1,6 +1,6 @@
 @media only screen and (min-width: 38rem){
 
-    header, main, nav{
+    header, main, nav, footer{
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -35,7 +35,7 @@
     }
 
     .navigation li.current:hover {
-    box-shadow: 4px 6px 12px yellow;
+    box-shadow: 4px 6px 12px red;
     }
 
     footer .social img:hover{

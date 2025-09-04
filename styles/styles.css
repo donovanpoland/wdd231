@@ -1,6 +1,6 @@
 /** 
     ---------------- Color scheme ----------------------- 
-        primary color: 
+        primary color: rgba(70, 83, 107);
         secondary color: 
 
 **/
@@ -25,6 +25,15 @@ a {
 header, footer{
     background-color: rgba(70, 83, 107, .5);
 }
+
+.indent{
+  text-indent: 1rem;
+}
+
+.center{
+    text-align: center;
+}
+
 
 /** Header **/
 
@@ -97,11 +106,128 @@ header span {
 }
 
 .current a {
-    color: yellow;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+li.current a::after {
+    content: 🎯;
 }
 
 .navigation li:hover {
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .3);
+}
+
+main .buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: .5rem;
+  padding: 8px 8px;
+}
+
+main .buttons button{
+  background-color: #bbb;
+  box-shadow: 4px 6px 12px black;
+  border: 2px #aaa solid;
+  border-radius: .5rem;
+  padding: .5rem;
+  font-size: 1.55rem;
+  transition: color 0.3s ease-in, box-shadow 0.3s ease-out;
+  cursor: pointer;
+}
+
+main button:hover{
+  color: red;
+  background-color: #ddd;
+  box-shadow: 0px 2px 8px black;
+}
+
+/* Main */
+
+h1{
+  margin: 0;
+  padding: 0 8px;
+}
+
+h2, h3{
+    text-align: center;
+    background-color: rgba(70, 83, 107);
+    border: 1px solid rgba(70, 83, 107);
+    padding: 4px;
+    margin: -4px;
+}
+
+.layout{
+    display: grid;
+    gap: 1em;
+    padding: 8px;
+}
+
+main section{
+    border-radius: .5rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+main section img{
+  display: block;
+  width: 90%;
+  height: auto;
+  background-color: #bbb;
+  margin: 8px auto;
+  padding: 8px;
+  border: #aaa;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+main section p{
+  padding: 1rem;
+  color: black;
+  line-height: 1.5;
+}
+
+/* Courses */
+
+.course-list{
+  display: flex;
+  list-style: none;
+  gap: .5rem;
+  padding: 8px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.course-list li{
+  border: 2px #aaa solid;
+  border-radius: .5rem;
+  padding: 8px;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+li.true{
+  background-color: #bbb;
+  border-color: green;
+}
+
+li.true::before{
+  content: "✔";
+  color: green;
+  margin-right: 8px;
+}
+
+li.false{
+  background-color: #ddd;
+  border-color: red;
+}
+
+li.false::before{
+  content: "❌";
+  margin-right: 8px;
+}
+.course-count, .credits{
+  text-align: center;
+  padding: .25rem;
 }
 
 /** Footer **/
@@ -137,7 +263,7 @@ footer {
 }
 
 .socials img:hover{
-    border-color: yellow;
+    border-color: red;
 }
 
 
