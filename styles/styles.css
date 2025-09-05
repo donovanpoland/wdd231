@@ -23,7 +23,7 @@ a {
 }
 
 header, footer{
-    background-color: rgba(70, 83, 107, .5);
+    background-color: rgba(0, 0, 0, .1);
 }
 
 .indent{
@@ -84,17 +84,8 @@ header span {
 
 .navigation ul {
     list-style: none;
-    background-color: rgba(70, 83, 107);
     display: flex;
     flex-direction: column;
-}
-
-.navigation a {
-    display: block;
-    color: white;
-    padding: .8rem 10px;
-    border-bottom: 1px solid #ddd;
-    transition: box-shadow 0.3s ease;
 }
 
 .navigation {
@@ -105,16 +96,12 @@ header span {
     display: block;
 }
 
-.current a {
-    background-color: rgba(0, 0, 0, .2);
+.navigation li{
+  border-radius: .5rem;
 }
 
 li.current a::after {
-    content: 🎯;
-}
-
-.navigation li:hover {
-    background-color: rgba(0, 0, 0, .3);
+    content: "🎯";
 }
 
 main .buttons{
@@ -124,22 +111,29 @@ main .buttons{
   padding: 8px 8px;
 }
 
-main .buttons button{
-  background-color: #bbb;
+main .buttons button, .navigation a{
+  color: white;
+  display: block;
+  background-color: rgba(70, 83, 107);
   box-shadow: 4px 6px 12px black;
   border: 2px #aaa solid;
   border-radius: .5rem;
   padding: .5rem;
-  font-size: 1.55rem;
-  transition: color 0.3s ease-in, box-shadow 0.3s ease-out;
+  transition: color 0.3s ease-in, background-color 0.3s ease-in, box-shadow 0.3s ease-out;
   cursor: pointer;
 }
 
-main button:hover{
+.navigation li.current a {
+     background-color: rgb(47, 55, 72);
+}
+
+main button:hover, .navigation a:hover, .navigation li.current a:hover {
   color: red;
   background-color: #ddd;
   box-shadow: 0px 2px 8px black;
 }
+
+
 
 /* Main */
 
@@ -154,6 +148,7 @@ h2, h3{
     border: 1px solid rgba(70, 83, 107);
     padding: 4px;
     margin: -4px;
+    color: white
 }
 
 .layout{

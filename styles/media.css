@@ -24,6 +24,8 @@
 
     .navigation ul{
         flex-direction: row;
+        gap: 1rem;
+        background-color: transparent;
     }
 
     .navigation a{
