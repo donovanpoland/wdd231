@@ -1,7 +1,6 @@
 /** 
     ---------------- Color scheme ----------------------- 
         primary color: rgba(70, 83, 107);
-        secondary color: 
 
 **/
 
@@ -133,8 +132,6 @@ main button:hover, .navigation a:hover, .navigation li.current a:hover {
   box-shadow: 0px 2px 8px black;
 }
 
-
-
 /* Main */
 
 h1{
@@ -228,15 +225,9 @@ li.false::before{
 /** Footer **/
 
 footer {
-    border-top: solid black 1px;
     padding: .5rem;
     text-align: center;
 }
-
-/* section.modified from date-finder.js */
-/* .modified {
-    
-} */
 
 .socials {
     display: flex;

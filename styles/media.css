@@ -44,4 +44,16 @@
         box-shadow: 4px 6px 12px black;
     }
 
+    .layout{
+        grid-template-columns: 2.5fr 1.5fr;
+    }
+
+    .layout h1{
+        grid-column: 1/-1;
+    }
+
+    .layout section:last-child{
+        grid-column: 1/-1;
+    }
+
 }
