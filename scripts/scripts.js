@@ -6,6 +6,12 @@ navButton.addEventListener('click', () => {
     navBar.classList.toggle('show');
 });
 
+// Listen for window resize and remove show class
+window.addEventListener("resize", () => {
+  navButton.classList.remove('show');
+  navBar.classList.remove('show');
+});
+
 const daughter = document.querySelector('#daughter')
 const son = document.querySelector('#son')
 
