@@ -1,3 +1,4 @@
+// Add class for showing navigation on hamburger button click
 const navButton = document.querySelector('#ham-btn');
 const navBar = document.querySelector('#nav-bar')
 
@@ -12,6 +13,8 @@ window.addEventListener("resize", () => {
   navBar.classList.remove('show');
 });
 
+
+// Dynamically change number of month/weeks/years of child's age in paragraph based on current date.
 const daughter = document.querySelector('#daughter')
 const son = document.querySelector('#son')
 
