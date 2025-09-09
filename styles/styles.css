@@ -70,12 +70,12 @@ header span {
 }
 
 .hamburger::before {
-  content: "\2630";
-  font-size: 2rem;
+    content: "\2630";
+    font-size: 2rem;
 }
 
 .hamburger.show::before {
-  content: "\00D7";
+    content: "\00D7";
 }
 
 /** Navigation **/

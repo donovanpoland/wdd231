@@ -1,0 +1,37 @@
+
+:root{
+    --font-lancelot: "Lancelot", serif;
+    --font-roboto: "Roboto", sans-serif;
+    --font-weight: 400;
+    --primary-color:  #9EC4F0; /* Icy cool blue */
+    --secondary-color: #3B5D3B; /* Evergreen */
+    --background-color: #303030; /* Darker Mountain Grey */
+    --text-color: #e9e3dc ; /* Light Mountain Grey */
+    --text-color2: #FAFAFA; /* Off white */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    /* fonts */
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--font-weight);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3{
+    /* fonts */
+    font-family: var(--font-lancelot);
+    font-weight: var(--font-weight);
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}

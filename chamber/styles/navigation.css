@@ -1,0 +1,103 @@
+/** Header **/
+
+header {
+    display: grid;
+    grid-template-columns: 100px auto 44px;
+    gap: 8px;
+    align-items: center;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;
+}
+
+header span {
+    font-size: 1.2rem;
+    font-family: var(--font-lancelot);
+    color: var(--primary-color);
+    margin-left: .5rem;
+}
+
+/** Hamburger **/
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+    color: var(--primary-color);
+}
+
+/** Navigation **/
+
+.navigation {
+    grid-column: 1/-1;
+    
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation li{
+    border-radius: .5rem;
+}
+
+li.current a::after {
+    margin-left: .5rem;
+    content: "🚠";
+}
+
+main .buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .5rem;
+    padding: 8px 8px;
+}
+
+main .buttons button, .navigation a{
+    color: var(--text-color2);
+    display: block;
+    background-color: var(--secondary-color);
+    box-shadow: 4px 6px 12px black;
+    border: 2px var(--secondary-color) solid;
+    border-radius: .5rem;
+    padding: .5rem;
+    transition: color 0.3s ease-in, background-color 0.3s ease-in, box-shadow 0.3s ease-out;
+    cursor: pointer;
+}
+
+.navigation li.current a {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 2px var(--primary-color) solid;
+}
+
+main button:hover, .navigation a:hover, .navigation li.current a:hover {
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    box-shadow: 0px 2px 8px black;
+}
