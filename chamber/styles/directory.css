@@ -17,3 +17,26 @@
 .view-switch button:hover{
     background-color: var(--secondary-color);
 }
+
+.directory{
+    display: grid;
+    /* repeat grids of 250px min or 350px max */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted white;
+}
+
+.card img{
+    border: 1px dotted white;
+
+}

@@ -17,15 +17,13 @@
 }
 
 body{
-    /* fonts */
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-roboto);
     font-weight: var(--font-weight);
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
 h1, h2, h3{
-    /* fonts */
     font-family: var(--font-lancelot);
     font-weight: var(--font-weight);
     color: var(--primary-color);
@@ -34,4 +32,11 @@ h1, h2, h3{
 a {
     text-decoration: none;
     color: var(--primary-color);
+}
+
+/* Footer */
+
+footer{
+    display: grid;
+    gap: 1rem;
 }
