@@ -4,4 +4,19 @@
         max-width: 1400px;
         margin: 0 auto;
     }
+
+    .navigation ul{
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    footer{
+        grid-template-columns: 1fr 1fr 1fr;
+        border: 1px dotted white; /* TEMPORARY */
+    }
+
+    footer div{
+        justify-content: center;
+        align-items: center;
+    }
 }

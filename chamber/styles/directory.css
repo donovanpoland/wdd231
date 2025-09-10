@@ -4,7 +4,6 @@
     justify-content: center;
     padding: 1rem;
     border-bottom: dotted;
-    
 }
 
 .view-switch button{
@@ -33,10 +32,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px dotted white;
+    border: 1px dotted white; /* TEMPORARY */
 }
 
 .card img{
-    border: 1px dotted white;
+    border: 1px dotted white; /* TEMPORARY */
 
 }
