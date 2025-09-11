@@ -13,9 +13,6 @@
     footer{
         grid-template-columns: 1fr 1fr 1fr;
         border: 1px dotted white; /* TEMPORARY */
-    }
-
-    footer div{
         justify-content: center;
         align-items: center;
     }

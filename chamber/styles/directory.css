@@ -33,9 +33,17 @@
     justify-content: center;
     align-items: center;
     border: 1px dotted white; /* TEMPORARY */
+    border-radius: .5rem;
+    background-color: rgba(250, 250, 250, .2);
+    gap: .5rem;
+    padding: .5rem;
 }
 
 .card img{
-    border: 1px dotted white; /* TEMPORARY */
+    border-radius: .5rem;
+}
 
+.business-head{
+    display: flex;
+    gap: 1rem;
 }
