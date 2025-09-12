@@ -29,6 +29,10 @@ h1, h2, h3{
     color: var(--primary-color);
 }
 
+h1{
+    padding-left: 1rem;
+}
+
 a {
     text-decoration: none;
     color: var(--primary-color);
@@ -40,4 +44,9 @@ footer{
     display: grid;
     gap: 1rem;
     justify-content: center;
+}
+
+footer .site-info{
+    display: flex;
+    flex-direction: column;
 }

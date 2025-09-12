@@ -1,3 +1,36 @@
+/* Quote section */
+.quote{
+    position: relative;
+    margin-left: 1rem;
+    padding: 1rem;
+    text-indent: 1rem;
+}
+
+.quote::before{
+    position: absolute;
+    left: -.5rem;
+    top: 0;
+    content: '“';
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.quote::after{
+    position: absolute;
+    right: .5rem;
+    bottom: 0;
+    content: '„';
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.quoter{
+    text-align: right;
+    margin-right: 2rem;
+}
+
+/* view display buttons grid/list */
+
 #view-switch{
     display: flex;
     gap: .5rem;
@@ -13,9 +46,11 @@
     transition: color 0.3s ease-in, background-color 0.3s ease-in, box-shadow 0.3s ease-out;
 }
 
-.directory{
+/* grid view */
+
+.directory-grid{
     display: grid;
-    /* repeat grids of 250px min or 350px max */
+    /* repeat grids of 280px min or 300px max */
     grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
     align-items: center;
     justify-content: center;
@@ -44,3 +79,30 @@
     display: flex;
     gap: 1rem;
 }
+
+/* list view */
+
+.directory-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.directory-list .card{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.directory-list .logo{
+    display: none;
+}
+
+.directory-list .desc{
+    display: none;
+}
+
+.directory-list .business-head{
+    text-align: left;
+}
+
+
+

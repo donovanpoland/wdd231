@@ -12,9 +12,12 @@
 
     footer{
         grid-template-columns: 1fr 1fr 1fr;
-        border: 1px dotted white; /* TEMPORARY */
+        border-top: 1px dotted white;
         justify-content: center;
         align-items: center;
+        text-align: center;
+        gap: 0;
+        padding: 1rem;
     }
 
     footer .socials img:hover{
@@ -32,5 +35,9 @@
 
     #view-switch button:hover{
     background-color: var(--secondary-color);
-}
+    }
+
+    .modified{
+        grid-column: 3/4;
+    }
 }
