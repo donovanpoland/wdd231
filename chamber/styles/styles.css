@@ -44,6 +44,8 @@ footer{
     display: grid;
     gap: 1rem;
     justify-content: center;
+    padding-bottom: 1rem;
+    text-align: center;
 }
 
 footer .site-info{
