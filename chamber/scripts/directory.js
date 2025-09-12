@@ -1,9 +1,9 @@
-const girdButton = document.querySelector('#grid-view');
+const gridButton = document.querySelector('#grid-view');
 const listButton = document.querySelector('#list-view');
 const display = document.querySelector("#directory");
 
 
-girdButton.addEventListener("click", showGrid);
+gridButton.addEventListener("click", showGrid);
 listButton.addEventListener("click", showList);
 
 function showList() {
