@@ -85,11 +85,16 @@
 .directory-list{
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
 }
 
 .directory-list .card{
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 320px;
+    margin: 0 auto;
 }
 
 .directory-list .logo{
@@ -97,6 +102,10 @@
 }
 
 .directory-list .desc{
+    display: none;
+}
+
+.directory-list .email{
     display: none;
 }
 
