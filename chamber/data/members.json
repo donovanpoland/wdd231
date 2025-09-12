@@ -1,123 +1,123 @@
 {
     "members":[
         {
-            "name": "",
-            "phone": "",
-            "url": "",
+            "name": "Summit Ski & Board",
+            "phone": "(435) 555-1122",
+            "url": "https://summitskiandboard.com",
             "image": "",
-            "membership": "",
-            "description": "",
+            "membership": "2",
+            "description": "A locally owned ski and snowboard shop offering rentals, sales, and expert tune-ups for all skill levels.",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "country": "",
-                "zip": ""
+                "street": "1450 Park Ave,",
+                "city": "Park City,",
+                "state": "UT",
+                "country": "USA",
+                "zip": "84060"
             }
         },
         {
-            "name": "",
-            "phone": "",
-            "url": "",
+            "name": "Alpine Stay Hotel Selector",
+            "phone": "(435) 555-2377",
+            "url": "https://alpinestay.com",
             "image": "",
-            "membership": "",
-            "description": "",
+            "membership": "1",
+            "description": "A personalized booking service connecting visitors with the best hotels, lodges, and vacation rentals in Park City.",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "country": "",
-                "zip": ""
+                "street": "820 Main St,",
+                "city": "Park City,",
+                "state": "UT",
+                "country": "USA",
+                "zip": "84060"
             }
         },
         {
-            "name": "",
-            "phone": "",
-            "url": "",
+            "name": "Wasatch Adventures Tour Co.",
+            "phone": "(435) 555-4820",
+            "url": "https://wasatchadventures.com",
             "image": "",
-            "membership": "",
-            "description": "",
+            "membership": "3",
+            "description": "Guided year-round tours featuring skiing, snowshoeing, hiking, and mountain biking in the Wasatch Range.",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "country": "",
-                "zip": ""
+                "street": "2100 Deer Valley Dr,",
+                "city": "Park City,",
+                "state": "UT",
+                "country": "USA",
+                "zip": "84060"
             }
         },
         {
-            "name": "",
-            "phone": "",
-            "url": "",
+            "name": "Powder Peak Bistro",
+            "phone": "(435) 555-9931",
+            "url": "https://powderpeakbistro.com",
             "image": "",
-            "membership": "",
-            "description": "",
+            "membership": "2",
+            "description": "Cozy restaurant serving modern American cuisine with locally sourced ingredients and après-ski cocktails.",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "country": "",
-                "zip": ""
+                "street": "550 Main St,",
+                "city": "Park City,",
+                "state": "UT",
+                "country": "USA",
+                "zip": "84060"
             }
         },
         {
-            "name": "",
-            "phone": "",
-            "url": "",
+            "name": "High Altitude Coffee Roasters",
+            "phone": "(435) 555-4468",
+            "url": "https://highaltitudecoffee.com",
             "image": "",
-            "membership": "",
-            "description": "",
+            "membership": "1",
+            "description": "Small-batch coffee roaster and café known for its alpine-inspired blends and fresh pastries.",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "country": "",
-                "zip": ""
+                "street": "990 Park Ave,",
+                "city": "Park City,",
+                "state": "UT",
+                "country": "USA",
+                "zip": "84060"
             }
         },
         {
-            "name": "",
-            "phone": "",
-            "url": "",
+            "name": "Silver Spur Outfitters",
+            "phone": "(435) 555-7210",
+            "url": "https://silverspuroutfitters.com",
             "image": "",
-            "membership": "",
-            "description": "",
+            "membership": "3",
+            "description": "Outdoor gear supplier specializing in camping, climbing, and hunting equipment for Utah's rugged terrain.",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "country": "",
-                "zip": ""
+                "street": "1880 Bonanza Dr,",
+                "city": "Park City,",
+                "state": "UT",
+                "country": "USA",
+                "zip": "84060"
             }
         },
         {
-            "name": "",
-            "phone": "",
-            "url": "",
+            "name": "Mountain Glow Spa & Wellness",
+            "phone": "(435) 555-3145",
+            "url": "https://mountainglowspa.com",
             "image": "",
-            "membership": "",
-            "description": "",
+            "membership": "2",
+            "description": "A luxury spa offering massages, facials, and wellness treatments designed to refresh after a day on the slopes.",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "country": "",
-                "zip": ""
+                "street": "1600 Empire Ave,",
+                "city": "Park City,",
+                "state": "UT",
+                "country": "USA",
+                "zip": "84060"
             }
         },
         {
-            "name": "",
-            "phone": "",
-            "url": "",
+            "name": "Park City Gallery Collective",
+            "phone": "(435) 555-8899",
+            "url": "https://pcgallerycollective.com",
             "image": "",
-            "membership": "",
-            "description": "",
+            "membership": "1",
+            "description": "An art gallery showcasing local and regional artists with rotating exhibits and community events.",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "country": "",
-                "zip": ""
+                "street": "675 Main St,",
+                "city": "Park City,",
+                "state": "UT",
+                "country": "USA",
+                "zip": "84060"
             }
         }
     ]
