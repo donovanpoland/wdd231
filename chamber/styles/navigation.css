@@ -88,7 +88,10 @@ main .buttons button, .navigation a{
     border: 2px var(--secondary-color) solid;
     border-radius: .5rem;
     padding: .5rem;
-    transition: color 0.3s ease-in, background-color 0.3s ease-in, box-shadow 0.3s ease-out;
+    transition: 
+        color 0.3s ease-in, 
+        background-color 0.3s ease-in, 
+        box-shadow 0.3s ease-out;
     cursor: pointer;
 }
 

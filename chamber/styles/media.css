@@ -5,10 +5,19 @@
         margin: 0 auto;
     }
 
+    .hamburger {
+        display: none;
+    }
+
     .navigation ul{
         flex-direction: row;
         gap: 1rem;
     }
+
+    .navigation {
+        display: block;
+    }
+
 
     footer{
         grid-template-columns: 1fr 1fr 1fr;
@@ -39,5 +48,55 @@
 
     .modified{
         grid-column: 3/4;
+    }
+
+    a.url{
+        transition: 
+            color 0.3s ease-in, 
+            background-color 0.3s ease-in, 
+            box-shadow 0.3s ease-out;
+    }
+
+    a.url:hover{
+        background-color: var(--background-color);
+        color: var(--primary-color);
+    }
+}
+
+/* 752px */
+@media only screen and (min-width: 47rem){
+
+    .directory-list .card{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 96px;
+        min-height: 96px;
+        height: auto;
+        text-align: center;
+        align-items: center;
+    }
+
+    .directory-list .address{
+        grid-row: 1;
+        grid-column: 3/4;
+        text-align: center;
+    }
+
+    .directory-list .contact{
+        grid-row: 1;
+        grid-column: 2/3;
+    }
+
+    .directory-list .desc{
+        grid-column: 4/5;
+        display: block;
+    }
+
+    .directory-list .logo{
+        grid-column: 5/6;
+        display: block;
+        width: 80px;
+        height: auto;
+        position: absolute;
+        right: 2rem;
     }
 }

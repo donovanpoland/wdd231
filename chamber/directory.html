@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/navigation.css">
-    <link rel="stylesheet" href="styles/media.css">
     <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/media.css">
     <!-- Font links-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,14 +51,36 @@
     </header>
     <main>
         <h1>Directory</h1>
-        <p class="quote">Here, you can explore a curated list of local businesses that are part of the Park City Chamber of Commerce.
+        <p class="quote indent">Here, you can explore a curated list of local businesses that are part of the Park City Chamber of Commerce.
         Whether you're a resident looking to shop locally, a new arrival exploring services in town, or a fellow business owner seeking collaboration,
         this directory connects you with trusted, active members of our community. Support Park City's economy by discovering what our chamber members have to offer.
         </p>
         <p class="quoter">- Park City Mayor</p>
         <div id="view-switch">
-            <button aria-label="Switch to grid view" aria-pressed="true" id="grid-view"><img src="images/grip-solid.svg" alt="Grid view" width="40" height="40" title="Click for Grid View"></button>
-            <button aria-label="Switch to list view" aria-pressed="false" id="list-view"><img src="images/list-solid.svg" alt="List view" width="40" height="40" title="Click for List View"></button>
+            <!-- Grid button / label -->
+            <label for="grid-view">Grid</label>
+            <label for="list-view">List</label>
+            
+            <button 
+                aria-label="Switch to grid view" 
+                aria-pressed="true" id="grid-view">
+                <img 
+                    src="images/grip-solid.svg" 
+                    alt="Grid view" 
+                    width="40" height="40" 
+                    title="Click for Grid View">
+            </button>
+            <!-- List button / label -->
+            
+            <button 
+                aria-label="Switch to list view" 
+                aria-pressed="false" id="list-view">
+                <img 
+                    src="images/list-solid.svg" 
+                    alt="List view" 
+                    width="40" height="40" 
+                    title="Click for List View">
+            </button>
         </div>
         <div id="directory" class="directory-grid">
             <!-- Default data replaced with actual business through js -->
@@ -75,7 +97,6 @@
                     <p class="location">City, State 00000</p>
                 </div>
                 <div class="contact">
-                    <p class="email">Email</p>
                     <p class="phone">Phone</p>
                     <a class="url" href="#" target="_blank">URL</a>
                 </div>
@@ -93,7 +114,6 @@
                     <p class="location">City, State 00000</p>
                 </div>
                 <div class="contact">
-                    <p class="email">Email</p>
                     <p class="phone">Phone</p>
                     <a class="url" href="#" target="_blank">URL</a>
                 </div>
@@ -111,7 +131,6 @@
                     <p class="location">City, State 00000</p>
                 </div>
                 <div class="contact">
-                    <p class="email">Email</p>
                     <p class="phone">Phone</p>
                     <a class="url" href="#" target="_blank">URL</a>
                 </div>
@@ -129,7 +148,6 @@
                     <p class="location">City, State 00000</p>
                 </div>
                 <div class="contact">
-                    <p class="email">Email</p>
                     <p class="phone">Phone</p>
                     <a class="url" href="#" target="_blank">URL</a>
                 </div>
@@ -147,7 +165,6 @@
                     <p class="location">City, State 00000</p>
                 </div>
                 <div class="contact">
-                    <p class="email">Email</p>
                     <p class="phone">Phone</p>
                     <a class="url" href="#" target="_blank">URL</a>
                 </div>
@@ -165,7 +182,6 @@
                     <p class="location">City, State 00000</p>
                 </div>
                 <div class="contact">
-                    <p class="email">Email</p>
                     <p class="phone">Phone</p>
                     <a class="url" href="#" target="_blank">URL</a>
                 </div>
@@ -183,7 +199,6 @@
                     <p class="location">City, State 00000</p>
                 </div>
                 <div class="contact">
-                    <p class="email">Email</p>
                     <p class="phone">Phone</p>
                     <a class="url" href="#" target="_blank">URL</a>
                 </div>
@@ -201,7 +216,6 @@
                     <p class="location">City, State 00000</p>
                 </div>
                 <div class="contact">
-                    <p class="email">Email</p>
                     <p class="phone">Phone</p>
                     <a class="url" href="#" target="_blank">URL</a>
                 </div>

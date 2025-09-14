@@ -38,6 +38,10 @@ a {
     color: var(--primary-color);
 }
 
+.indent{
+  text-indent: 1rem;
+}
+
 /* Footer */
 
 footer{
