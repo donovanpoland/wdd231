@@ -5,6 +5,7 @@ header {
     grid-template-columns: 100px auto 44px;
     gap: 8px;
     align-items: center;
+    margin: 0 1rem; /* top/bottom 0, left/right 16px */
 }
 
 header img {
@@ -27,7 +28,8 @@ header span {
     background: none;
     border: none;
     cursor: pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: var(--font-roboto);
 }
 
 .hamburger::before {

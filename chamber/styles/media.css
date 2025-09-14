@@ -23,7 +23,6 @@
         grid-template-columns: 1fr 1fr 1fr;
         border-top: 1px dotted white;
         justify-content: center;
-        align-items: center;
         text-align: center;
         gap: 0;
         padding: 1rem;
@@ -47,7 +46,7 @@
     }
 
     .modified{
-        grid-column: 3/4;
+        grid-column: 2/3;
     }
 
     a.url{
