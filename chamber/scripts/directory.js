@@ -55,7 +55,7 @@ function displayData(members) {
     // Display star dependant on membership level
     let imageUrl = getImageUrl(member.membership);
     membership.setAttribute('src', imageUrl);
-    membership.setAttribute('alt', 'Membership level')
+    membership.setAttribute('alt', `Membership level ${member.membership}`)
 
     // Set logo
     const logo = card.querySelector('.logo');
