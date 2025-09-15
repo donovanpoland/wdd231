@@ -34,13 +34,13 @@ header span {
 
 .hamburger::before {
     content: "\2630";
-    font-size: 3rem;
+    font-size: 3.1rem;
     color: var(--primary-color);
 }
 
 .hamburger.show::before {
     content: "\00D7";
-    font-size: 3rem;
+    font-size: 5.3rem;
     color: var(--primary-color);
 }
 
@@ -67,7 +67,7 @@ header span {
 
 .navigation li{
     border-radius: .5rem;
-    font-size: 1.3rem;
+    font-size: 1.35rem;
 }
 
 li.current a::after {
