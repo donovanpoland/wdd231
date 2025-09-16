@@ -33,15 +33,17 @@ async function fetchMemberData() {
   const data = await response.json();
 
   // Log data(jason file) to console in table format to the console
-  console.table(data.members);
+  // console.table(data.members);
   displayData(data.members)
 }
 
 // For each card display info from data loaded
 function displayData(members) {
 
+  // Find all classes with the name card and place them in an array
   const cards = document.querySelectorAll('.card');
   
+  // For each card assign member data according to index number
   members.forEach((member, index) => {
 
     const card = cards[index];

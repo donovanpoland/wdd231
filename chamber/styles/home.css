@@ -1,8 +1,19 @@
 
 
 .hero{
+    display: flex;
+    flex-direction: column;
+    position: relative;
     margin: 0 1rem;
     min-width: 280px;
+}
+
+
+.hero img{
+    border: 1px dotted white;
+    /* width: 100%;
+    height: 100%;
+    object-fit: cover; */
 }
 
 .grid {
@@ -11,6 +22,10 @@
     gap: .5rem;
     padding: 1rem;
     justify-content: center;
+}
+
+.grid h2{
+    text-align: center;
 }
 
 

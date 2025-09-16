@@ -53,18 +53,17 @@
     <h1>Home</h1>
     <section class="hero card">
         <h2>hero</h2>
-        <img src="" alt="">
         <picture>
             <source 
                 srcset=
                     ""
                 type="/image/webp"
-                sizes="(max-width: 320px) 100vw, 1400px">
+                sizes="(max-width: 280px) 100vw, 1400px">
             <img 
                 src="" 
                 alt=""
-                width=""
-                height=""
+                width="200"
+                height="200"
                 loading="eager"
                 fetchpriority="high">
         </picture>
@@ -76,9 +75,19 @@
         </section>
         <section class="card">
             <h2>Current Weather</h2>
+            <img id="image" src="" alt="">
+            <p id="desc">Description</p>
+            <p>High:<span id="high">0°F</span></p>
+            <p>Low:<span id="low">0°F</span></p>
+            <p>Humidity:<span id="humidity">0%</span></p>
+            <p>Sunrise:<span id="sunrise">06:00AM</span></p>
+            <p>Sunset:<span id="sunset">18:00PM</span></p>
         </section>
         <section class="card">
             <h2>Weather Forecast</h2>
+            <p>Today: 0°F</p>
+            <p>Tomorrow: 0°F</p>
+            <p>The Next Day: 0°F</p>
         </section>
     </div>
     <div id="highlights" class="directory-grid">

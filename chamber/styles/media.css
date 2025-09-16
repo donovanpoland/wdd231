@@ -73,7 +73,19 @@
     .grid{
         grid-template-columns: 2fr 1fr 1fr;
     }
-    
+
+    .hero h2{
+        position: absolute;
+        top: 1rem;
+        background-color: rgba(0, 0, 0, .2);
+        border-radius: .5rem;
+        padding: .2rem;
+    }
+
+    .hero a {
+        position: absolute;
+        bottom: 1.5rem;
+    }   
 }
 
 /* 752px */
