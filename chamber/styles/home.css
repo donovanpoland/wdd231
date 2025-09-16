@@ -1,0 +1,16 @@
+
+
+.hero{
+    margin: 0 1rem;
+    min-width: 280px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 288px;
+    gap: .5rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+
