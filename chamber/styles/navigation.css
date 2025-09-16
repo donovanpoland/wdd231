@@ -16,7 +16,7 @@ header img {
 }
 
 header span {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: var(--font-lancelot);
     color: var(--primary-color);
     margin-left: .5rem;

@@ -5,6 +5,10 @@
         margin: 0 auto;
     }
 
+    header span {
+            font-size: 2rem;
+    }
+
     .hamburger {
         display: none;
     }
