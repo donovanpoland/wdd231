@@ -5,26 +5,23 @@ const gridButton = document.querySelector('#grid-view');
 const listButton = document.querySelector('#list-view');
 const layout = document.querySelector("#directory");
 
-
-
-
+// Event listeners
 gridButton.addEventListener("click", showGrid);
 listButton.addEventListener("click", showList);
 
-
-//add list class and remove grid class
+// Add list class and remove grid class
 function showList() {
   layout.classList.add("directory-list");
   layout.classList.remove("directory-grid");
 }
 
-//add grid class and remove list class
+// Add grid class and remove list class
 function showGrid() {
   layout.classList.add("directory-grid");
   layout.classList.remove("directory-list");
 }
 
-// async function for fetching membership data
+// Async function for fetching membership data
 async function fetchMemberData() {
   // Load/fetch data json file using json url path
   const response = await fetch(jsonData);
