@@ -77,8 +77,8 @@
 
     .hero h2{
         position: absolute;
-        top: 1rem;
-        background-color: rgba(0, 0, 0, .2);
+        top: 35%;
+        background-color: rgba(0, 0, 0, .5);
         border-radius: .5rem;
         padding: .2rem;
     }

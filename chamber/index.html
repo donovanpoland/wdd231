@@ -53,23 +53,28 @@
 <main>
     <h1>Home</h1>
     <section class="hero section">
-        <h2>hero</h2>
+        <h2>Connecting Local Business & Community</h2>
         <picture>
+            <!-- Aspect ratio 3:2 -->
             <source 
                 srcset=
-                    ""
-                type="/image/webp"
-                sizes="(max-width: 280px) 100vw, 1400px">
+                    "images/hero/hero280x187.webp 280w,
+                    images/hero/hero640x427.webp 640w,
+                    images/hero/hero960x640.webp 960w,
+                    images/hero/hero1400x933.webp 1400w"
+                type="image/webp"
+                sizes="(max-width: 600px) 100vw, 1400px">
             <img 
-                src="" 
-                alt=""
-                width="200"
-                height="200"
+                src="images/hero/hero960x640.webp" 
+                alt="Park City Skyline"
+                width="1400"
+                height="933"
                 loading="eager"
                 fetchpriority="high">
         </picture>
-        <a href="join.html">call to action</a>
+        <a href="join.html">Become A Proud Member Today!</a>
     </section>
+    <h1>Local Information</h1>
     <div class="local-data">
         <section class="section events">
             <h2>Local Events</h2>
