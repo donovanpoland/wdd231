@@ -13,6 +13,10 @@
     width: 100%;
 }
 
+.hero h2{
+    text-align: center;
+}
+
 .hero img{
     border: 1px dotted white;
     aspect-ratio: 3 / 2;
