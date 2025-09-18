@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Chamber of Commerce">
     <meta name="author" content="Donovan Poland">
-    <meta name="description" content="">
+    <meta name="description" content="Home page for Park city chamber of Commerce, view current city weather, future weather forecasts, local events, highlighted Members">
     <meta name="robots" content="index, follow">
     <!-- Scripts -->
     <script src="../scripts/last-modified.js" defer></script>
     <script src="scripts/scipts.js" defer></script>
+    <script type="module" src="scripts/home.js"></script>
     <!-- CSS style sheets -->
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
@@ -24,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lancelot&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Open Graph protocol meta tags -->
     <meta property="og:title" content="Home - Park City - Chamber of Commerce">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="Home page for Park city chamber of Commerce, view current city weather, future weather forecasts, local events, highlighted Members">
     <meta property="og:url" content="https://donovanpoland.github.io/wdd231/chamber/">
     <meta property="og:image" content="https://donovanpoland.github.io/wdd231/chamber/images/pccc-logo100x100.webp">
     <meta property="og:locale" content="en_US">
@@ -51,7 +52,7 @@
     </header>
 <main>
     <h1>Home</h1>
-    <section class="hero card">
+    <section class="hero section">
         <h2>hero</h2>
         <picture>
             <source 
@@ -69,13 +70,18 @@
         </picture>
         <a href="join.html">call to action</a>
     </section>
-    <div class="grid">
-        <section class="card">
-            <h2>Events</h2>
+    <div class="local-data">
+        <section class="section events">
+            <h2>Local Events</h2>
+            <ul>
+                <li>Summit SnowFest<span class="event-date"></span><span class="event-time"></span> <a href="#">RSVP</a></li>
+                <li>Mountain Arts & Music Stroll<span class="event-date"></span><span class="event-time"></span> <a href="#">RSVP</a></li>
+                <li>Harvest on the Hill<span class="event-date"></span><span class="event-time"></span> <a href="#">RSVP</a></li>
+            </ul>
         </section>
-        <section class="card">
+        <section class="section">
             <h2>Current Weather</h2>
-            <img id="image" src="" alt="">
+            <img id="image" src="" alt="Depiction of Current Weather">
             <p id="desc">Description</p>
             <p>High:<span id="high">0°F</span></p>
             <p>Low:<span id="low">0°F</span></p>
@@ -83,17 +89,19 @@
             <p>Sunrise:<span id="sunrise">06:00AM</span></p>
             <p>Sunset:<span id="sunset">18:00PM</span></p>
         </section>
-        <section class="card">
+        <section class="section">
             <h2>Weather Forecast</h2>
             <p>Today: 0°F</p>
             <p>Tomorrow: 0°F</p>
             <p>The Next Day: 0°F</p>
         </section>
     </div>
+    <h1>Member Highlights</h1>
     <div id="highlights" class="directory-grid">
+        <!-- Card 1 place holder -->
         <section class="card" title="words">
             <div class="business-head">
-                <h2 class="name">Business name</h2>
+                <h2 class="business-name">Business name</h2>
                 <img class="membership" src="images/membership/bronze-star.svg" alt="membership level" width="24" height="24" loading="lazy">
             </div>
             <img class="logo" src="images/businesses/plcaeholder200x200.webp" alt="business logo" width="200" height="200" title="Business name" loading="lazy">
@@ -110,7 +118,7 @@
         <!-- Card 2 place holder -->
         <section class="card">
             <div class="business-head">
-                <h2 class="name">Business name</h2>
+                <h2 class="business-name">Business name</h2>
                 <img class="membership" src="images/membership/bronze-star.svg" alt="membership level" width="24" height="24" loading="lazy">
             </div>
             <img class="logo" src="images/businesses/plcaeholder200x200.webp" alt="business logo" width="200" height="200" title="Business name" loading="lazy">
@@ -127,7 +135,7 @@
         <!-- Card 3 place holder -->
         <section class="card">
             <div class="business-head">
-                <h2 class="name">Business name</h2>
+                <h2 class="business-name">Business name</h2>
                 <img class="membership" src="images/membership/bronze-star.svg" alt="membership level" width="24" height="24" loading="lazy">
             </div>
             <img class="logo" src="images/businesses/plcaeholder200x200.webp" alt="business logo" width="200" height="200" title="Business name" loading="lazy">
@@ -140,6 +148,23 @@
                 <p class="phone">Phone</p>
                 <a class="url" href="#" target="_blank">URL</a>
             </div>
+        </section>
+        <!-- Card 4 place holder -->
+        <section class="card">
+           <div class="business-head">
+               <h2 class="business-name">Business name</h2>
+               <img class="membership" src="images/membership/bronze-star.svg" alt="membership level" width="24" height="24" loading="lazy">
+           </div>
+           <img class="logo" src="images/businesses/plcaeholder200x200.webp" alt="business logo" width="200" height="200" title="Business name" loading="lazy">
+           <p class="desc">Description</p>
+           <div class="address">
+               <p class="street">Address</p>
+               <p class="location">City, State 00000</p>
+           </div>
+           <div class="contact">
+               <p class="phone">Phone</p>
+               <a class="url" href="#" target="_blank">URL</a>
+           </div>
         </section>
     </div>
 </main>

@@ -16,16 +16,19 @@
     object-fit: cover; */
 }
 
-.grid {
+.local-data {
     display: grid;
     grid-template-columns: 288px;
     gap: .5rem;
     padding: 1rem;
-    justify-content: center;
 }
 
-.grid h2{
+.local-data h2{
     text-align: center;
+}
+
+.events ul{
+    list-style: none;
 }
 
 

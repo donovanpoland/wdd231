@@ -97,7 +97,7 @@ main .buttons button, .navigation a, .hero a{
     cursor: pointer;
 }
 
-.navigation li.current a {
+.navigation li.current a{
     background-color: var(--background-color);
     color: var(--text-color);
     border: 2px var(--primary-color) solid;
