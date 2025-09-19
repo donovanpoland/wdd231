@@ -117,9 +117,10 @@
         <section class="weather">
             <h2>Current Weather</h2>
             <figure>
-                <img id="image" src="images/snowflake-thin-full.svg" alt="Depiction of Current Weather" width="24" height="24">
+                <img id="weather-icon" src="images/snowflake-thin-full.svg" alt="Depiction of Current Weather" width="24" height="24">
                 <figcaption id="desc">Description</figcaption>
             </figure>
+            <p>Temperature<span id="temp"></span></p>
             <p>High:<span id="high">0°F</span></p>
             <p>Low:<span id="low">0°F</span></p>
             <p>Humidity:<span id="humidity">0%</span></p>
@@ -127,10 +128,10 @@
             <p>Sunset:<span id="sunset">18:00PM</span></p>
         </section>
         <section class="forecast">
-            <h2>Weather Forecast</h2>
-            <p>Today: 0°F</p>
-            <p>Tomorrow: 0°F</p>
-            <p>The Next Day: 0°F</p>
+            <h2>Three Day Forecast</h2>
+            <p><span id="forecastTomorrow">Monday:</span> <span id="tomorrowHigh">High: 0</span> <span id="tomorrowLow">Low: 0</span></p>
+            <p><span id="forecastNext">Tuesday:</span> <span id="nextHigh">High: 0</span> <span id="nextLow">Low: 0</span></p>
+            <p><span id="forecastAfter">Wednesday:</span> <span id="afterHigh">High: 0</span> <span id="afterLow">Low: 0</span></p>
         </section>
     </div>
     <h1>Member Highlights</h1>
