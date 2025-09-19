@@ -4,7 +4,7 @@
     --font-roboto: "Roboto", sans-serif;
     --font-weight: 400;
     --primary-color:  #9EC4F0; /* Icy cool blue */
-    --secondary-color: #3B5D3B; /* Evergreen */
+    --secondary-color: #3B5D3B; /* Evergreen rgb(158,196,240) */
     --background-color: #303030; /* Darker Mountain Grey */
     --text-color: #e9e3dc ; /* Light Mountain Grey */
     --text-color2: #FAFAFA; /* Off white */
@@ -44,12 +44,15 @@ a {
 
 /* all views */
 
-.card , .section{
+.card, .hero, .weather, .events, .forecast{
     border: 2px solid var(--primary-color);
     border-radius: .5rem;
     background-color: rgba(250, 250, 250, .2);
     padding: .5rem;
     gap: .5rem;
+}
+
+.card, .hero{
     align-items: center;
 }
 

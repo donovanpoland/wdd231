@@ -40,4 +40,15 @@
     list-style: none;
 }
 
+.weather, .events, .forecast{
+    display: flex;
+    flex-direction: column;
+}
+
+.weather figure{
+    display: flex;
+    font-size: 1.5rem;
+    gap: .5rem;
+}
+
 

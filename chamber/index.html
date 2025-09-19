@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Chamber of Commerce">
     <meta name="author" content="Donovan Poland">
-    <meta name="description" content="Home page for Park city chamber of Commerce, view current city weather, future weather forecasts, local events, highlighted Members">
+    <meta name="description" content="Home of the Park city Chamber of Commerce, view current city weather, future weather forecasts, local events, highlighted Members">
     <meta name="robots" content="index, follow">
     <!-- Scripts -->
     <script src="../scripts/last-modified.js" defer></script>
@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lancelot&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Open Graph protocol meta tags -->
     <meta property="og:title" content="Home - Park City - Chamber of Commerce">
-    <meta property="og:description" content="Home page for Park city chamber of Commerce, view current city weather, future weather forecasts, local events, highlighted Members">
+    <meta property="og:description" content="Home of the Park city Chamber of Commerce, view current city weather, future weather forecasts, local events, highlighted Members">
     <meta property="og:url" content="https://donovanpoland.github.io/wdd231/chamber/">
     <meta property="og:image" content="https://donovanpoland.github.io/wdd231/chamber/images/pccc-logo100x100.webp">
     <meta property="og:locale" content="en_US">
@@ -52,7 +52,7 @@
     </header>
 <main>
     <h1>Home</h1>
-    <section class="hero section">
+    <section class="hero">
         <h2>Connecting Local Business & Community</h2>
         <picture>
             <!-- Aspect ratio 3:2 -->
@@ -76,7 +76,7 @@
     </section>
     <h1>Local Information</h1>
     <div class="local-data">
-        <section class="section events">
+        <section class="events">
             <h2>Local Events</h2>
             <ul>
                 <li>Summit SnowFest<span class="event-date"></span><span class="event-time"></span> <a href="#">RSVP</a></li>
@@ -84,17 +84,19 @@
                 <li>Harvest on the Hill<span class="event-date"></span><span class="event-time"></span> <a href="#">RSVP</a></li>
             </ul>
         </section>
-        <section class="section">
+        <section class="weather">
             <h2>Current Weather</h2>
-            <img id="image" src="" alt="Depiction of Current Weather">
-            <p id="desc">Description</p>
+            <figure>
+                <img id="image" src="images/snowflake-thin-full.svg" alt="Depiction of Current Weather" width="24" height="24">
+                <figcaption id="desc">Description</figcaption>
+            </figure>
             <p>High:<span id="high">0°F</span></p>
             <p>Low:<span id="low">0°F</span></p>
             <p>Humidity:<span id="humidity">0%</span></p>
             <p>Sunrise:<span id="sunrise">06:00AM</span></p>
             <p>Sunset:<span id="sunset">18:00PM</span></p>
         </section>
-        <section class="section">
+        <section class="forecast">
             <h2>Weather Forecast</h2>
             <p>Today: 0°F</p>
             <p>Tomorrow: 0°F</p>
