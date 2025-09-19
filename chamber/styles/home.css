@@ -36,8 +36,26 @@
     text-align: center;
 }
 
-.events ul{
+.events #local-time{
+    align-self: center;
+}
+
+.events-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.events ul, .events ol{
     list-style: none;
+}
+
+.events ol{
+    text-indent: 1rem;
+}
+
+.events-list a::before{
+    content: "➡️";
 }
 
 .weather, .events, .forecast{

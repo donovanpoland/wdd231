@@ -75,6 +75,10 @@
         grid-template-columns: 2fr 1fr 1fr;
     }
 
+    .events-list{
+        grid-template-columns: 1fr 1fr;
+    }
+
     .hero h2{
         position: absolute;
         top: 35%;
