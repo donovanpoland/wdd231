@@ -52,7 +52,7 @@ a {
     gap: .5rem;
 }
 
-.card, .hero{
+.card, .hero, .events{
     align-items: center;
 }
 
