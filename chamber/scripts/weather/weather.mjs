@@ -1,5 +1,5 @@
 import { weatherApi, forecastApi } from "./url.mjs";
-import { displayCurrentWeather, displayForecastWeather } from "./output.mjs";
+
 
 export async function fetchWeather() { 
     // Fetch weather data from OpenWeather API
@@ -9,8 +9,8 @@ export async function fetchWeather() {
     const weatherData = await weatherResponse.json();
     // Log to console - Debugging
     console.log("Current Weather API Response:", weatherData);
-    // Display data on page
-    displayCurrentWeather(weatherData);
+
+    return weatherData;
 }
 
 export async function fetchForecast() { 
@@ -22,6 +22,5 @@ export async function fetchForecast() {
 
     // Log to console - Debugging
     console.log("Forecast API Response:", forecastData);
-    // Display data on page
-    displayForecastWeather(forecastData);
+    return forecastData;
 }

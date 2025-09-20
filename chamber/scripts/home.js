@@ -1,6 +1,7 @@
 import { updateLocalTime, createTimeStamp } from "./time-management.mjs";
 import { fetchMemberData } from "./display-data.mjs";
-import { fetchWeather, fetchForecast } from "./weather/weather.mjs";
+import { displayCurrentWeather, storeData } from "./weather/output.mjs";
+
 
 
 // Update time every 30 seconds to display on page
@@ -12,14 +13,14 @@ window.addEventListener("DOMContentLoaded", () => {
     
 
     if (createTimeStamp() === true) {
-        
-    } else { return }
+        storeData();
+        displayCurrentWeather();
+    } else { 
+        displayCurrentWeather();
+    }
     
-
 });
 
-fetchWeather();
-fetchForecast();
 fetchMemberData();
 
 
