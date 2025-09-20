@@ -4,4 +4,4 @@
 // NOTE: This API key is used for a public demo (school project).
 // Do not reuse it in production apps.+
 
-export const apiKey = "";
+export const apiKey = "28fab18d465066f10fb8cbc61075abc7";

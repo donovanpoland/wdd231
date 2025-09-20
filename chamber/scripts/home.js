@@ -1,4 +1,4 @@
-import { updateLocalTime } from "./local-time.mjs";
+import { updateLocalTime, createTimeStamp } from "./time-management.mjs";
 import { fetchMemberData } from "./display-data.mjs";
 import { fetchWeather, fetchForecast } from "./weather/weather.mjs";
 
@@ -9,6 +9,13 @@ window.addEventListener("DOMContentLoaded", () => {
     // Run once immediately and then every 30 seconds
     updateLocalTime();
     setInterval(updateLocalTime, 30000);
+    
+
+    if (createTimeStamp() === true) {
+        
+    } else { return }
+    
+
 });
 
 fetchWeather();

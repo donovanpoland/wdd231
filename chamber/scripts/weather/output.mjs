@@ -21,6 +21,14 @@ const afterHigh = document.getElementById("afterHigh");
 const afterLow = document.getElementById("afterLow");
 
 
-export function displayCurrentWeather(weatherData) { }
+export function displayCurrentWeather(weatherData) {
+
+
+ }
 
 export function displayForecastWeather(forecastData) { }
+
+
+export function storeData(weatherData, forecastData) {
+    
+}

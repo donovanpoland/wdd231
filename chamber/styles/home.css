@@ -57,12 +57,20 @@
 .weather, .events, .forecast{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .weather figure{
     display: flex;
     font-size: 1.5rem;
     gap: .5rem;
+}
+
+.forecast p:last-child{
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+    padding: .5rem;
 }
 
 
