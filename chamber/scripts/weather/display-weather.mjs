@@ -3,7 +3,7 @@ const weatherIcon = document.getElementById("weather-icon");
 const description = document.getElementById("desc");
 const temperature = document.getElementById("temp");
 const humidity = document.getElementById("humidity");
-const sunrise = document.getElementById("sunrise"); 
+const sunrise = document.getElementById("sunrise");
 const sunset = document.getElementById("sunset");
 
 // Forecast card
@@ -30,7 +30,24 @@ export function displayCurrentWeather() {
     sunset.textContent = localStorage.getItem("Sunset");
  }
 
-export function displayForecastWeather() { }
+export function displayForecastWeather() {
+    // Get data from local storage and display it
+    // Days forecasted
+    forecastTomorrow.innerHTML = `${localStorage.getItem("Tomorrow")},`;
+    forecastNext.innerHTML = `${localStorage.getItem("Day After")},`;
+    forecastAfter.innerHTML = `${localStorage.getItem("Next Day")},`;
+    
+    // Highs
+    tomorrowHigh.innerHTML = `High: ${localStorage.getItem("Tomorrow High")}&deg;F`;
+    nextHigh.innerHTML = `High: ${localStorage.getItem("Day After High")}&deg;F`;
+    afterHigh.innerHTML = `High: ${localStorage.getItem("Next Day High")}&deg;F`;
+
+    // Lows
+    tomorrowLow.innerHTML = `Low: ${localStorage.getItem("Tomorrow Low")}&deg;F`;
+    nextLow.innerHTML = `Low: ${localStorage.getItem("Day After Low")}&deg;F`;
+    afterLow.innerHTML = `Low: ${localStorage.getItem("Next Day Low")}&deg;F`;
+    
+}
 
 // Make words Title Case
 function capitalizeWords(str) {
@@ -40,9 +57,6 @@ function capitalizeWords(str) {
     .join(" ");
 }
 
-// forecastData.list[0].dt = midnight of the current date
-// let dt = forecastData.list[0].dt;
-// console.log(new Date(dt * 1000));
-// this data will always be the next 5 days
+
 
 

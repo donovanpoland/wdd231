@@ -47,3 +47,10 @@ export function createTimeStamp() {
         return true;
     }
 }
+
+// Get the name of the weekday
+export function getDayName(baseDate, offset) {
+  const date = new Date(baseDate);
+  date.setDate(date.getDate() + offset);
+  return date.toLocaleDateString("en-US", { weekday: "long" });
+}

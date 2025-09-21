@@ -6,12 +6,21 @@ export async function CheckStoredData() {
 
     // Expected keys to stored weather data
     const requiredKeys = [
-    "Icon Source",
-    "Description",
-    "Current Temperature",
-    "Sunrise",
-    "Sunset",
-    "Humidity"
+        "Icon Source",
+        "Description",
+        "Current Temperature",
+        "Sunrise",
+        "Sunset",
+        "Humidity",
+        "Tomorrow",
+        "Day After",
+        "Next Day",
+        "Tomorrow High", 
+        "Tomorrow Low",
+        "Day After High", 
+        "Day After Low",
+        "Next Day High",
+        "Next Day Low"
     ];
 
     // Check if all required keys exist

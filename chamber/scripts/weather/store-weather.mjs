@@ -1,4 +1,6 @@
+import { getDayName } from "../time-management.mjs";
 import { fetchForecast, fetchWeather } from "./get-weather.mjs";
+
 
 export async function storeWeatherData() {
     // Fetch data
@@ -45,4 +47,54 @@ export async function storeWeatherData() {
 export async function storeForecastData() {
     // Fetch data
     const forecastData = await fetchForecast();
+
+    // Get local date
+    const localDate = new Date();
+
+    // forecastData.list[0].dt = midnight aka 00:00 the next day
+    // let dt = forecastData.list[0].dt;
+    // console.log(new Date(dt * 1000));
+    // url = &cnt=23
+    // this data will always be the next 3 days
+
+    // Slice 8 forecast blocks per day (3 hours each = 24 hours)
+    const firstDay = forecastData.list.slice(0, 8);
+    const secondDay = forecastData.list.slice(8, 16);
+    const thirdDay = forecastData.list.slice(16, 24);
+
+    // Add list to function to find high and low for the day
+    const tomorrow = getDailyHighLow(firstDay);
+    const dayAfter = getDailyHighLow(secondDay);
+    const nextDay = getDailyHighLow(thirdDay);
+
+    // Set days
+    localStorage.setItem("Tomorrow", getDayName(localDate, 1))
+    localStorage.setItem("Day After", getDayName(localDate, 2))
+    localStorage.setItem("Next Day", getDayName(localDate, 3))
+
+    // Set temps
+    localStorage.setItem("Tomorrow High", tomorrow.high);
+    localStorage.setItem("Tomorrow Low", tomorrow.low);
+    localStorage.setItem("Day After High", dayAfter.high);
+    localStorage.setItem("Day After Low", dayAfter.low);
+    localStorage.setItem("Next Day High", nextDay.high);
+    localStorage.setItem("Next Day Low", nextDay.low);
+
+}
+
+// Get forecasts highs and lows
+function getDailyHighLow(forecastList) {
+    let high = -Infinity;
+    let low = Infinity;
+
+    forecastList.forEach(item => {
+        const temp = item.main.temp;
+        if (temp > high) high = temp;
+        if (temp < low) low = temp;
+    });
+
+    return {
+        high: Math.round(high),
+        low: Math.round(low)
+    };
 }
