@@ -22,8 +22,8 @@ const afterLow = document.getElementById("afterLow");
 export function displayCurrentWeather() {
     // Get data from local storage and display it
     weatherIcon.setAttribute("src", localStorage.getItem("Icon Source"));
-    weatherIcon.setAttribute("alt", localStorage.getItem("Description"));
-    description.textContent = localStorage.getItem("Description");
+    weatherIcon.setAttribute("alt", capitalizeWords(localStorage.getItem("Description")));
+    description.textContent = capitalizeWords(localStorage.getItem("Description"));
     temperature.textContent = localStorage.getItem("Current Temperature");
     humidity.textContent = localStorage.getItem("Humidity");
     sunrise.textContent = localStorage.getItem("Sunrise");
@@ -32,7 +32,13 @@ export function displayCurrentWeather() {
 
 export function displayForecastWeather() { }
 
-
+// Make words Title Case
+function capitalizeWords(str) {
+  return str
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
 
 // forecastData.list[0].dt = midnight of the current date
 // let dt = forecastData.list[0].dt;
