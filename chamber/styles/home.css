@@ -27,11 +27,23 @@
 
 .local-data {
     display: grid;
-    grid-template-columns: 288px;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "events"
+    " weather"
+    "forecast";
+    min-width: 280px;
     gap: .5rem;
     padding: 1rem;
-    justify-content: center;
+    
+
 }
+
+.local-data > :nth-child(1) {grid-area: events;}
+.local-data > :nth-child(2) {grid-area: weather;}
+.local-data > :nth-child(3) {grid-area: forecast;}
+
 
 .local-data h2{
     text-align: center;
@@ -40,6 +52,7 @@
 .events-list{
     display: grid;
     grid-template-columns: 1fr;
+    
     gap: 1rem;
 }
 
