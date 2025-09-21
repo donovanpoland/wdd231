@@ -1,4 +1,5 @@
 // Current weather card
+const city = document.getElementById("city");
 const weatherIcon = document.getElementById("weather-icon");
 const description = document.getElementById("desc");
 const temperature = document.getElementById("temp");
@@ -21,6 +22,7 @@ const afterLow = document.getElementById("afterLow");
 
 export function displayCurrentWeather() {
     // Get data from local storage and display it
+    city.textContent = `${localStorage.getItem("City")} Today`;
     weatherIcon.setAttribute("src", localStorage.getItem("Icon Source"));
     weatherIcon.setAttribute("alt", capitalizeWords(localStorage.getItem("Description")));
     description.textContent = capitalizeWords(localStorage.getItem("Description"));

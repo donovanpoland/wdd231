@@ -9,7 +9,7 @@ export async function fetchWeather() {
         // Store the data
         const weatherData = await weatherResponse.json();
         // Log to console - Debugging
-        // console.log("Current Weather API Response:", weatherData);
+        console.log("Current Weather API Response:", weatherData);
         return weatherData;
     } catch (error) {
         console.error("Error Fetching Data: ", error);

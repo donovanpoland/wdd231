@@ -7,7 +7,7 @@ export async function storeWeatherData() {
     const weatherData = await fetchWeather();
 
     // Set city
-    // localStorage.setItem("City", weatherData.name);
+    localStorage.setItem("City", weatherData.name);
 
     // Set weather icon source
     localStorage.setItem("Icon Source", `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`);

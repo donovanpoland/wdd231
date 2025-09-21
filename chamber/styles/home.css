@@ -70,14 +70,18 @@
     flex-direction: column;
     position: relative;
     text-align: center;
+    align-items: center;
 }
 
-.weather figure{
-    display: flex;
-    font-size: 1.5rem;
-    gap: .5rem;
+.weather #weather-icon{
+    padding: 0;
+    width: 64px;
+    height: auto;
 }
 
+.weather #desc, .weather #city{
+    font-size: 1.2rem;
+}
 
 .forecast p:last-child{
     align-self: center;
