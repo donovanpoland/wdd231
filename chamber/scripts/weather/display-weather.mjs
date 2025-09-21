@@ -1,5 +1,3 @@
-import { fetchWeather, fetchForecast } from "./weather.mjs";
-
 // Current weather card
 const weatherIcon = document.getElementById("weather-icon");
 const description = document.getElementById("desc");
@@ -34,50 +32,11 @@ export function displayCurrentWeather() {
 
 export function displayForecastWeather() { }
 
-export async function storeData() {
-    // Fetch data
-    const weatherData = await fetchWeather();
-    const forecastData = await fetchForecast();
-
-    // Set weather icon source
-    localStorage.setItem("Icon Source", `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`);
-
-    // Set weather description
-    localStorage.setItem("Description", weatherData.weather[0].description);
-
-    // Set temperature
-    localStorage.setItem("Current Temperature", weatherData.main.temp);
-
-    // Get sunrise
-    const sunriseTimestamp = weatherData.sys.sunrise;
-    const sunriseDate = new Date(sunriseTimestamp * 1000);
-    const sunriseTime = sunriseDate.toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: true
-    });
-
-    // Get sunset
-    const sunsetTimestamp = weatherData.sys.sunset;
-    const sunsetDate = new Date(sunsetTimestamp * 1000);
-    const sunsetTime = sunsetDate.toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: true
-    });
-
-    // Set sunrise/sunset
-    localStorage.setItem("Sunrise", sunriseTime);
-    localStorage.setItem("Sunset", sunsetTime);  
-
-    // Set humidity
-    localStorage.setItem("Humidity", weatherData.main.humidity)
-}
 
 
 // forecastData.list[0].dt = midnight of the current date
 // let dt = forecastData.list[0].dt;
 // console.log(new Date(dt * 1000));
-// this data will always be the next 3 days
+// this data will always be the next 5 days
 
 

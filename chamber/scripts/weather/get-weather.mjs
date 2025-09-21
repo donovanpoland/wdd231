@@ -1,4 +1,4 @@
-import { weatherApi, forecastApi } from "./url.mjs";
+import { weatherApi, forecastApi } from "./get-urls.mjs";
 
 
 export async function fetchWeather() { 

@@ -1,6 +1,7 @@
-import { updateLocalTime, createTimeStamp } from "./time-management.mjs";
+import { updateLocalTime} from "./time-management.mjs";
 import { fetchMemberData } from "./display-data.mjs";
-import { displayCurrentWeather, storeData } from "./weather/output.mjs";
+import { CheckStoredData } from "./weather/check.mjs";
+
 
 
 
@@ -10,17 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // Run once immediately and then every 30 seconds
     updateLocalTime();
     setInterval(updateLocalTime, 30000);
-    
-
-    if (createTimeStamp() === true) {
-        storeData();
-        displayCurrentWeather();
-    } else { 
-        displayCurrentWeather();
-    }
-    
+    // Check if there is stored data then fetch or display it
+    CheckStoredData();
+    fetchMemberData();
 });
-
-fetchMemberData();
-
-

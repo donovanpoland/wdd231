@@ -21,6 +21,7 @@ export function createTimeStamp() {
     
     // Current time in ms
     const currentTime = Date.now();
+    const formattedTime = currentTime.toLocaleString();
 
     // Get the stored timestamp if any
     const stored = localStorage.getItem("Timestamp");
@@ -30,12 +31,13 @@ export function createTimeStamp() {
         const storedTime = Number(stored);
         const hoursPassed = (currentTime - storedTime) / (1000 * 60 * 60);
 
+        // If 3 hours have passed update the time stamp
         if (hoursPassed > 3) {
-            localStorage.setItem("Timestamp", currentTime);
+            localStorage.setItem("Timestamp", `${currentTime} (${formattedTime})`);
             console.log("updated expired timestamp.");
             return true;
         } else {
-            console.log("Timestamp still valid.");
+            console.log("Timestamp still valid, did not load new data.");
             return false;
         }
     } else {

@@ -90,7 +90,12 @@
     .hero a {
         position: absolute;
         bottom: 1.5rem;
-    }   
+    }
+    
+    .forecast p:last-child{
+        position: absolute;
+        bottom: 0;
+    } 
 }
 
 /* 752px */
