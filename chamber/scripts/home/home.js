@@ -1,6 +1,6 @@
 import { updateLocalTime} from "./time-management.mjs";
-import { fetchMemberData } from "./display-data.mjs";
-import { CheckStoredData } from "./weather/check.mjs";
+import { fetchMemberData, chooseHighlights } from "../directory/display-data.mjs";
+import { checkStoredData } from "../weather/check.mjs";
 
 
 
@@ -12,6 +12,8 @@ window.addEventListener("DOMContentLoaded", () => {
     updateLocalTime();
     setInterval(updateLocalTime, 30000);
     // Check if there is stored data then fetch or display it
-    CheckStoredData();
-    fetchMemberData();
+    checkStoredData();
+    chooseHighlights(4); 
 });
+
+

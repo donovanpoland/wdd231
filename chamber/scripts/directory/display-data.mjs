@@ -14,6 +14,13 @@ export async function fetchMemberData() {
     displayData(data.members);
 }
 
+// Get an Array of members
+export async function getMembers() {
+  const res = await fetch(jsonData);
+  const data = await res.json();
+  return data.members;
+}
+
 
 // For each card display info from data loaded
 function displayData(members) {
@@ -65,6 +72,21 @@ function displayData(members) {
         website.textContent = displayUrl;
   });// End foreach
 }// End DisplayData function
+
+// Get Random highlighted members to display
+export async function chooseHighlights(count = 4) {
+  const members = await getMembers();
+  const picks = pickRandom(members, count);
+  displayData(picks);
+}
+
+
+function pickRandom(arr, count) {
+  const copy = [...arr];
+  copy.sort(() => 0.5 - Math.random());
+  return copy.slice(0, count);
+}
+
 
 // Gets image url location for membership stars
 function getImageUrl(membership) {

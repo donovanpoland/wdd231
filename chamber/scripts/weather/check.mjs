@@ -1,8 +1,8 @@
 import { displayCurrentWeather, displayForecastWeather } from "./display-weather.mjs";
 import { storeForecastData, storeWeatherData } from "./store-weather.mjs";
-import { createTimeStamp } from "../time-management.mjs";
+import { createTimeStamp } from "../home/time-management.mjs";
 
-export async function CheckStoredData() {
+export async function checkStoredData() {
 
     // Expected keys to stored weather data
     const requiredKeys = [

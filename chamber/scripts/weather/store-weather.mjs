@@ -1,4 +1,4 @@
-import { getDayName } from "../time-management.mjs";
+import { getDayName } from "../home/time-management.mjs";
 import { fetchForecast, fetchWeather } from "./get-weather.mjs";
 
 
