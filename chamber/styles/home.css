@@ -3,9 +3,10 @@
 .hero{
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
     position: relative;
-    margin: 0 1rem;
-    min-width: 280px;
+    gap: .5rem;
+    width: 92%;
 }
 
 .hero picture, .hero img {
@@ -28,12 +29,11 @@
 .local-data {
     display: grid;
     justify-content: center;
-    grid-template-columns: 1fr;
+    grid-template-columns: 300px;
     grid-template-areas: 
     "events"
     " weather"
     "forecast";
-    min-width: 280px;
     gap: .5rem;
     padding: 1rem;
     
