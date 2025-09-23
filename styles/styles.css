@@ -103,6 +103,11 @@ header span {
   border-radius: .5rem;
 }
 
+.navigation li a{
+  display: flex;
+  align-items: center;
+}
+
 li.current a::after {
     content: "🎯";
 }
@@ -124,6 +129,8 @@ main .buttons button, .navigation a{
   padding: .5rem;
   transition: color 0.3s ease-in, background-color 0.3s ease-in, box-shadow 0.3s ease-out;
   cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
 }
 
 .navigation li.current a {
@@ -224,6 +231,33 @@ li.false::before{
 .course-count, .credits{
   text-align: center;
   padding: .25rem;
+}
+
+/* Modal */
+dialog {
+  margin: auto auto;
+  border: 1px solid rgb(0 0 0 / 10%);
+  border-radius: .25rem;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 3rem #777;
+  width: 90%;
+  max-width: 600px;
+}
+
+::backdrop {
+  background-color: rgb(0 0 0 / 50%);
+}
+
+dialog button {
+  position: absolute;
+  align-items: center;
+  top: 23px;
+  right: 23px;
+  border: 1px solid rgb(0 0 0 / 10%);
+  border-radius: .5rem;
+  min-height: 44px;
+  min-width: 44px;
 }
 
 /** Footer **/

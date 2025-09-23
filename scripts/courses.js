@@ -1,4 +1,4 @@
-//create courses array
+// Create courses array
 const courses = [
     {
         subject: 'CSE',
@@ -79,7 +79,7 @@ const courses = [
     }
 ]
 
-//create empty array
+// Create empty array
 let currentCourses = [];
 
 //get the all buttons with the class of filter-btn, add click listener for each dataset
@@ -105,28 +105,30 @@ document.querySelectorAll('.filter-btn').forEach(button => {
     });
 });
 
-//display current course information
+// Display current course information
 function displayCourse(coursesArray) {
     const courseList = document.querySelector(".course-list");
-    //empty the list first
+    // Empty the list first
     courseList.innerHTML = "";
-    //add info to array
+    // Add info to array
     coursesArray.forEach(course => createListItem(course));
 };
 
 
-//create list item and add course info to content
+// Create list item and add course info to content
 function createListItem(course) {
     const courseList = document.querySelector(".course-list");
     const listItem = document.createElement("li");
-    //check if course is completed
+    // Check if course is completed
     if (getCourseCompletion(course) === true) {
         listItem.classList = "true";
     }
     else {
         listItem.classList = "false";
     }
-    //add course content to the list item
+    // Add event listener to each list item
+    listItem.addEventListener("click", () => { displayCourseDetails(course) });
+    // Add course content to the list item
     listItem.textContent = getCourse(course);
     courseList.appendChild(listItem);
 }
@@ -150,3 +152,27 @@ function getTotalCredits(coursesArray) {
     const paragraph = document.querySelector(".credits");
     paragraph.innerHTML = `<strong> Total number of credits required: ${totalCredits}</strong>`;
 }
+
+const courseDetails = document.querySelector("#course-details");
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `
+        <button id="close">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+
+    // Select button and add the event listener
+    const closeModal = document.querySelector("#close");
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+
+    // Show the dialog
+    courseDetails.showModal();
+}
+
