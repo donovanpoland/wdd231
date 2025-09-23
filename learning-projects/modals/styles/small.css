@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container{
+    position: relative;
+}
+
+/* If you use this CSS selector you modal will remain hidden until the correct
+button is pressed */
+
+/* depreciated */
+/* :modal{
+
+} */
+
+/* this is the same thing as calling :modal but this will show on screen unless hidden
+and you will need to use js to show it*/
+/* :modal has higher priority as a Css selector*/
+dialog{
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    border: 10px dotted green;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 250px;
+}
+
+dialog button{
+    background-color: blue;
+    color: wheat;
+    width: 10rem;
+}
+
+::backdrop{
+    background-color: rgba(30, 30, 30, .5);
+}
+
