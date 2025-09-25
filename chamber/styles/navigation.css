@@ -82,7 +82,7 @@ main .buttons{
     padding: 8px 8px;
 }
 
-main .buttons button, .navigation a, .hero a{
+main button, .navigation a, .hero a{
     color: var(--text-color2);
     display: block;
     background-color: var(--secondary-color);

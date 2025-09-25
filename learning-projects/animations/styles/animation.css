@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card{
+    border: 1px black solid;
+    border-radius: 1rem;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border: 4px solid transparent;
+    border-color: grey transparent grey transparent;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    box-shadow: 0 0 2rem rgb(255, 0, 0);
+}
+
+.square{
+    border: 4px solid transparent;
+
+}
+
+.loading{
+    /* animations long form*/
+    animation-name: spin1;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.loading::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "⚙️";
+    /* animations short form*/
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.transition{
+    transition: spin2 1.5s linear infinite;
+    position: relative;
+}
+
+.transition::after{
+    content: "⚙️";
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 1.5s ease-in-out;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+}
+
+.transition:hover{
+    transform: rotate(360deg);
+    animation: spin2 1.5s linear 1.5s;
+}
+
+.transition:hover::after{
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+
+/* Animations */
+@keyframes spin1 {
+    100% {transform: rotate(720deg);}
+}
+
+@keyframes pulse {
+    0%, 100% {transform: translate(-50%, -50%) scale(1);}
+    50% {transform: translate(-50%, -50%) scale(1.25);} 
+}
+
+@keyframes spin2 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}

@@ -17,6 +17,10 @@
         margin: 0 auto;
     }
 
+    main{
+    padding-bottom: 1rem;
+    }
+
     header img{
         margin: 0 1rem;
     }
@@ -83,8 +87,6 @@
         color: var(--primary-color);
     }
 
-
-
     .events-list{
         grid-template-columns: 1fr 1fr;
     }
@@ -106,6 +108,15 @@
         position: absolute;
         bottom: 0;
     } 
+
+    .app-form{
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .app-form .membership{
+    grid-row: 2;
+}
 }
 
 

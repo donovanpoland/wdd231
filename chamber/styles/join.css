@@ -1,0 +1,53 @@
+.join{
+    display: grid;
+    width: 280px;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.join-form fieldset{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    border: none;
+}
+
+.join-form fieldset label{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.join-form fieldset label{
+    width: 250px;
+}
+
+.join-form select{
+    cursor: pointer;
+}
+
+.join-form button{
+    align-self: center;
+    justify-self: center;
+    width: 250px;
+    margin-top: 1rem;
+}
+
+.membership{
+    max-width: 250x;
+    display: grid;
+    gap: 1rem;
+}
+
+.membership article{
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-bottom: 1px solid var(--primary-color);
+    padding: 1rem 0;
+}
+
+.membership article button{
+    position: absolute;
+    right: 0;
+}
