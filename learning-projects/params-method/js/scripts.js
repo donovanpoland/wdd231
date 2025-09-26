@@ -29,7 +29,7 @@ const templeLocation = myInfo.get('location');
 // display results on page
 const results = document.querySelector("#results");
 results.innerHTML =
-`<p>Appointment for ${first} ${last} Confirmed</p>
+    `<p>Appointment for ${first} ${last} Confirmed</p>
 <p>Proxy ${ordinance} on ${date} in the ${templeLocation}</p>
 <p>Your Phone: ${phone}</p>
-<p>Your Email: ${email}</p>`
+<p>Your Email: ${email}</p>`;
