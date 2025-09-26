@@ -243,17 +243,25 @@ dialog {
   box-shadow: 0 0 3rem #777;
   width: 90%;
   max-width: 600px;
+  position: relative;
+}
+
+#course-details{
+  background-color: #fff;
+  box-shadow: 0 2px 12px 2px #fff;
 }
 
 ::backdrop {
-  background-color: rgb(0 0 0 / 50%);
+  background-color: rgb(0 0 0 / 60%);
 }
 
 dialog button {
   position: absolute;
   align-items: center;
+  font-size: 2rem;
   top: 23px;
   right: 23px;
+  background-color: #fff;
   border: 1px solid rgb(0 0 0 / 10%);
   border-radius: .5rem;
   min-height: 44px;

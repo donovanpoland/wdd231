@@ -21,22 +21,29 @@ button is pressed */
 and you will need to use js to show it*/
 /* :modal has higher priority as a Css selector*/
 dialog{
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    border: 10px dotted green;
-    background-color: aqua;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 250px;
+    margin: auto auto;
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, .1);
 }
 
 dialog button{
     background-color: blue;
     color: wheat;
-    width: 10rem;
-}
+    min-height: 44px;
+    min-width: 44px;
+     position: absolute;
+    align-items: center;
+    top: 23px;
+    right: 23px;
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: .5rem;
+    }
 
 ::backdrop{
     background-color: rgba(30, 30, 30, .5);
