@@ -125,31 +125,57 @@
 
 
 /* 752px */
-@media (min-width: 47em){
+@media (min-width: 62em){
 
-    .directory-list .card{
+    .directory-list section.card{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 96px;
+        grid-template-columns: 180px 180px 1fr 1fr 96px;
         min-height: 96px;
         height: auto;
-        text-align: center;
-        align-items: center;
+        width: fit-content;
+        gap: 2rem;
+        width: 100%;
+        margin: 0;
+    }
+
+    .directory-list .business-head{
+        min-width: 180px;
+    }
+
+    .directory-list .business-head .business-name{
+        width: 156px;
     }
 
     .directory-list .address{
         grid-row: 1;
         grid-column: 3/4;
-        text-align: center;
+        min-width: 120px;
     }
 
     .directory-list .contact{
         grid-row: 1;
         grid-column: 2/3;
+        width: 100%;
+    }
+
+    .directory-list .contact .phone{
+        text-align: center;
+    }
+
+    .directory-list .contact a.url{
+        display: flex;
+        text-align: center;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
     }
 
     .directory-list .desc{
+        grid-row: 1;
         grid-column: 4/5;
         display: block;
+        max-width: 600px;
     }
 
     .directory-list .logo{
@@ -157,8 +183,24 @@
         display: block;
         width: 80px;
         height: auto;
-        position: absolute;
+        /* position: absolute; */
         right: 2rem;
+    }
+
+    .directory-list .address,
+    .directory-list .business-head,
+    .directory-list .contact
+    {
+        margin: 0;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 43em){
+    .directory-list section.card{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: fit-content;
     }
 }
 

@@ -78,9 +78,6 @@
 }
 
 .directory-grid .business-head{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 4rem; /* 64px */
     width: 100%;
 }
@@ -111,22 +108,18 @@
     position: relative;
 }
 
-.directory-list .card{
+.directory-list section.card{
     display: grid;
     grid-template-columns: 1fr;
     height: fit-content;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .directory-list .business-head{
-    display: flex;
-    text-align: left;
-    width: 152px;
+    width: 200px;
 }
 
-.directory-list .business-head .name{
-    width: 128px;
+.directory-list .business-head .business-name{
+    width: 176px;
     line-height: 1;
 }
 
@@ -138,11 +131,13 @@
     display: none;
 }
 
-.directory-list .address{
-    align-self: center;
-    text-align: left;
+.directory-list .address,
+.directory-list .business-head,
+.directory-list .contact
+{
+    margin: 0 auto;
+    text-align: center;
 }
-
 
 
 
