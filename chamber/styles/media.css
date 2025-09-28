@@ -21,6 +21,10 @@
     padding-bottom: 1rem;
     }
 
+    header{
+        grid-template-columns: 100px auto 44px;
+    }
+
     header img{
         margin: 0 1rem;
     }

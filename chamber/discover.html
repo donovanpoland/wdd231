@@ -24,15 +24,21 @@
     <meta property="og:title" content="Discover - Park City - Chamber of Commerce">
     <meta property="og:description" content="">
     <meta property="og:url" content="https://donovanpoland.github.io/wdd231/chamber/">
-    <meta property="og:image" content="https://donovanpoland.github.io/wdd231/chamber/images/pccc-logo100x100.webp">
+    <meta property="og:image" content="https://donovanpoland.github.io/wdd231/chamber/images/site-images/pccc-logo.png">
     <meta property="og:locale" content="en_US">
     <!-- Favicon.ico -->
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="images/site-images/favicon.ico">
 </head>
 <body>
     <header>
-        <!-- Site logo and link to homepage when clicked -->
-        <a href="index.html"><img src="images/pccc-logo100x100.webp" alt="Site Logo" width="100" height="100"></a>
+        <!-- Site logo and link to homepage when clicked, smaller image on mobile and larger on desktop-->
+        <a href="index.html">
+            <picture>
+                <source srcset="images/site-images/pccc-logo50x50.webp" media="(max-width: 600px)">
+                <source srcset="images/site-images/pccc-logo100x100.webp" media="(min-width: 601px)">
+                <img src="images/site-images/pccc-logo100x100.webp" alt="Logo">
+            </picture>
+        </a>
         <!-- Site name -->
         <span>Park City Chamber of Commerce</span>
         <!-- Hamburger button -->
