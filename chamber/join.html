@@ -60,43 +60,78 @@
         <div class="join">
             <form method="get" action="thanks.html" class="join-form card">
                 <fieldset>
-                    <legend><h2>Application Form</h2></legend>
-                    <Label for="fname">First Name<input id="fname" name="fname" type="text" required autocomplete="given-name" title="First Name" placeholder="John"></Label>
-                    <Label for="lname">Last Name<input id="lname" name="lname" type="text" required autocomplete="family-name" title="Last Name" placeholder="Smith"></Label>
-                    <Label for="org-title">Title<input id="org-title" type="text" name="org-title" autocomplete="organization-title" title="Title" pattern="" placeholder="CEO"></Label>
-                    <label for="email">Email
+                    <legend>
+                        <h2>Application Form</h2>
+                        <p class="required">Required</p>
+                        <p class="optional">Optional</p>
+                    </legend>
+                    <!-- First name -->
+                    <Label for="fname">
+                        <span class="required">First Name</span>
+                        <input id="fname" name="fname" type="text" required autocomplete="given-name" title="First Name" placeholder="John">
+                    </Label>
+                    <!-- Last name -->
+                    <Label for="lname">
+                        <span class="required">Last Name</span>
+                        <input id="lname" name="lname" type="text" required autocomplete="family-name" title="Last Name" placeholder="Smith">
+                    </Label>
+                    <!-- Organization title -->
+                    <Label for="org-title">
+                        <span class="optional">Title</span>
+                        <input 
+                            id="org-title" type="text" name="org-title" 
+                            autocomplete="organization-title" title="Only letters, hyphens, and spaces. Minimum 7 characters."  
+                            placeholder="Chief Executive Officer" 
+                            pattern="^[A-Za-z\- ]{7,}$">
+                    </Label>
+                    <!-- Email -->
+                    <!-- Email type does not need pattern -->
+                    <label  for="email">
+                        <span class="required">Email</span>
                         <input id="email" name="email" required type="email" autocomplete="email" 
                         placeholder="you@example.com"
-                        pattern="[a-zA-Z0-9._%+-]+[@a-zA-Z0-9._%+-]+\.[a-zA-Z]{2,}"
                         title="Enter a Valid Email">
                     </label>
-                    <!-- pattern checks for valid area codes in the USA -->
-                    <label for="phone">Phone
+                    <!-- Phone -->
+                    <!-- Pattern checks for valid area codes in the USA -->
+                    <label for="phone">
+                        <span class="required">Phone</span>
                         <input type="tel" id="phone" name="phone" required autocomplete="tel-national"
                         placeholder="(801-123-4567)"
-                        pattern="^(\+1\s?)?(\()?([2-9][0-9]{2})(\))?[\s.-]?([0-9]{3})[\s.-]?([0-9]{4})$"
+                        pattern="^(\+1\s?)?(\([2-9][0-9]{2}\)|[2-9][0-9]{2})[\s.-]?[0-9]{3}[\s.-]?[0-9]{4}$"
                         title="Enter a valid U.S. phone number (e.g. 123-456-7890 or (123) 456-7890 or 1234567890)">
                     </label>
-                    <label for="org-name">Organization<input type="text" required name="org-name" id="org-name" autocomplete="organization" placeholder="Best Company Ever"></label>
-                    <label for="member-level">Choose a Membership Level
+                    <!-- Organization -->
+                    <label for="org-name">
+                        <span class="required">Organization</span>
+                        <input 
+                            type="text" required name="org-name" id="org-name" 
+                            autocomplete="organization" autocapitalize="words" 
+                            placeholder="Best Company Ever">
+                    </label>
+                    <!-- Membership -->
+                    <label  for="member-level">
+                        <span class="required">Membership Level</span>
                         <select id="member-level" name="member-level" required>
-                            <option disabled aria-disabled="true" selected value="">Please Select</option>
-                            <option value="npo">Non Profit</option>
-                            <option value="bronze">Bronze</option>
-                            <option value="silver">Silver</option>
-                            <option value="gold">Gold</option>
+                            <option disabled aria-disabled="true" selected value="">Please Choose an Option</option>
+                            <option value="Npo">Non Profit</option>
+                            <option value="Bronze">Bronze</option>
+                            <option value="Silver">Silver</option>
+                            <option value="Gold">Gold</option>
                         </select>
                     </label>
-                    <label 
-                        for="description">
-                        Please provide A description of your business
+                    <!-- Description -->
+                    <label  for="description">
+                        <span class="required">Please provide A description of your business</span>
                         <textarea 
                             required
                             id="description"
                             name="description"
                             type="textarea" 
+                            autocapitalize="sentences"
                             placeholder="Here at.... "></textarea>
                     </label>
+                    <!-- Time stamp -->
                     <input type="hidden" name="timestamp" id="timestamp">
                 </fieldset>
                 <button type="submit">Apply</button>
@@ -126,6 +161,8 @@
         <section>
             <h2>Contact Us</h2>
             <h3>Park City Chamber of Commerce</h3>
+            <p>Hours 8:00 AM - 4:00 PM</p>
+            <p>Monday - Friday</p>
             <p>(435) 555-3000</p>
             <p>info@parkcitychamber.com</p>
             <p>PO Box 2788</p>

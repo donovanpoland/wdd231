@@ -1,8 +1,17 @@
+
+/* Form */
 .join{
     display: grid;
-    width: 280px;
+    min-width: 280px;
+    grid-template-columns: 1fr;
     gap: 1rem;
     margin: 0 auto;
+}
+
+.join-form form .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .join-form fieldset{
@@ -10,16 +19,51 @@
     grid-template-columns: 1fr;
     gap: 1rem;
     border: none;
+    position: relative;
 }
 
+/* Legend and requirements */
+.join-form fieldset legend{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.join-form fieldset legend .required{
+    margin: 2rem -0.09rem 1rem;
+}
+
+.join-form fieldset legend .optional,
+.join-form fieldset legend .required{
+    grid-row: 1;
+    grid-column: 2/3;
+    text-align: right;
+}
+
+.optional:before,
+.required:before
+{
+    margin-right: .5rem;
+    font-size: 1.5rem;
+    content: "*";
+}
+
+.required:before{
+    color: red;
+}
+
+.optional:before{
+    color: green;
+}
+
+/* Labels and inputs */
 .join-form fieldset label{
     display: flex;
     flex-direction: column;
     gap: .2rem;
 }
 
-.join-form fieldset label{
-    width: 250px;
+.join-form fieldset label input{
+    
 }
 
 .join-form select{
@@ -51,3 +95,21 @@
     position: absolute;
     right: 0;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea
+{
+    padding: .7rem;
+    min-width: 250px;
+    max-width: 650px;
+}
+
+textarea{
+    height: 200px;
+}
+
+
+

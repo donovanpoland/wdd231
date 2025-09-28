@@ -11,6 +11,7 @@
     <!-- Scripts -->
     <script src="../scripts/last-modified.js" defer></script>
     <script src="scripts/scipts.js" defer></script>
+    <script src="scripts/thanks.js"></script>
     <!-- CSS style sheets -->
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
@@ -40,19 +41,50 @@
                 </picture>
             </a>
         <!-- Site name -->
-        <span></span>
+        <span>Park City Chamber of Commerce</span>
         <!-- Hamburger button -->
-        <button id="" class=""></button>
-        <nav id="" class="">
+        <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
+        <!-- Navigation -->
+        <nav id="nav-bar" class="navigation">
             <ul>
-                <li class="current"><a href="#">Page Name</a></li>
+                <li class="current" aria-current="page"><a href="#">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li ><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Thanks</h1>
+        <p>Thank You<Span id="full-name"></Span> for submitting an application to join our community driven chamber of commerce.</p>
+        <p>You will be receiving an email from our review team at review@parkcitychamber.com to <span id="email"></span></p>
     </main>
     <footer>
+        <section>
+            <h2>Contact Us</h2>
+            <h3>Park City Chamber of Commerce</h3>
+            <p>Hours 8:00 AM - 4:00 PM</p>
+            <p>Monday - Friday</p>
+            <p>(435) 555-3000</p>
+            <p>info@parkcitychamber.com</p>
+            <p>PO Box 2788</p>
+            <p>Park City, UT 84060</p>
+        </section>
+        <div class="socials">
+            <h2>Join the Community</h2>
+            <p>Find or Host local events on our socials</p>
+            <a href="https://www.facebook.com/"><img src="images/socials/facebook.svg" alt="Facebook" width="44" height="44" title="Facebook"></a>
+            <a href="https://www.instagram.com/"><img src="images/socials/instagram.svg" alt="Instagram" width="44" height="44" title="Instagram"></a>
+            <a href="https://www.linkedin.com/"><img src="images/socials/linkedin.svg" alt="LinkedIn" width="44" height="44" title="LinkedIn"></a>
+            <a href="https://x.com/"><img src="images/socials/x-twitter.svg" alt="X/Twitter" width="44" height="44" title="X/Twitter"></a>
+        </div>
+        <div class="site-info">
+            <h3>WDD 231 Class Project</h3>
+            <a href="site-plan.html">Site Plan</a>
+            <a href="attributions.html">Attributions</a>
+            <a href="/index.html">Donovan Poland - Home</a>
+        </div>
+        <!-- date, name, last modified section inserted here by JS -->
     </footer>
 </body>
 </html>
