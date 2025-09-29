@@ -61,9 +61,9 @@
             <form method="get" action="thanks.html" class="join-form card">
                 <fieldset>
                     <legend>
-                        <h2>Application Form</h2>
-                        <p class="required">Required</p>
-                        <p class="optional">Optional</p>
+                        <span class="heading2">Application Form</span>
+                        <span class="required">Required</span>
+                        <span class="optional">Optional</span>
                     </legend>
                     <!-- First name -->
                     <Label for="fname">
@@ -87,7 +87,7 @@
                     <!-- Pattern checks for valid area codes in the USA -->
                     <label for="phone">
                         <span class="required">Phone</span>
-                        <input type="tel" id="phone" name="phone" required autocomplete="tel-national"
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel"
                         placeholder="(801-123-4567)"
                         pattern="^(\+1\s?)?(\([2-9][0-9]{2}\)|[2-9][0-9]{2})[\s.-]?[0-9]{3}[\s.-]?[0-9]{4}$"
                         title="Enter a valid U.S. phone number (e.g. 123-456-7890 or (123) 456-7890 or 1234567890)">
@@ -127,7 +127,6 @@
                             required
                             id="description"
                             name="description"
-                            type="textarea" 
                             autocapitalize="sentences"
                             placeholder="Here at.... "></textarea>
                     </label>
@@ -143,15 +142,24 @@
                     <button id="open-button1">See How We Can Help</button>
                 </article>
                 <article id="bronze" class="card">
-                    <h3>Bronze<img src="images/membership/bronze-star.svg" alt="Bronze" width="24px" height="24px"></h3>
+                    <div>
+                        <h3>Bronze</h3>
+                        <img src="images/membership/bronze-star.svg" alt="Bronze" width="24" height="24">
+                    </div>
                     <button id="open-button2">Start Your Journey</button>
                 </article>
                 <article id="silver" class="card">
-                    <h3>Silver<img src="images/membership/silver-star.svg" alt="Bronze" width="24px" height="24px"></h3>
+                    <div>
+                        <h3>Silver</h3>
+                        <img src="images/membership/silver-star.svg" alt="Silver" width="24" height="24">
+                    </div>
                     <button id="open-button3">Upgrade Your Experience</button>
                 </article>
                 <article id="gold" class="card">
-                    <h3>Gold<img src="images/membership/gold-star.svg" alt="Bronze" width="24px" height="24px"></h3>
+                    <div>
+                        <h3>Bronze</h3>
+                        <img src="images/membership/gold-star.svg" alt="Gold" width="24" height="24">
+                    </div>
                     <button id="open-button4">Access Premium Perks</button>
                 </article>
             </aside>

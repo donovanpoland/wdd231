@@ -219,7 +219,7 @@
     .membership{
         flex: 0 0 320px;  /* fixed-ish column for cards */
         display: grid;
-        grid-template-columns: fit-content 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .membership h2{

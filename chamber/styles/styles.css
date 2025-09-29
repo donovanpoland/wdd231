@@ -30,6 +30,20 @@ h1, h2, h3{
     color: var(--primary-color);
 }
 
+.heading2, .heading3{
+    font-family: var(--font-lancelot);
+    font-weight: var(--font-weight);
+    color: var(--primary-color);
+}
+
+.heading2{
+    font-size: 1.5rem;
+} 
+
+.heading3{
+    font-size: 1rem;
+}
+
 h1{
     padding-left: 1rem;
 }
