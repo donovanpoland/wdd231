@@ -11,7 +11,7 @@
     <!-- Scripts -->
     <script src="../scripts/last-modified.js" defer></script>
     <script src="scripts/scipts.js" defer></script>
-    <script src="scripts/join.js"></script>
+    <script src="scripts/join/join.js" defer></script>
     <!-- CSS style sheets -->
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
@@ -75,15 +75,6 @@
                         <span class="required">Last Name</span>
                         <input id="lname" name="lname" type="text" required autocomplete="family-name" title="Last Name" placeholder="Smith">
                     </Label>
-                    <!-- Organization title -->
-                    <Label for="org-title">
-                        <span class="optional">Title</span>
-                        <input 
-                            id="org-title" type="text" name="org-title" 
-                            autocomplete="organization-title" title="Only letters, hyphens, and spaces. Minimum 7 characters."  
-                            placeholder="Chief Executive Officer" 
-                            pattern="^[A-Za-z\- ]{7,}$">
-                    </Label>
                     <!-- Email -->
                     <!-- Email type does not need pattern -->
                     <label  for="email">
@@ -109,15 +100,24 @@
                             autocomplete="organization" autocapitalize="words" 
                             placeholder="Best Company Ever">
                     </label>
+                    <!-- Organization title -->
+                    <Label for="org-title">
+                        <span class="optional">Title</span>
+                        <input 
+                            id="org-title" type="text" name="org-title" 
+                            autocomplete="organization-title" title="Only letters, hyphens, and spaces. Minimum 7 characters."  
+                            placeholder="Chief Executive Officer" 
+                            pattern="^[A-Za-z\- ]{7,}$">
+                    </Label>
                     <!-- Membership -->
                     <label  for="member-level">
                         <span class="required">Membership Level</span>
                         <select id="member-level" name="member-level" required>
                             <option disabled aria-disabled="true" selected value="">Please Choose an Option</option>
-                            <option value="Npo">Non Profit</option>
-                            <option value="Bronze">Bronze</option>
-                            <option value="Silver">Silver</option>
-                            <option value="Gold">Gold</option>
+                            <option value="non profit organization">Non Profit</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
                         </select>
                     </label>
                     <!-- Description -->
@@ -136,25 +136,25 @@
                 </fieldset>
                 <button type="submit">Apply</button>
             </form>
-            <div class="card membership">
+            <aside class="membership">
                 <h2>Membership</h2>
-                <article id="npo">
+                <article id="npo" class="card">
                     <h3>Non Profit</h3>
                     <button>See How We Can Help</button>
                 </article>
-                <article id="bronze">
-                    <h3>Bronze</h3>
+                <article id="bronze" class="card">
+                    <h3>Bronze<img src="images/membership/bronze-star.svg" alt="Bronze" width="24px" height="24px"></h3>
                     <button>Start Your Journey</button>
                 </article>
-                <article id="silver">
-                    <h3>Silver</h3>
+                <article id="silver" class="card">
+                    <h3>Silver<img src="images/membership/silver-star.svg" alt="Bronze" width="24px" height="24px"></h3>
                     <button>Upgrade Your Experience</button>
                 </article>
-                <article id="gold">
-                    <h3>Gold</h3>
+                <article id="gold" class="card">
+                    <h3>Gold<img src="images/membership/gold-star.svg" alt="Bronze" width="24px" height="24px"></h3>
                     <button>Access Premium Perks</button>
                 </article>
-            </div>
+            </aside>
         </div>
     </main>
     <footer>

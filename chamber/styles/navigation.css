@@ -67,7 +67,6 @@ header span {
 
 .navigation li{
     border-radius: .5rem;
-    font-size: 1.35rem;
 }
 
 li.current a::after {
@@ -82,14 +81,20 @@ main .buttons{
     padding: 8px 8px;
 }
 
-main button, .navigation a, .hero a{
+footer .site-info{
+    display: flex;
+    gap: 1rem;
+    max-width: 300px;
+}
+
+main button, .navigation a, .hero a, footer .site-info a{
     color: var(--text-color2);
     display: block;
     background-color: var(--secondary-color);
     box-shadow: 4px 6px 12px black;
     border: 2px var(--secondary-color) solid;
     border-radius: .5rem;
-    padding: .5rem;
+    padding: .8rem;
     transition: 
         color 0.3s ease-in, 
         background-color 0.3s ease-in, 

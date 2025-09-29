@@ -1,5 +1,5 @@
 import { updateLocalTime} from "./time-management.mjs";
-import { fetchMemberData, chooseHighlights } from "../directory/display-data.mjs";
+import { chooseHighlights } from "../directory/display-data.mjs";
 import { checkStoredData } from "../weather/check.mjs";
 
 

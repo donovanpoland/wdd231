@@ -11,11 +11,12 @@
     <!-- Scripts -->
     <script src="../scripts/last-modified.js" defer></script>
     <script src="scripts/scipts.js" defer></script>
-    <script src="scripts/thanks.js"></script>
+    <script src="scripts/join/thanks.js" defer></script>
     <!-- CSS style sheets -->
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/thanks.css">
     <link rel="stylesheet" href="styles/media.css">
     <!-- Font links-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,9 +56,14 @@
         </nav>
     </header>
     <main>
-        <h1>Thanks</h1>
-        <p>Thank You<Span id="full-name"></Span> for submitting an application to join our community driven chamber of commerce.</p>
-        <p>You will be receiving an email from our review team at review@parkcitychamber.com to <span id="email"></span></p>
+        <h1>Application Submitted</h1>
+        <div id="thanks-message">
+            <p>Thank You <Span id="title-name"></Span> for submitting an application to join our community driven chamber of commerce as a <span id="level"></span> Member.</p>
+            <p>You will be receiving an email from our review team at review@parkcitychamber.com to <span id="email"></span> about your company <span id="company"></span>.</p>
+            <p>If for some reason we cannot reach you via email then we will call you at: <br><span id="phone"></span></p>
+            <p>While your waiting start connecting with our Members.</p>
+            <button><a href="directory.html">Check out the Community</a></button>
+        </div>
     </main>
     <footer>
         <section>

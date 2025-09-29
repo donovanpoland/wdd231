@@ -65,7 +65,8 @@
     main button:hover, 
     .navigation a:hover, 
     .navigation li.current a:hover,
-    .hero a:hover {
+    .hero a:hover,
+    footer .site-info a:hover {
         color: var(--primary-color);
         background-color: var(--background-color);
         box-shadow: 0px 2px 8px black;
@@ -112,15 +113,6 @@
         position: absolute;
         bottom: 0;
     } 
-
-    .app-form{
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
-
-    .app-form .membership{
-        grid-row: 2;
-    }
 }
 
 
@@ -196,7 +188,18 @@
     }
 
     .join{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .join .join-form{
+        margin: 0 auto;
+    }
+
+    .join article{
+        grid-column: auto;
+    }
+    .join article:nth-child{
+        translate: -100px;
     }
 }
 
