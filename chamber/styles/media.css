@@ -113,9 +113,40 @@
     .forecast p:last-child{
         position: absolute;
         bottom: 0;
-    } 
-}
+    }
 
+    .join{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 2rem; 
+        align-items: flex-start;  
+    }
+
+    .join-form fieldset legend{
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .join-form fieldset{
+        width: 100%;
+    }
+
+    .join-form{
+        flex: 1 1 60%;
+        margin: 0;
+    }
+
+    .membership{
+        flex: 0 0 320px;  /* fixed-ish column for cards */
+        display: grid;
+        grid-template-columns: fit-content 1fr 1fr 1fr;
+    }
+
+    .membership h2{
+        text-align: center;
+    }
+}
 
 /* 752px */
 @media (min-width: 62em){
@@ -186,21 +217,6 @@
     {
         margin: 0;
         text-align: left;
-    }
-
-    .join{
-        grid-template-columns: 2fr 1fr;
-    }
-
-    .join .join-form{
-        margin: 0 auto;
-    }
-
-    .join article{
-        grid-column: auto;
-    }
-    .join article:nth-child{
-        translate: -100px;
     }
 }
 

@@ -12,7 +12,6 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    max-width: 600px;
     min-width: 280px;
 }
 
@@ -90,6 +89,7 @@ textarea{
 
 .membership h2{
     grid-column: 1/-1;
+    max-height: fit-content;
 }
 
 .membership article{
@@ -215,11 +215,15 @@ box-shadow: 0 0px 12px 2px rgb(255, 215, 0);
 }
 
 #dialog p{
-    max-width: 300px;
+    min-width: 300px;
+    max-width: 600px;
     padding: 1rem;
 }
 
 
+::backdrop{
+    background-color: rgba(30, 30, 30, .7);
+}
 
 
 
