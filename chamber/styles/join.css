@@ -98,28 +98,28 @@ textarea{
     padding: 1rem;
     opacity: 0;
     transform: translateX(300px);
-    animation: fade-left 0.8s ease-in-out forwards;
+    animation: shift-left 0.8s ease-in-out forwards;
     overflow: hidden;
 }
 
 .membership article::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 2px;
-  background: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(255,255,255,0.02) 10%,
-    rgba(255,255,255,0.08) 20%,
-    rgba(255,255,255,0.20) 40%,
-    rgba(255,255,255,0.08) 60%,
-    rgba(255,255,255,0.02) 70%,
-    transparent 80%
-  );
-  background-size: 200% 100%;
-  animation: sheen 15s linear infinite;
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255,255,255,0.02) 10%,
+        rgba(255,255,255,0.08) 20%,
+        rgba(255,255,255,0.20) 40%,
+        rgba(255,255,255,0.08) 60%,
+        rgba(255,255,255,0.02) 70%,
+        transparent 80%
+    );
+    background-size: 200% 100%;
+    animation: sheen 15s linear infinite;
 }
 
 .membership article h3{
@@ -135,23 +135,23 @@ textarea{
 }
 
 .membership article:nth-of-type(1) {
-  animation-delay: 0.3s;
-  box-shadow: 0 0px 12px 2px rgb(158, 196, 240);
+    animation-delay: 0.3s;
+    box-shadow: 0 0px 12px 2px rgb(158, 196, 240);
 }
 .membership article:nth-of-type(2) {
-  animation-delay: .9s;
-  border-color: rgb(205, 127, 50); /* Bronze */
-  box-shadow: 0 0px 12px 2px rgb(205, 127, 50);
+    animation-delay: .9s;
+    border-color: rgb(205, 127, 50); /* Bronze */
+    box-shadow: 0 0px 12px 2px rgb(205, 127, 50);
 }
 .membership article:nth-of-type(3) {
-  animation-delay: 1.5s;
-  border-color: rgb(192, 192, 192); /* Silver */
-  box-shadow: 0 0px 12px 2px rgb(192, 192, 192);
+    animation-delay: 1.5s;
+    border-color: rgb(192, 192, 192); /* Silver */
+    box-shadow: 0 0px 12px 2px rgb(192, 192, 192);
 }
 .membership article:nth-of-type(4) {
-  animation-delay: 2.1s;
-  border-color: rgb(255, 215, 0); /* Gold */
-box-shadow: 0 0px 12px 2px rgb(255, 215, 0);
+    animation-delay: 2.1s;
+    border-color: rgb(255, 215, 0); /* Gold */
+    box-shadow: 0 0px 12px 2px rgb(255, 215, 0);
 }
 
 .membership article:nth-of-type(1):before{
@@ -167,7 +167,7 @@ box-shadow: 0 0px 12px 2px rgb(255, 215, 0);
     animation-delay: 3s;
 }
 
-@keyframes fade-left {
+@keyframes shift-left {
   0% {
     opacity: 0;
     transform: translateX(300px);
@@ -218,7 +218,6 @@ box-shadow: 0 0px 12px 2px rgb(255, 215, 0);
     max-width: 600px;
     padding: 1rem;
 }
-
 
 ::backdrop{
     background-color: rgba(30, 30, 30, .7);
