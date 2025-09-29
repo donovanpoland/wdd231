@@ -66,15 +66,15 @@
                         <span class="optional">Optional</span>
                     </legend>
                     <!-- First name -->
-                    <Label for="fname">
+                    <label for="fname">
                         <span class="required">First Name</span>
                         <input id="fname" name="fname" type="text" required autocomplete="given-name" title="First Name" placeholder="John">
-                    </Label>
+                    </label>
                     <!-- Last name -->
-                    <Label for="lname">
+                    <label for="lname">
                         <span class="required">Last Name</span>
                         <input id="lname" name="lname" type="text" required autocomplete="family-name" title="Last Name" placeholder="Smith">
-                    </Label>
+                    </label>
                     <!-- Email -->
                     <!-- Email type does not need pattern -->
                     <label  for="email">
@@ -101,16 +101,16 @@
                             placeholder="Best Company Ever">
                     </label>
                     <!-- Organization title -->
-                    <Label for="org-title">
+                    <label for="org-title">
                         <span class="optional">Title</span>
                         <input 
                             id="org-title" type="text" name="org-title" 
                             autocomplete="organization-title" title="Only letters, hyphens, and spaces. Minimum 7 characters."  
                             placeholder="Chief Executive Officer" 
                             pattern="^[A-Za-z\- ]{7,}$">
-                    </Label>
+                    </label>
                     <!-- Membership -->
-                    <label  for="member-level">
+                    <label for="member-level">
                         <span class="required">Membership Level</span>
                         <select id="member-level" name="member-level" required>
                             <option disabled aria-disabled="true" selected value="">Please Choose an Option</option>
@@ -121,7 +121,7 @@
                         </select>
                     </label>
                     <!-- Description -->
-                    <label  for="description">
+                    <label for="description">
                         <span class="required">Please provide A description of your business</span>
                         <textarea 
                             required
