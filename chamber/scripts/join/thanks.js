@@ -12,6 +12,7 @@ const phone = getFromData.get('phone');
 const orgName = getFromData.get('org-name');
 const level = getFromData.get('member-level');
 const description = getFromData.get('description');
+const timeStamp = getFromData.get('timestamp');
 
 // Optional
 const orgTitle = getFromData.get('org-title');
@@ -29,10 +30,14 @@ function logParamsListener() {
     console.log(orgName);
     console.log(level);
     console.log(description);
-    console.log(orgTitle)
+    console.log(orgTitle);
+    console.log(timeStamp);
 }
 
 function displayInfo() {
+    // Set timestamp
+    document.querySelector("#timestamp").textContent = `Submission Time: ${timeStamp}`;
+
     // set member name and title if provided
     const fullName = document.querySelector("#title-name");
     if (orgTitle != "") {

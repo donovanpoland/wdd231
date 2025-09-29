@@ -3,11 +3,13 @@
     flex-direction: column;
     gap: 1rem;
     align-items: center;
-    padding: 1rem;
+    padding: 0 1rem;
     line-height: 1.5;
     text-align: center;
+    position: relative;
 }
 
-#thanks-message button{
-    max-width: fit-content;
+
+.card{
+    margin: 0 1rem;
 }

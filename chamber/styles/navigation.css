@@ -87,7 +87,7 @@ footer .site-info{
     max-width: 300px;
 }
 
-main button, .navigation a, .hero a, footer .site-info a{
+main button, .navigation a, .hero a, footer .site-info a, #thanks-message a{
     color: var(--text-color2);
     display: block;
     background-color: var(--secondary-color);

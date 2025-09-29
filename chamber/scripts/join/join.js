@@ -9,6 +9,23 @@ const benefits = document.querySelector(`#dialog ul`)
 const closeButton = document.querySelector("#dialog button");
 
 
+// Set local time
+document.addEventListener("DOMContentLoaded", () => {
+    const timeStamp = document.querySelector("#timestamp");
+
+    if (timeStamp) {
+        // Create local time string
+        const localTime = new Date().toLocaleString("en-US", {
+            timeZone: "America/Denver", // Handles MST + MDT automatically
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: true,
+        });
+        // Set time stamp
+        timeStamp.value = localTime;
+    }
+});
+
 openButton1.addEventListener("click", () => {
     dialogBox.showModal();
 
