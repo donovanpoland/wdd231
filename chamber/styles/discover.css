@@ -7,4 +7,5 @@
 .discover .card{
     display: grid;
     padding: 1rem;
+    text-align: center;
 }
