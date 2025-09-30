@@ -1,0 +1,10 @@
+.discover{
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.discover .card{
+    display: grid;
+    padding: 1rem;
+}
