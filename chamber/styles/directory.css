@@ -75,6 +75,7 @@
     flex-direction: column;
     height: 520px;
     text-align: center;
+    align-items: center;
 }
 
 .directory-grid .business-head{
@@ -95,6 +96,20 @@
 .directory-grid .desc{
     padding-top: .5rem;
     height: 90px;
+}
+
+.business-head{
+    position: relative;
+}
+
+.business-head .membership{
+    position: absolute;
+    right: 0;
+    top: 0;  
+}
+
+.contact a{
+    margin-top: 1rem;
 }
 
 

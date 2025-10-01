@@ -55,22 +55,14 @@
         padding: 1rem;
     }
 
-    footer .socials img:hover{
-        border: 1px var(--primary-color) solid;
-        border-radius: .5rem;
-    }
-
-    main button:hover, 
-    .navigation a:hover, 
+    .btn:hover,
+    .card a:hover,
+    .navigation a:hover,
     .navigation li.current a:hover,
-    .hero a:hover,
-    footer .site-info a:hover,
-    .membership button:hover,
-    #thanks-message a:hover,
-    .discover .card a:hover {
+    .card button:hover{
         color: var(--primary-color);
         background-color: var(--background-color);
-        box-shadow: 0px 2px 8px black;
+        box-shadow: 0px 2px 8px rgb(158, 196, 240);
         border: 2px var(--primary-color) solid;
     }
 
@@ -80,18 +72,6 @@
 
     .modified{
         grid-column: 2/3;
-    }
-
-    a.url{
-        transition: 
-            color 0.3s ease-in, 
-            background-color 0.3s ease-in, 
-            box-shadow 0.3s ease-out;
-    }
-
-    a.url:hover{
-        background-color: var(--background-color);
-        color: var(--primary-color);
     }
 
     .events-list{
@@ -104,11 +84,13 @@
         background-color: rgba(0, 0, 0, .5);
         border-radius: .5rem;
         padding: .2rem;
+        align-self: center;
     }
 
     .hero a {
         position: absolute;
         bottom: 1.5rem;
+        align-self: center;
     }
 
     .forecast p:last-child{
@@ -133,7 +115,9 @@
             box-shadow .2s ease-in-out;
     }
 
-    .discover .card:hover{
+    .discover .card:hover, 
+    #directory .card:hover,
+    #highlights .card:hover{
         box-shadow: 0 0px 12px 2px rgb(158, 196, 240);
     }
 
@@ -192,15 +176,6 @@
 
     .directory-list .contact .phone{
         text-align: center;
-    }
-
-    .directory-list .contact a.url{
-        display: flex;
-        text-align: center;
-        height: 44px;
-        justify-content: center;
-        align-items: center;
-        width: 200px;
     }
 
     .directory-list .desc{

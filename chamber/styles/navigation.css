@@ -74,39 +74,30 @@ li.current a::after {
     content: "🚠";
 }
 
-main .buttons{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: .5rem;
-    padding: 8px 8px;
-}
-
 footer .site-info{
     display: flex;
     gap: 1rem;
     max-width: 300px;
 }
 
-.btn-layout,
-main button,
-.navigation a,
-.hero a,
-footer .site-info a,
-#thanks-message a,
-.discover .card a{
+.btn, .card a, .navigation a, .card button{
     color: var(--text-color2);
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--secondary-color);
-    box-shadow: 4px 6px 12px black;
+    box-shadow: 6px 6px 12px black;
     border: 2px var(--secondary-color) solid;
     border-radius: .5rem;
-    padding: .8rem;
+    height: 44px;
+    min-width: 10rem;
+    padding: 1rem;
     transition: 
         color 0.3s ease-in-out, 
         background-color 0.3s ease-in-out, 
         box-shadow 0.3s ease-in-out,
         border-color 0.3s ease-in-out ;
-    cursor: pointer;
+    cursor: pointer;  
 }
 
 .navigation li.current a{

@@ -1,12 +1,13 @@
-
-
 .hero{
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
     position: relative;
     gap: .5rem;
-    width: 92%;
+}
+
+.hero .card{
+    display: grid;
+    min-width: 300px;
 }
 
 .hero picture, .hero img {
@@ -14,14 +15,10 @@
     width: 100%;
 }
 
-.hero h2{
-    text-align: center;
-}
-
 .hero img{
     aspect-ratio: 3 / 2;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: .5rem;
     height: auto;
 }
 
@@ -40,11 +37,6 @@
 .local-data > :nth-child(1) {grid-area: events;}
 .local-data > :nth-child(2) {grid-area: weather;}
 .local-data > :nth-child(3) {grid-area: forecast;}
-
-
-.local-data h2{
-    text-align: center;
-}
 
 .events-list{
     display: grid;

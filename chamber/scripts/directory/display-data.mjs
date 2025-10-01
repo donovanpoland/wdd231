@@ -26,7 +26,7 @@ export async function getMembers() {
 function displayData(members) {
 
     // Find all classes with the name card and place them in an array
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.directory-grid .card');
   
     // For each card assign member data to each card according to index number
     members.forEach((member, index) => {
@@ -65,7 +65,7 @@ function displayData(members) {
         phone.textContent = member.phone;
 
         // Set website URL
-        const website = card.querySelector('.url');
+        const website = card.querySelector('.contact a');
         let url = member.url;
         let displayUrl = url.replace("https://", "");
         website.setAttribute('href', url);
