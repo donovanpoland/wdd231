@@ -81,11 +81,13 @@
 .directory-grid .business-head{
     height: 4rem; /* 64px */
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.directory-grid .business-head .name{
+.directory-grid .business-head .business-name{
     text-align: center;
-    width: 128px;
+    width: 152px;
 }
 
 .directory-grid .logo{
