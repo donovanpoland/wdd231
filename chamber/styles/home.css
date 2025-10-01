@@ -19,7 +19,6 @@
 }
 
 .hero img{
-    border: 1px dotted white;
     aspect-ratio: 3 / 2;
     object-fit: cover;
     border-radius: 8px;
@@ -32,7 +31,7 @@
     grid-template-columns: 300px;
     grid-template-areas: 
     "events"
-    " weather"
+    "weather"
     "forecast";
     gap: .5rem;
     padding: 1rem;
