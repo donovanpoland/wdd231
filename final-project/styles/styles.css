@@ -1,0 +1,74 @@
+:root{
+
+    /* Fonts */
+    --primary-font: ;
+    --headings-font: ;
+    --size: ;
+
+    /* Colors */
+    --primary-color:  #; /* */
+    --secondary-color: #; /*  */
+    --bg-color1: #; /*  */
+    --bg-color2: #; /*  */
+    --text-color: #; /* */
+    --text-color2: #; /*  */
+
+    /* Borders */
+    --border-color: #;
+    --border-size: 2px;
+    --radius: .5rem;
+    --border: var(--border-size) solid var(--border-color);
+
+    /* Spacing */
+    --around: 1rem;
+    /* Shorthand (vertical horizontal) */
+    --top-bottom: 1rem 0;
+    --sides: 0 1rem;
+    /* Gaps */
+    --small: .5rem;
+    --medium: 1rem;
+    --large: 2rem;
+
+    /* Shadows */
+    --shadow-color-dark: #;
+    --shadow-color-light: #;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    font-family: var(--primary-font);
+    color: var(--text-color);
+    background-color: var(--bg-color1);
+}
+
+h1, h2, h3{
+    font-family: var(--headings-font);
+    color: var(--primary-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.grid{
+    display: grid;
+}
+
+.card{
+    border: var(--border);
+    border-radius: var(--radius);
+}

@@ -1,0 +1,38 @@
+/* 608px */
+@media only screen and (min-width: 38em){
+
+    header, main, nav, footer{
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    main{
+    padding-bottom: 1rem;
+    }
+
+    header{
+        grid-template-columns: 100px auto 44px;
+    }
+
+    header img{
+        margin: 0 1rem;
+    }
+
+    header span {
+        margin: 0 1rem;
+        font-size: 2rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation ul{
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .navigation {
+        display: block;
+    }
+}
