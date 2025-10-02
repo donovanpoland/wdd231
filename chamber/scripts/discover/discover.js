@@ -1,4 +1,4 @@
-import { places, url } from "../data/places.mjs";
+import { places, url } from "../../data/places.mjs";
 
 
 
