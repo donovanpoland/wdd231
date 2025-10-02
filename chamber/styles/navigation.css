@@ -94,10 +94,10 @@ footer .site-info{
     padding: 1rem;
     transition: 
         color 0.3s ease-in-out, 
-        background-color 0.3s ease-in-out, 
+        background-color 0.3s ease-in-out,
         box-shadow 0.3s ease-in-out,
-        border-color 0.3s ease-in-out ;
-    cursor: pointer;  
+        border-color 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .navigation li.current a{
