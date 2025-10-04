@@ -10,12 +10,16 @@
     <meta name="robots" content="index, follow">
     <!-- Scripts -->
     <script src="/final-project/scripts/scripts.js" defer></script>
+    <script src="/scripts/last-modified.js" defer></script>
     <!-- CSS style sheets -->
+    <link rel="stylesheet" href="/final-project/styles/styles.css">
+    <link rel="stylesheet" href="/final-project/styles/navigation.css">
+    <link rel="stylesheet" href="/final-project/styles/medium.css">
     <link rel="stylesheet" href="styles/site-plan.css">
     <!-- Font links-->
-    <link rel="preconnect" href="">
-    <link rel="preconnect" href="" crossorigin>
-    <link href="" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <!-- Open Graph protocol meta tags -->
     <meta property="og:title" content="Page Title goes here">
     <meta property="og:description" content="replace with page description">
@@ -28,7 +32,7 @@
 <body>
 <header>
     <!-- Site logo and link to homepage when clicked -->
-    <a href=""><img src="images/" alt="Site Logo" width="" height=""></a>
+    <a id="logo" href="/final-project/index.html"><img src="/final-project/images/logos/recipe-explorer-logo100.webp" alt="Recipe Explorer Logo" width="" height=""></a>
     <!-- Site name -->
     <span>Project Site Plan</span>
     <!-- Hamburger button -->
@@ -39,35 +43,117 @@
             <li class="current"><a href="#">Site Plan</a></li>
             <li><a href="https://byui-cse.github.io/wdd231-ww-course/week06/project-description.html">Project Description</a></li>
             <li><a href="proposal.html">Proposal</a></li>
-            <li><a href="/index.html">Project</a></li>
+            <li><a href="/final-project/index.html">Project</a></li>
         </ul>
     </nav>
 </header>
 <main>
     <h1>Site plan</h1>
-    <section>
-        <h2>name</h2>
-        <p>why</p>
+    <section class="card">
+        <h2>Name</h2>
+        <p>Recipe Explorer</p>
+        <p>The name Recipe Explorer builds on the idea of being creative and trying something new.</p>
     </section>    
-    <section>
-        <h2>purpose</h2>
-        <p>why</p>
+    <section class="card">
+        <h2>Purpose</h2>
+        <p>The purpose of this site is to create a space where recipes can be discovered and shared, helping people find inspiration for everyday meals and special occasions.</p>
     </section>
-        <section>
-        <h2>scenarios</h2>
-        <p>text</p>
+        <section class="card ">
+        <h2>Scenarios</h2>
+        <ul class="scenarios flex">
+            <li>
+            <h3>Busy Parent Looking for Dinner Ideas</h3>
+            <p>
+                A parent wants to quickly find a healthy dinner recipe using ingredients they already have.
+                They use search or category filters to find an easy 30-minute meal for the family.
+            </p>
+            </li>
+
+            <li>
+            <h3>College Student Learning to Cook</h3>
+            <p>
+                A student browses simple and affordable recipes and saves favorites with the
+                “Save Recipe” feature to revisit later.
+            </p>
+            </li>
+
+            <li>
+            <h3>Home Cook Sharing Recipes</h3>
+            <p>
+                A passionate home cook submits an original recipe through the site's form,
+                including ingredients and step-by-step instructions.
+            </p>
+            </li>
+
+            <li>
+            <h3>Meal Planner for the Week</h3>
+            <p>
+                A user plans meals by browsing categories (breakfast, lunch, dinner, dessert)
+                and adds several dishes to their favorites list for quick access.
+            </p>
+            </li>
+
+            <li>
+            <h3>Food Enthusiast Exploring New Cuisines</h3>
+            <p>
+                Someone explores recipes by cuisine type, opening a modal to read detailed instructions
+                and view images before deciding what to cook next.
+            </p>
+            </li>
+        </ul>
     </section>
-    <section>
+    <section class="card colors">
         <h2>Color Schema</h2>
-        <p>color</p>
+        <ul class="flex">
+            <li>
+                <h3>Heading</h3>
+                <p><strong>--color1:</strong> #2E7D32 - <em>Deep Green</em></p>
+                <p><strong>--color2:</strong> #F9A825 - <em>Warm Gold</em></p>
+            </li>
+
+            <li>
+                <h3>Background</h3>
+                <p><strong>--bg1:</strong> #FFF8E1 - <em>Soft Cream</em></p>
+                <p><strong>--bg2:</strong> #FFFFFF - <em>White</em></p>
+            </li>
+
+            <li>
+                <h3>Text</h3>
+                <p><strong>--text1:</strong> #212121 - <em>Near Black</em></p>
+                <p><strong>--text2:</strong> #424242 - <em>Charcoal Gray</em></p>
+            </li>
+
+            <li>
+                <h3>Forms</h3>
+                <p><strong>--alert:</strong> #C62828 - <em>Brick Red</em></p>
+                <p><strong>--confirm:</strong> #388E3C - <em>Forest Green</em></p>
+            </li>
+
+            <li>
+                <h3>Buttons / Links / Hover</h3>
+                <a href="">Standard anchor tag</a>
+                <button>Button</button>
+                <p></p>
+            </li>
+
+            <li>
+                <h3>Shadows</h3>
+                <p><strong>--shadow-dark:</strong> #212121 - <em>Near Black</em> - Larger shadow</p>
+                <p><strong>--shadow-light:</strong> #212121 - <em>Near Black</em> - Smaller shadow</p>
+            </li>
+        </ul>
     </section>
-    <section>
+    <section class="card">
         <h2>Typography</h2>
-        <p>font</p>
+        <p>Headings - Lobster</p>
+        <p>Body Text - Nunito</p>
     </section>
-    <section>
+    <section class="card">
         <h2>Wireframe</h2>
-        <img src="" alt="">
+        <img src="/final-project/images/wireframes/" alt="Wireframe">
+        <img src="/final-project/images/wireframes/" alt="Wireframe">
+        <img src="/final-project/images/wireframes/" alt="Wireframe">
+        <img src="/final-project/images/wireframes/" alt="Wireframe">
     </section>
 </main>
 <footer>

@@ -1,20 +1,28 @@
 :root{
 
     /* Fonts */
-    --primary-font: ;
-    --headings-font: ;
-    --size: ;
+    --font1: "Lobster", sans-serif;
+    --font2: "Nunito", sans-serif;
+    --size: 400;
 
     /* Colors */
-    --primary-color:  #; /* */
-    --secondary-color: #; /*  */
-    --bg-color1: #; /*  */
-    --bg-color2: #; /*  */
-    --text-color: #; /* */
-    --text-color2: #; /*  */
+    --color1:  #2E7D32; /* Deep Green */
+    --color2: #F9A825; /* Warm Gold */
+    --bg1: #FFF8E1; /* Soft Cream */
+    --bg2: #FFFFFF; /* White */
+    --text1: #212121; /* Near Black */
+    --text2: #424242; /* Charcoal Gray */
+    --alert: #C62828; /* Brick Red */
+    --confirm: #388E3C; /* Forest Green */
+    --highlight: #FFCA28 ; /* Light Golden */
+
+    /* Buttons / Links */
+    --btn-bg: var(--color2);
+    /* Hover */
+    --btn-bg-h: var(--highlight);
 
     /* Borders */
-    --border-color: #;
+    --border-color: var(--color2);
     --border-size: 2px;
     --radius: .5rem;
     --border: var(--border-size) solid var(--border-color);
@@ -30,8 +38,8 @@
     --large: 2rem;
 
     /* Shadows */
-    --shadow-color-dark: #;
-    --shadow-color-light: #;
+    --shadow-dark: 6px 6px 12px #212121 ;
+    --shadow-light: 0 2px 6px #212121;
 }
 
 * {
@@ -41,18 +49,41 @@
 }
 
 body{
-    font-family: var(--primary-font);
+    font-family: var(--font2);
     color: var(--text-color);
-    background-color: var(--bg-color1);
+    background-color: var(--bg1);
+    font-weight: var(--size);
+
+}
+
+main{
+    gap: var(--medium);
+    padding: var(--top-bottom);
 }
 
 h1, h2, h3{
-    font-family: var(--headings-font);
-    color: var(--primary-color);
+    font-family: var(--font1);
+    color: var(--color1);
+    font-weight: var(--size);
 }
 
-a{
+.navigation a, main a, main button{
     text-decoration: none;
+    border-radius: var(--radius);
+    border: var(--border);
+    text-align: center;
+    color: var(--text2);
+    background-color: var(--btn-bg);
+    min-height: 44px;
+    padding: .7rem;
+    align-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-dark);
+    transition: 
+        color 0.3s ease-in-out, 
+        background-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
 }
 
 ul, ol{
@@ -68,7 +99,25 @@ ul, ol{
     display: grid;
 }
 
+.center{
+    text-align: center;
+}
+
+.indent{
+    text-indent: 1rem;
+}
+
 .card{
     border: var(--border);
     border-radius: var(--radius);
+    background-color: var(--bg2);
+    box-shadow: var(--shadow-dark);
+}
+
+footer{
+    gap: var(--medium);
+}
+
+.modified{
+    text-align: center;
 }

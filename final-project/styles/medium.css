@@ -10,6 +10,7 @@
     padding-bottom: 1rem;
     }
 
+    /* Header */
     header{
         grid-template-columns: 100px auto 44px;
     }
@@ -23,6 +24,7 @@
         font-size: 2rem;
     }
 
+    /* Navigation */
     .hamburger {
         display: none;
     }
@@ -34,5 +36,19 @@
 
     .navigation {
         display: block;
+    }
+
+    /* Hover links and buttons */
+    .navigation a:hover, main a:hover, main button:hover{
+        background-color: var(--btn-bg-h);
+        color: var(--text1);
+        border-color: var(--color1);
+        box-shadow: var(--shadow-light);
+    }
+
+    /* Footer */
+    footer{
+        border-top: var(--broder);
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

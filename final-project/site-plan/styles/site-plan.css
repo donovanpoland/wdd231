@@ -1,92 +1,6 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-/** Header **/
-
-header {
-    display: grid;
-    grid-template-columns: 50px auto 44px;
-    gap: 8px;
-    align-items: center;
-    margin: 0 1rem; /* top/bottom 0, left/right 16px */
-}
-
-header img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: .5rem;
-}
-
-header span {
-    font-size: 1.5rem;
-    font-family: var();
-    color: var(--primary-color);
-    margin-left: .5rem;
-}
-
-/** Hamburger **/
-
-.hamburger {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: var();
-}
-
-.hamburger::before {
-    content: "\2630";
-    font-size: 3.1rem;
-    color: var(--primary-color);
-}
-
-.hamburger.show::before {
-    content: "\00D7";
-    font-size: 5.3rem;
-    color: var(--primary-color);
-}
-
-/** Navigation **/
-
-.navigation {
-    grid-column: 1/-1;
-}
-
-.navigation ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-}
-
-.navigation {
-    display: none;
-}
-
-.navigation.show {
-    display: block;
-}
-
-.navigation li {
-    border-radius: .5rem;
-}
-
-.navigation a{
-    padding: 1rem;
-}
-
 li.current a::after {
     margin-left: .5rem;
     content: "📍";
-}
-
-.navigation a{
-    text-decoration: none;
-    color: black;
 }
 
 main{
@@ -107,46 +21,15 @@ ul{
     margin-left: 3rem;
 }
 
-/* 608px */
-@media only screen and (min-width: 38em){
-
-    header, main, nav, footer{
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    main{
-    padding-bottom: 1rem;
-    }
-
-    header{
-        grid-template-columns: 100px auto 44px;
-    }
-
-    header img{
-        margin: 0 1rem;
-    }
-
-    header span {
-        margin: 0 1rem;
-        font-size: 2rem;
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    .navigation ul{
-        flex-direction: row;
-        gap: 1rem;
-    }
-
-    .navigation {
-        display: block;
-    }
-
-    .navigation a{
-        border: 1px solid black;
-    }
-
+.colors ul{
+    gap: var(--medium);
 }
+
+.scenarios{
+    gap: var(--medium);
+}
+
+.scenarios p{
+    text-indent: 1rem;
+}
+
