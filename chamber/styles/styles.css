@@ -81,12 +81,3 @@ footer{
     padding-bottom: 1rem;
     text-align: center;
 }
-
-footer .site-info{
-    display: flex;
-    flex-direction: column;
-}
-
-footer .site-info h3{
-    font-family: var(--font-roboto);
-}

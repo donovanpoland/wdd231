@@ -47,8 +47,8 @@
     }
 
     footer{
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        border-top: 1px dotted white;
         justify-content: center;
         text-align: center;
         gap: 0;
@@ -59,11 +59,15 @@
     .card a:hover,
     .navigation a:hover,
     .navigation li.current a:hover,
-    .card button:hover{
+    .card button:hover, 
+    .socials img:hover,
+    .site-info a:hover{
         color: var(--primary-color);
         background-color: var(--background-color);
         box-shadow: 0px 2px 8px rgb(158, 196, 240);
         border: 2px var(--primary-color) solid;
+        border-radius: .5rem;
+        text-decoration: none;
     }
 
     #view-switch button:hover{
@@ -74,23 +78,29 @@
         grid-column: 2/3;
     }
 
-    .events-list{
-        grid-template-columns: 1fr 1fr;
+    .hero .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .hero h2{
+    .hero .card h2{
         position: absolute;
         top: 35%;
         background-color: rgba(0, 0, 0, .5);
         border-radius: .5rem;
         padding: .2rem;
-        align-self: center;
     }
 
-    .hero a {
+    .hero .card a {
         position: absolute;
         bottom: 1.5rem;
-        align-self: center;
+    }
+
+    .events-list{
+        grid-template-columns: 1fr 1fr;
     }
 
     .forecast p:last-child{
@@ -137,7 +147,6 @@
         transform: rotate(1deg);
         scale: .9;
     }
-
 }
 
 /* 752px */
@@ -202,7 +211,7 @@
         text-align: left;
     }
 
-        .join{
+    .join{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;

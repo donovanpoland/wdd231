@@ -1,6 +1,6 @@
 .hero{
     display: grid;
-    grid-template-columns: 300px;
+    grid-template-columns: 1fr;
     position: relative;
     gap: .5rem;
     min-width: 300px;
@@ -27,7 +27,7 @@
     margin: 0 auto;
     display: grid;
     justify-content: center;
-    grid-template-columns: 300px;
+    grid-template-columns: 1fr;
     grid-template-areas: 
     "events"
     "weather"
