@@ -1,21 +1,22 @@
 .hero{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 300px;
     position: relative;
     gap: .5rem;
+    min-width: 300px;
+    padding: 1rem;
 }
 
 .hero .card{
     display: grid;
-    min-width: 300px;
 }
 
-.hero picture, .hero img {
+.hero .card picture, .hero .card img {
     display: block;
     width: 100%;
 }
 
-.hero img{
+.hero .card img{
     aspect-ratio: 3 / 2;
     object-fit: cover;
     border-radius: .5rem;
@@ -23,6 +24,7 @@
 }
 
 .local-data {
+    margin: 0 auto;
     display: grid;
     justify-content: center;
     grid-template-columns: 300px;
@@ -31,6 +33,7 @@
     "weather"
     "forecast";
     gap: .5rem;
+    min-width: 280px;
     padding: 1rem;
 }
 

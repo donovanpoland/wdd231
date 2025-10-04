@@ -1,3 +1,5 @@
+ 
+
 .discover{
     display: flex;
     flex-direction: column;
@@ -43,4 +45,25 @@
     grid-area: link;
     align-self: last baseline;
     width: 100%;
+}
+
+.visit{
+    padding: 1rem;
+    min-width: 320px;
+}
+
+.visit .card{
+    display: grid;
+    grid-template-columns: 1fr 44px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .visit-btn{
+    display: flex;
+    max-width: 44px;
+}
+
+.hidden{
+    display: none;
 }

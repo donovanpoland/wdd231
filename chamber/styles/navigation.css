@@ -48,13 +48,14 @@ header span {
 
 .navigation {
     grid-column: 1/-1;
-    
+    width: 100%;
 }
 
 .navigation ul {
     list-style: none;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .navigation {
@@ -90,7 +91,7 @@ footer .site-info{
     border: 2px var(--secondary-color) solid;
     border-radius: .5rem;
     height: 44px;
-    min-width: 10rem;
+
     padding: 1rem;
     transition: 
         color 0.3s ease-in-out, 

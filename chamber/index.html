@@ -58,28 +58,30 @@
     </header>
 <main>
     <h1>Home</h1>
-    <section class="hero card">
-        <h2 class="center">Connecting Local Business & Community</h2>
-        <picture>
-            <!-- Aspect ratio 3:2 -->
-            <source 
-                srcset=
-                    "images/hero/hero280x187.webp 280w,
-                    images/hero/hero640x427.webp 640w,
-                    images/hero/hero960x640.webp 960w,
-                    images/hero/hero1400x933.webp 1400w"
-                type="image/webp"
-                sizes="(max-width: 600px) 100vw, 1400px">
-            <img 
-                src="images/hero/hero960x640.webp" 
-                alt="Park City Skyline"
-                width="1400"
-                height="933"
-                loading="eager"
-                fetchpriority="high">
-        </picture>
-        <a href="join.html">Become A Proud Member Today!</a>
-    </section>
+    <div class="hero">
+        <section class="card">
+            <h2 class="center">Connecting Local Business & Community</h2>
+            <picture>
+                <!-- Aspect ratio 3:2 -->
+                <source 
+                    srcset=
+                        "images/hero/hero280x187.webp 280w,
+                        images/hero/hero640x427.webp 640w,
+                        images/hero/hero960x640.webp 960w,
+                        images/hero/hero1400x933.webp 1400w"
+                    type="image/webp"
+                    sizes="(max-width: 600px) 100vw, 1400px">
+                <img 
+                    src="images/hero/hero960x640.webp" 
+                    alt="Park City Skyline"
+                    width="1400"
+                    height="933"
+                    loading="eager"
+                    fetchpriority="high">
+            </picture>
+            <a href="join.html">Become A Proud Member Today!</a>
+        </section>
+    </div>
     <h1>Local Information</h1>
     <div class="local-data">
         <section class="events card">
