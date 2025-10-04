@@ -55,10 +55,6 @@
     text-indent: 1rem;
 }
 
-.events-list a::before{
-    content: "➡️";
-}
-
 .weather, .events, .forecast{
     display: flex;
     flex-direction: column;
