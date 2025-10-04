@@ -48,7 +48,7 @@
 
     /* Footer */
     footer{
-        border-top: var(--broder);
+        border-top: var(--border);
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
