@@ -15,10 +15,12 @@
         "address"
         "link";
     min-width: 300px;
+    align-items: center;
 }
 
 .discover .card h2{
     grid-area: heading;
+    align-self: first baseline;
 }
 
 .discover .card figure{
