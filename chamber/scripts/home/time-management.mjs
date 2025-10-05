@@ -14,38 +14,31 @@ export function updateLocalTime() {
     }
 }
 
-// Determine if a new time stamp is need on local storage and place one
-// Return true or false if time stamp has elapsed by 3 hours
-// Used to determine if new api call is needed or if local storage contains relevant data
 export function createTimeStamp() {
-    
-    // Current time in ms
-    const currentTime = Date.now();
-    const formattedTime = currentTime.toLocaleString();
+  const currentTime = Date.now();
+  localStorage.setItem("Timestamp", currentTime.toString());
+  console.log("Timestamp created/updated:", currentTime);
+}
 
-    // Get the stored timestamp if any
-    const stored = localStorage.getItem("Timestamp");
-    // Should a new API call be made? true/false
-    if (stored) {
-        // Convert string to number
-        const storedTime = Number(stored);
-        const hoursPassed = (currentTime - storedTime) / (1000 * 60 * 60);
+export function isTimeStampExpired() {
+  const stored = localStorage.getItem("Timestamp");
 
-        // If 3 hours have passed update the time stamp
-        if (hoursPassed > 3) {
-            localStorage.setItem("Timestamp", `${currentTime} (${formattedTime})`);
-            console.log("updated expired timestamp.");
-            return true;
-        } else {
-            console.log("Timestamp still valid, did not load new data.");
-            return false;
-        }
-    } else {
-        // No time stamp yet, save a new one
-        localStorage.setItem("Timestamp", currentTime);
-        console.log("Created initial timestamp.");
-        return true;
-    }
+  if (!stored) {
+    console.log("No timestamp found — data considered expired.");
+    return true; // Force refresh on first load
+  }
+
+  const currentTime = Date.now();
+  const storedTime = Number(stored);
+  const hoursPassed = (currentTime - storedTime) / (1000 * 60 * 60);
+
+  if (hoursPassed > 3) {
+    console.log(`Timestamp expired: ${hoursPassed.toFixed(2)} hours have passed.`);
+    return true;
+  }
+
+  console.log(`Timestamp still valid: ${hoursPassed.toFixed(2)} hours have passed.`);
+  return false;
 }
 
 // Get the name of the weekday

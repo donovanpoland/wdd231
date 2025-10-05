@@ -1,6 +1,6 @@
 import { displayCurrentWeather, displayForecastWeather } from "./display-weather.mjs";
 import { storeForecastData, storeWeatherData } from "./store-weather.mjs";
-import { createTimeStamp } from "../home/time-management.mjs";
+import { createTimeStamp, isTimeStampExpired } from "../home/time-management.mjs";
 
 export async function checkStoredData() {
 
@@ -27,25 +27,14 @@ export async function checkStoredData() {
     // Check if all required keys exist
     const hasAllKeys = requiredKeys.every(key => localStorage.getItem(key) !== null);
 
-    if (!hasAllKeys) { // will always trigger with new users
-        console.log("Missing required data, fetching new data.");
-        // Set new timestamp
-        createTimeStamp();
-        // Store fresh data
+
+    if (!hasAllKeys || isTimeStampExpired()) {
         await storeWeatherData();
         await storeForecastData();
-        // Display stored data
-        displayCurrentWeather();
-        displayForecastWeather();
-    } else if (createTimeStamp()) { // Will trigger if time stamp is expired
-        // Refresh data
-        await storeWeatherData();
-        await storeForecastData();
-        // Display newly stored data
-        displayCurrentWeather();
-        displayForecastWeather();
-    } else { // Will trigger if data is not expired
-        displayCurrentWeather();
-        displayForecastWeather();
+        createTimeStamp(); // reset after fetching
     }
+
+  // Always display whatever is currently in storage (fresh or cached)
+  displayCurrentWeather();
+  displayForecastWeather();
 }
