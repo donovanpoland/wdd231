@@ -1,4 +1,4 @@
-import { fetchMemberData, displayData, getMembers } from "./display-data.mjs";
+import { displayData, getMembers } from "./display-data.mjs";
 
 // Layout buttons
 const gridButton = document.querySelector('#grid-view');

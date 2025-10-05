@@ -1,26 +1,14 @@
 // Membership data
 const jsonData = 'data/members.json' // File path
 
-// Async function for fetching membership data
-export async function fetchMemberData() {
-    // Load/fetch data json file using json url path
-    const response = await fetch(jsonData);
-
-    // Store the data
-    const data = await response.json();
-
-    // Log data(jason file) to console in table format to the console
-    // console.table(data.members);
-    // displayData(data.members);
-}
-
 // Get an Array of members
 export async function getMembers() {
-  const res = await fetch(jsonData);
-  const data = await res.json();
+  const response = await fetch(jsonData);
+  const data = await response.json();
+  // Log data(jason file) to console in table format to the console
+  // console.table(data.members);
   return data.members;
 }
-
 
 // For each card display info from data loaded
 export function displayData(members, query) {
