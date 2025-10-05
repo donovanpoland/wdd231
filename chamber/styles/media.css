@@ -48,10 +48,10 @@
 
     footer{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         justify-content: center;
         text-align: center;
-        gap: 0;
+        gap: 1rem;
         padding: 1rem;
     }
 
@@ -152,6 +152,10 @@
 /* 752px */
 @media (min-width: 62em){
 
+    footer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     .directory-list section.card{
         display: grid;
         grid-template-columns: 180px 180px 1fr 1fr 96px;
@@ -204,7 +208,6 @@
         display: block;
         width: 80px;
         height: auto;
-        /* position: absolute; */
         right: 2rem;
     }
 
@@ -219,7 +222,7 @@
     .join{
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: 2rem; 
         align-items: flex-start;  
     }
@@ -236,11 +239,13 @@
     .join-form{
         flex: 1 1 60%;
         margin: 0;
+        min-width: 0;
     }
 
     .membership{
-        flex: 0 0 320px;  /* fixed-ish column for cards */
+        flex: 0 0 300px;  /* fixed-ish column for cards */
         display: grid;
+        min-width: 0;
         grid-template-columns: 1fr;
     }
 
@@ -254,6 +259,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         height: fit-content;
+    }
+
+    .business-head .membership{
+        right: -1rem;
     }
 }
 

@@ -57,6 +57,14 @@
     text-align: center;
 }
 
+.contact a{
+        min-width: 250px;
+        max-width: 280px;
+}
+
+.contact{
+    line-height: 2;
+}
 
 /* grid view */
 
@@ -158,13 +166,9 @@
     
 }
 
-.directory-list .contact{
-    line-height: 2;
-}
 
-.directory-list .contact a{
-        width: 250px;
-    }
+
+
 
 
 
