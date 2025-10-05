@@ -23,20 +23,23 @@ export function createTimeStamp() {
 export function isTimeStampExpired() {
   const stored = localStorage.getItem("Timestamp");
 
+  // If time stamp isn't in stored data but other data is, add time stamp and refresh data
   if (!stored) {
     console.log("No timestamp found — data considered expired.");
-    return true; // Force refresh on first load
+    return true;
   }
 
   const currentTime = Date.now();
   const storedTime = Number(stored);
   const hoursPassed = (currentTime - storedTime) / (1000 * 60 * 60);
 
+  // if 3 hours have passed return timeStampeExpired() as true
   if (hoursPassed > 3) {
     console.log(`Timestamp expired: ${hoursPassed.toFixed(2)} hours have passed.`);
     return true;
   }
 
+  // ALways return false unless condition above is met
   console.log(`Timestamp still valid: ${hoursPassed.toFixed(2)} hours have passed.`);
   return false;
 }

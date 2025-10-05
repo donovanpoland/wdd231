@@ -42,13 +42,13 @@ export function displayData(members, query) {
     if (isListView) {
       revisedUrl = smallImage;
       size = "Small"
-      console.log('revisedUrl:', revisedUrl);
+      // console.log('revisedUrl:', revisedUrl);
       logo.setAttribute("width", "80");
       logo.setAttribute("height", "80");
     } else {
       size = "Large";
       revisedUrl = largeImage;
-      console.log('revisedUrl:', revisedUrl);
+      // console.log('revisedUrl:', revisedUrl);
       logo.setAttribute("width", "280");
       logo.setAttribute("height", "280");
     } // End if
