@@ -2,7 +2,8 @@ import {places, url} from "../../data/places.mjs"
 import { displayVisitMessage } from "./last-visit.mjs";
 
 const visitCard = document.querySelector(".visit");
-visitCard.addEventListener('click', () => {
+const closeButton = document.querySelector(".visit-btn")
+closeButton.addEventListener('click', () => {
     visitCard.classList.add("hidden");  
 });
 
