@@ -11,7 +11,7 @@ export async function fetchMemberData() {
 
     // Log data(jason file) to console in table format to the console
     // console.table(data.members);
-    displayData(data.members);
+    // displayData(data.members);
 }
 
 // Get an Array of members
@@ -23,17 +23,16 @@ export async function getMembers() {
 
 
 // For each card display info from data loaded
-function displayData(members) {
+export function displayData(members, query) {
 
-    // Find all classes with the name card and place them in an array
-  const cards = document.querySelectorAll('.directory-grid .card');
-  const listCards = document.querySelectorAll(".directory-list .card");
-  
+  const isListView = document.querySelector("#directory")?.classList.contains("directory-list");
+
   // For each card assign member data to each card according to index number
   members.forEach((member, index) => {
 
-    const card = cards[index];
-    if (!card) return;  // skip if there’s no matching card
+    const card = query[index];
+    // skip if there’s no matching card
+    if (!card) return;
     // Set business name
     const businessName = card.querySelector('.business-name')
     businessName.textContent = member.name;
@@ -47,17 +46,28 @@ function displayData(members) {
 
     // Set logo
     const logo = card.querySelector('.logo');
-    const memberUrl = member.logo;
+    const largeImage = member.large;
+    const smallImage = member.small;
     let revisedUrl;
-    if (listCards.length > 0) {
-      revisedUrl = memberUrl.replace("280.webp", "80.webp");
+    let size;
+
+    if (isListView) {
+      revisedUrl = smallImage;
+      size = "Small"
+      console.log('revisedUrl:', revisedUrl);
+      logo.setAttribute("width", "80");
+      logo.setAttribute("height", "80");
     } else {
-      revisedUrl = memberUrl;
-    }
+      size = "Large";
+      revisedUrl = largeImage;
+      console.log('revisedUrl:', revisedUrl);
+      logo.setAttribute("width", "280");
+      logo.setAttribute("height", "280");
+    } // End if
 
     logo.setAttribute('src', revisedUrl);
-    logo.setAttribute('alt', `Logo for ${member.name}`);
-    logo.setAttribute('title', member.name);
+    logo.setAttribute('alt', `${size} logo for ${member.name}`);
+    logo.setAttribute('title',`${member.name} - ${size}`);
       
 
     // Set description
@@ -81,8 +91,8 @@ function displayData(members) {
     let displayUrl = url.replace("https://", "");
     website.setAttribute('href', url);
     website.textContent = displayUrl;
-  });// End foreach
-}// End DisplayData function
+     });// End foreach
+  };// End DisplayData function
 
 // Get Random highlighted members to display
 export async function chooseHighlights(count = 4) {
