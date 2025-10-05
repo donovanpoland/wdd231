@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
     setInterval(updateLocalTime, 30000);
     // Check if there is stored data then fetch or display it
     checkStoredData();
-    chooseHighlights(4); 
+    chooseHighlights(4, document.querySelectorAll('.directory-grid .card')); 
 });
 
 

@@ -83,10 +83,10 @@ export function displayData(members, query) {
   };// End DisplayData function
 
 // Get Random highlighted members to display
-export async function chooseHighlights(count = 4) {
+export async function chooseHighlights(count = 4, query) {
   const members = await getMembers();
   const picks = pickRandom(members, count);
-  displayData(picks);
+  displayData(picks, query);
 }
 
 
