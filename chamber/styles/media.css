@@ -163,6 +163,11 @@
         margin: 0;
     }
 
+    .directory-list .business-head .membership{
+        top: -1rem;
+        right: -1rem;
+    }
+
     .directory-list .business-head{
         min-width: 180px;
     }

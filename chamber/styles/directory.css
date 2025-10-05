@@ -125,13 +125,18 @@
     display: grid;
     grid-template-columns: 1fr;
     height: fit-content;
+    align-items: center;
 }
 
 .directory-list .business-head{
-    width: 200px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
+
 .directory-list .business-head .business-name{
+    text-align: center;
     width: 176px;
     line-height: 1;
 }
@@ -150,8 +155,16 @@
 {
     margin: 0 auto;
     text-align: center;
+    
 }
 
+.directory-list .contact{
+    line-height: 2;
+}
+
+.directory-list .contact a{
+        width: 250px;
+    }
 
 
 
