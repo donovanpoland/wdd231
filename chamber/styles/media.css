@@ -17,7 +17,7 @@
     }
 
     main{
-    padding-bottom: 1rem;
+        padding-bottom: 1rem;
     }
 
     header{
@@ -71,7 +71,7 @@
     }
 
     #view-switch button:hover{
-    background-color: var(--secondary-color);
+        background-color: var(--secondary-color);
     }
 
     .modified{
