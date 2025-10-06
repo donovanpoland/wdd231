@@ -3,7 +3,7 @@
     /* Fonts */
     --font1: "Lobster", sans-serif;
     --font2: "Nunito", sans-serif;
-    --size: 400;
+    --weight: 400;
 
     /* Colors */
     --color1:  #2E7D32; /* Deep Green */
@@ -36,6 +36,7 @@
     --small: .5rem;
     --medium: 1rem;
     --large: 2rem;
+    --double: 4rem;
 
     /* Shadows */
     --shadow-dark: 6px 6px 12px #212121 ;
@@ -48,23 +49,28 @@
 	box-sizing: border-box;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body{
     font-family: var(--font2);
     color: var(--text-color);
     background-color: var(--bg1);
-    font-weight: var(--size);
+    font-weight: var(--weight);
 
 }
 
 main{
     gap: var(--medium);
-    padding: var(--top-bottom);
+    padding: var(--around);
 }
 
 h1, h2, h3{
     font-family: var(--font1);
     color: var(--color1);
-    font-weight: var(--size);
+    font-weight: var(--weight);
 }
 
 .navigation a, main a, main button{
@@ -74,6 +80,7 @@ h1, h2, h3{
     text-align: center;
     color: var(--text2);
     background-color: var(--btn-bg);
+    font-size: var(--weight);
     min-height: 44px;
     padding: .7rem;
     align-content: center;

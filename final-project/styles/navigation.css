@@ -23,8 +23,8 @@ header a#logo{
 
 header span {
     font-size: 1.5rem;
-    font-family: var();
-    color: var(--primary-color);
+    font-family: var(--font1);
+    color: var(--color1);
     margin-left: .5rem;
 }
 
@@ -34,19 +34,19 @@ header span {
     background: none;
     border: none;
     cursor: pointer;
-    font-family: var();
+    font-family: var(--font2);
 }
 
 .hamburger::before {
     content: "\2630";
     font-size: 3.1rem;
-    color: var(--primary-color);
+    color: var(--color1);
 }
 
 .hamburger.show::before {
     content: "\00D7";
     font-size: 5.3rem;
-    color: var(--primary-color);
+    color: var(--color1);
 }
 
 /** Navigation **/
