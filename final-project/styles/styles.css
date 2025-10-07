@@ -39,8 +39,9 @@
     --double: 4rem;
 
     /* Shadows */
-    --shadow-dark: 6px 6px 12px #212121 ;
-    --shadow-light: 0 2px 6px #212121;
+    --shadow-dark: 10px 15px 20px #212121 ;
+    --shadow-light: 10px 15px 20px white ;
+    --shadow-less: 0 2px 6px #212121;
 }
 
 * {
@@ -75,8 +76,6 @@ h1, h2, h3{
 
 .navigation a, main a, main button{
     text-decoration: none;
-    border-radius: var(--radius);
-    border: var(--border);
     text-align: center;
     color: var(--text2);
     background-color: var(--btn-bg);
@@ -85,12 +84,12 @@ h1, h2, h3{
     padding: .7rem;
     align-content: center;
     cursor: pointer;
-    box-shadow: var(--shadow-dark);
     transition: 
         color 0.3s ease-in-out, 
         background-color 0.3s ease-in-out,
         box-shadow 0.3s ease-in-out,
-        border-color 0.3s ease-in-out;
+        border-color 0.3s ease-in-out,
+        scale 0.3s ease-in-out;
 }
 
 ul, ol{
