@@ -39,8 +39,9 @@
     --double: 4rem;
 
     /* Shadows */
-    --shadow-dark: 10px 15px 20px #212121 ;
-    --shadow-light: 10px 15px 20px white ;
+    --shadow-dark: 10px 15px 20px #212121;
+    --shadow-text: 5px 5px 15px #212121;
+    --shadow-light: 10px 15px 20px white;
     --shadow-less: 0 2px 6px #212121;
 }
 
@@ -72,6 +73,7 @@ h1, h2, h3{
     font-family: var(--font1);
     color: var(--color1);
     font-weight: var(--weight);
+    text-shadow: var(--shadow-text);
 }
 
 .navigation a, main a, main button{
@@ -79,6 +81,7 @@ h1, h2, h3{
     text-align: center;
     color: var(--text2);
     background-color: var(--btn-bg);
+    border-radius: var(--radius);
     font-size: var(--weight);
     min-height: 44px;
     padding: .7rem;
@@ -92,6 +95,11 @@ h1, h2, h3{
         scale 0.3s ease-in-out;
 }
 
+/* Prevent natural button radius to effect nav in mobile */
+.navigation a{
+    border-radius: 0;
+}
+
 ul, ol{
     list-style: none;
 }
@@ -103,6 +111,7 @@ ul, ol{
 
 .grid{
     display: grid;
+    gap: var(--small);
 }
 
 .center{
@@ -118,6 +127,7 @@ ul, ol{
     border-radius: var(--radius);
     background-color: var(--bg2);
     box-shadow: var(--shadow-dark);
+    padding: var(--small);
 }
 
 footer{

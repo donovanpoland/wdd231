@@ -14,6 +14,7 @@
     <!-- CSS style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
@@ -28,7 +29,7 @@
     <meta property="og:image" content="link to image here">
     <meta property="og:locale" content="en_US">
     <!-- Favicon.ico -->
-    <link rel="icon" href="images/logos/">
+    <link rel="icon" href="images/logos/favicon.ico">
 </head>
 <body>
 <header>
@@ -58,8 +59,148 @@
 </header>
 <main class="flex">
     <h1>Home</h1>
-    <section class="card">
-        <h2>heading</h2>
+    <section class="hero flex card">
+        <h2>Search, Cook, Eat, Love</h2>
+        <p class="center">Find your next favorite dish from thousands of recipes!</p>
+        <picture>
+            <!-- Aspect ratio 16:9 -->
+            <source 
+                srcset="
+                    images/hero/hero280x158.webp 280w,
+                    images/hero/hero640x360.webp 640w,
+                    images/hero/hero960x540.webp 960w,
+                    images/hero/hero1400x788.webp 1400w,
+                    images/hero/hero1552x873.webp 1552w"
+                type="image/webp"
+                sizes="(max-width: 600px) 100vw, 1552px">
+            <img 
+                src="images/hero/hero1552x873.webp"
+                alt="hero"
+                width="1552"
+                loading="eager"
+                fetchpriority="high">
+        </picture>
+        <div class="flex">
+            <label for="search-bar"><input type="text" placeholder="Explore Recipes..." class="indent"></label>
+            <button>Search</button>
+        </div>
+    </section>
+    <section class="category grid card">
+        <h2>Search By Category</h2>
+        <button>Breakfast</button>
+        <button>Lunch</button>
+        <button>Dinner</button>
+        <button>Desert</button>
+        <button>Vegetarian</button>
+        <button>Quick Meals</button>
+    </section>
+    <h2>Featured</h2>
+    <section class="featured grid">
+        <!-- Card 1 -->
+        <article class="card">
+            <img src="" alt="" width="288" height="288">
+            <div>
+                <h3>Recipe Name</h2>
+                <ul>
+                    <li>Category</li>
+                    <li>Number of Ingredients</li>
+                    <li>Tags</li>
+                </ul>
+                <p>Description</p>
+            </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="card">
+            <img src="" alt="" width="288" height="288">
+            <div>
+                <h3>Recipe Name</h2>
+                <ul>
+                    <li>Category</li>
+                    <li>Number of Ingredients</li>
+                    <li>Tags</li>
+                </ul>
+                <p>Description</p>
+            </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card">
+            <img src="" alt="" width="288" height="288">
+            <div>
+                <h3>Recipe Name</h2>
+                <ul>
+                    <li>Category</li>
+                    <li>Number of Ingredients</li>
+                    <li>Tags</li>
+                </ul>
+                <p>Description</p>
+            </div>
+        </article>
+        <!-- Card 4 -->
+        <article class="card">
+            <img src="" alt="" width="288" height="288">
+            <div>
+                <h3>Recipe Name</h2>
+                <ul>
+                    <li>Category</li>
+                    <li>Number of Ingredients</li>
+                    <li>Tags</li>
+                </ul>
+                <p>Description</p>
+            </div>
+        </article>
+    </section>
+    <h2>Popular This Week</h2>
+     <section class="popular grid">
+        <!-- Card 1 -->
+        <article class="card">
+            <img src="" alt="" width="288" height="288">
+            <h3>Recipe Name</h3>
+            <ul>
+                <li>Category</li>
+                <li>Number of Ingredients</li>
+                <li>Tags</li>
+            </ul>
+            <p>Description</p>
+        </article>
+        <!-- Card 2 -->
+        <article class="card">
+            <img src="" alt="" width="288" height="288">
+            <div>
+                <h3>Recipe Name</h2>
+                <ul>
+                    <li>Category</li>
+                    <li>Number of Ingredients</li>
+                    <li>Tags</li>
+                </ul>
+                <p>Description</p>
+            </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card">
+            <img src="" alt="" width="288" height="288">
+            <div>
+                <h3>Recipe Name</h2>
+                <ul>
+                    <li>Category</li>
+                    <li>Number of Ingredients</li>
+                    <li>Tags</li>
+                </ul>
+                <p>Description</p>
+            </div>
+        </article>
+        <!-- Card 4 -->
+        <article class="card">
+            <img src="" alt="" width="288" height="288">
+            <div>
+                <h3>Recipe Name</h2>
+                <ul>
+                    <li>Category</li>
+                    <li>Number of Ingredients</li>
+                    <li>Tags</li>
+                </ul>
+                <p>Description</p>
+            </div>
+        </article>
     </section>
 </main>
 <footer class="grid center">

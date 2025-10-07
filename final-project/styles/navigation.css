@@ -69,8 +69,7 @@ nav{
 }
 
 .navigation li{
-    height: 45px;
-    
+    height: 45px; 
 }
 
 .navigation li a{
@@ -82,7 +81,7 @@ nav{
 
 li.current a::after, li.current a::before {
     content: "🥄";
-    font-size: .8rem;
+    font-size: 1rem;
     display: inline-block;
 }
 

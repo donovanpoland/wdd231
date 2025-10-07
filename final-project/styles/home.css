@@ -1,0 +1,89 @@
+.hero{
+    justify-content: center;
+    gap: var(--small);
+    position: relative;
+    align-items: center;
+}
+
+.hero h2, .hero p, .hero div{
+    /* position: fixed; */
+}
+
+.hero h2{
+    background-color: rgba(250, 250, 250, .65);
+    padding: var(--medium);
+    border-radius: var(--radius);
+    /* top: 45%; */
+}
+
+.hero p{
+    /* top: 55%; */
+    background-color: rgba(250, 250, 250, .65);
+    width: 280px;
+}
+
+.hero picture, .hero img {
+    display: block;
+    width: 100%;
+}
+
+.hero picture{
+    border-radius: var(--radius);
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: var(--shadow-less);
+}
+
+.hero .card img{
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radius);
+    height: auto;
+
+}
+
+.hero div{
+    gap: var(--small);
+    width: 280px;
+    top: 60%;
+}
+
+.hero input[type="text"]{
+    width: 100%;
+    height: 44px;
+    border: var(--border);
+    border-radius: var(--radius);
+    color: var(--text1);
+    opacity: .7;
+}
+
+.category{
+    grid-template-columns: 1fr 1fr;
+}
+
+.category :first-child{
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+.featured .card, .popular .card{
+    padding: 0;
+    overflow: hidden;
+}
+
+.featured h3, .popular h3{
+    text-align: center;
+}
+
+.featured p, .popular p{
+    padding: var(--small);
+    text-align: center;
+}
+
+
+.featured ul, .popular ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--small);
+    padding: var(--small);
+}
