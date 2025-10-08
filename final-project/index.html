@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/navigation.css">
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/recipes.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
@@ -52,14 +53,14 @@
                 src="images/logos/logo-75.webp"
                 alt="Recipe Explorer logo"
                 width="100"
-                height="auto"
+                height="100"
                 loading="eager"
                 fetchpriority="high"
                 >
             </picture>
         </a>
         <!-- Hamburger button -->
-        <button id="ham-btn" class="hamburger" aria-label="navigation" title="Menu"></button>
+        <button id="ham-btn" class="hamburger" aria-label="navigation" title="Menu">Menu</button>
     </div>
     <!-- Navigation -->
     <nav id="nav-bar" class="navigation">
@@ -109,12 +110,12 @@
         <button>Quick Meals</button>
     </section>
     <h2>Featured</h2>
-    <section class="featured grid">
+    <div class="recipe grid" id="featured">
         <!-- Card 1 -->
         <article class="card">
-            <img src="" alt="" width="288" height="288">
+            <img src="images/" alt="Recipe placeholder Image">
             <div>
-                <h3>Recipe Name</h2>
+                <h3>Recipe Name</h3>
                 <ul>
                     <li>Category</li>
                     <li>Number of Ingredients</li>
@@ -122,12 +123,13 @@
                 </ul>
                 <p>Description</p>
             </div>
+            <button>View Recipe</button>
         </article>
         <!-- Card 2 -->
         <article class="card">
-            <img src="" alt="" width="288" height="288">
+            <img src="images/" alt="Recipe placeholder Image">
             <div>
-                <h3>Recipe Name</h2>
+                <h3>Recipe Name</h3>
                 <ul>
                     <li>Category</li>
                     <li>Number of Ingredients</li>
@@ -135,12 +137,13 @@
                 </ul>
                 <p>Description</p>
             </div>
+            <button>View Recipe</button>
         </article>
         <!-- Card 3 -->
         <article class="card">
-            <img src="" alt="" width="288" height="288">
+            <img src="images/" alt="Recipe placeholder Image">
             <div>
-                <h3>Recipe Name</h2>
+                <h3>Recipe Name</h3>
                 <ul>
                     <li>Category</li>
                     <li>Number of Ingredients</li>
@@ -148,12 +151,13 @@
                 </ul>
                 <p>Description</p>
             </div>
+            <button>View Recipe</button>
         </article>
         <!-- Card 4 -->
-        <article class="card">
-            <img src="" alt="" width="288" height="288">
+        <article class="card extra">
+            <img src="images/" alt="Recipe placeholder Image">
             <div>
-                <h3>Recipe Name</h2>
+                <h3>Recipe Name</h3>
                 <ul>
                     <li>Category</li>
                     <li>Number of Ingredients</li>
@@ -161,13 +165,28 @@
                 </ul>
                 <p>Description</p>
             </div>
+            <button>View Recipe</button>
         </article>
-    </section>
+        <!-- Card 5 -->
+        <article class="card extra">
+            <img src="images/" alt="Recipe placeholder Image">
+            <div>
+                <h3>Recipe Name</h3>
+                <ul>
+                    <li>Category</li>
+                    <li>Number of Ingredients</li>
+                    <li>Tags</li>
+                </ul>
+                <p>Description</p>
+            </div>
+            <button>View Recipe</button>
+        </article>
+    </div>
     <h2>Popular This Week</h2>
-     <section class="popular grid">
+    <div class="recipe grid" id="pupular">
         <!-- Card 1 -->
         <article class="card">
-            <img src="" alt="" width="288" height="288">
+            <img src="images/" alt="Recipe placeholder Image">
             <h3>Recipe Name</h3>
             <ul>
                 <li>Category</li>
@@ -175,12 +194,13 @@
                 <li>Tags</li>
             </ul>
             <p>Description</p>
+            <button>View Recipe</button>
         </article>
         <!-- Card 2 -->
         <article class="card">
-            <img src="" alt="" width="288" height="288">
+            <img src="images/" alt="Recipe placeholder Image">
             <div>
-                <h3>Recipe Name</h2>
+                <h3>Recipe Name</h3>
                 <ul>
                     <li>Category</li>
                     <li>Number of Ingredients</li>
@@ -188,12 +208,13 @@
                 </ul>
                 <p>Description</p>
             </div>
+            <button>View Recipe</button>
         </article>
         <!-- Card 3 -->
         <article class="card">
-            <img src="" alt="" width="288" height="288">
+            <img src="images/" alt="Recipe placeholder Image">
             <div>
-                <h3>Recipe Name</h2>
+                <h3>Recipe Name</h3>
                 <ul>
                     <li>Category</li>
                     <li>Number of Ingredients</li>
@@ -201,12 +222,13 @@
                 </ul>
                 <p>Description</p>
             </div>
+            <button>View Recipe</button>
         </article>
         <!-- Card 4 -->
-        <article class="card">
-            <img src="" alt="" width="288" height="288">
+        <article class="card extra">
+            <img src="images/" alt="Recipe placeholder Image">
             <div>
-                <h3>Recipe Name</h2>
+                <h3>Recipe Name</h3>
                 <ul>
                     <li>Category</li>
                     <li>Number of Ingredients</li>
@@ -214,8 +236,23 @@
                 </ul>
                 <p>Description</p>
             </div>
+            <button>View Recipe</button>
         </article>
-    </section>
+        <!-- Card 5 -->
+        <article class="card extra">
+            <img src="images/" alt="Recipe placeholder Image">
+            <div>
+                <h3>Recipe Name</h3>
+                <ul>
+                    <li>Category</li>
+                    <li>Number of Ingredients</li>
+                    <li>Tags</li>
+                </ul>
+                <p>Description</p>
+            </div>
+            <button>View Recipe</button>
+        </article>
+    </div>
 </main>
 <footer class="grid center">
     <div class="flex site-info">

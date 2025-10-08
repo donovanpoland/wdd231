@@ -1,0 +1,37 @@
+.recipe{
+    text-align: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+    gap: var(--medium);
+}
+
+.recipe .card{
+    overflow: hidden;
+}
+
+
+.recipe p{
+    padding: var(--small);
+    text-align: center;
+}
+
+
+.recipe .card ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: var(--small);
+    padding: var(--small);
+}
+
+.recipe h2, .recipe button{
+    grid-column: 1/-1;
+}
+
+.recipe button{
+    width: 100%;
+}
+
+.extra{
+    display: none;
+}

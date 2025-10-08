@@ -53,25 +53,3 @@
     grid-column: 1/-1;
     text-align: center;
 }
-
-.featured .card, .popular .card{
-    padding: 0;
-    overflow: hidden;
-}
-
-.featured h3, .popular h3{
-    text-align: center;
-}
-
-.featured p, .popular p{
-    padding: var(--small);
-    text-align: center;
-}
-
-
-.featured ul, .popular ul{
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--small);
-    padding: var(--small);
-}

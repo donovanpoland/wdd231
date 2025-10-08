@@ -72,7 +72,9 @@
         justify-content: flex-end;
     }
 
-
+    .extra{
+        display: block;
+    }
 
     main a, main button{
         border-radius: var(--radius);

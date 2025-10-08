@@ -5,16 +5,18 @@ header{
 }
 
 .header {
-    grid-template-columns: 1fr 44px;
+    grid-template-columns: 1fr 1fr;
     gap: var(--small);
     align-items: center;
-    margin: 0 var(--medium); /* top/bottom 0, left/right 16px */
+    /* top/bottom 0, left/right 16px */
+    margin: 0 var(--medium); 
 }
 
 .header img {
     display: block;
     width: 100%;
     height: auto;
+    grid-column: 1/2;
 }
 
 #logo picture,
@@ -28,23 +30,26 @@ header{
 /** Hamburger **/
 
 .hamburger {
+    display: flex;
     background: none;
     border: none;
     cursor: pointer;
     font-family: var(--font2);
+    grid-column: 3/4;
+    justify-content: flex-end;
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
 }
 
-.hamburger::before {
+.hamburger::after {
     /* content: "\2630"; */
     content: "🍔";
-    font-size: 2rem;
-    color: var(--color1);
 }
 
-.hamburger.show::before {
-    content: "\00D7";
-    font-size: 3.1rem;
-    color: var(--color1);
+.hamburger.show::after {
+    /* content: "\00D7"; */
+    content: "❌";
 }
 
 /** Navigation **/
