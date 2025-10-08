@@ -46,7 +46,7 @@
     }
 
     /* Hero */
-    .hero h2, .hero p, .hero div{
+    .hero h2, .hero p, .hero form{
         display: flex;
         position: absolute;
         flex: 1 1 600px;
@@ -67,7 +67,7 @@
         top: 45%;
     }
 
-    .hero div{
+    .hero form{
         bottom: 10%;
         justify-content: flex-end;
     }
