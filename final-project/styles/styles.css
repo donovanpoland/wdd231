@@ -82,7 +82,7 @@ h1, h2, h3{
     color: var(--text2);
     background-color: var(--btn-bg);
     border-radius: var(--radius);
-    font-size: var(--weight);
+    font-weight: var(--weight);
     min-height: 44px;
     padding: .7rem;
     align-content: center;
