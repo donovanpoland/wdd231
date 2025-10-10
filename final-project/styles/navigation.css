@@ -45,6 +45,7 @@ header{
 .hamburger::after {
     /* content: "\2630"; */
     content: "🍔";
+    margin-left: var(--small);
 }
 
 .hamburger.show::after {
