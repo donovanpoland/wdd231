@@ -131,6 +131,27 @@ ul, ol{
     padding: var(--small);
 }
 
+dialog{
+    margin: auto auto;
+    border: none;
+    border-radius: var(--radius);
+    width: minmax(300px, 600px);
+}
+
+dialog div.flex{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+dialog div button{
+    width: 44px;
+}
+
+::backdrop{
+    background-color: rgba(21, 21, 21, .7);
+}
+
 footer{
     gap: var(--medium);
 }

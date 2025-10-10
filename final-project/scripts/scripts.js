@@ -1,3 +1,5 @@
+
+
 // Add class for showing navigation on hamburger button click
 const navButton = document.querySelector('#ham-btn');
 const navBar = document.querySelector('#nav-bar');
@@ -12,3 +14,4 @@ window.addEventListener("resize", () => {
   navButton.classList.remove('show');
   navBar.classList.remove('show');
 });
+

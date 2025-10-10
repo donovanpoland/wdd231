@@ -9,8 +9,9 @@
     <meta name="description" content="Discover and share delicious recipes from around the world. Recipe Explorer helps you find, save, and enjoy meals for every taste and occasion.">
     <meta name="robots" content="index, follow">
     <!-- Scripts -->
-     <script src="/scripts/last-modified.js" defer></script>
+    <script src="/scripts/last-modified.js" defer></script>
     <script src="scripts/scripts.js" defer></script>
+    <script type="module" src="scripts/recipes.js"></script>
     <!-- CSS style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/navigation.css">
@@ -105,7 +106,7 @@
         <button>Breakfast</button>
         <button>Lunch</button>
         <button>Dinner</button>
-        <button>Desert</button>
+        <button>Dessert</button>
         <button>Vegetarian</button>
         <button>Quick Meals</button>
     </section>
@@ -121,9 +122,8 @@
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
                 </ul>
-                <p>Description</p>
             </div>
-            <button>View Recipe</button>
+            <button class="view">View Recipe</button>
         </article>
         <!-- Card 2 -->
         <article class="card">
@@ -135,9 +135,8 @@
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
                 </ul>
-                <p>Description</p>
             </div>
-            <button>View Recipe</button>
+            <button class="view">View Recipe</button>
         </article>
         <!-- Card 3 -->
         <article class="card">
@@ -149,9 +148,8 @@
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
                 </ul>
-                <p>Description</p>
             </div>
-            <button>View Recipe</button>
+            <button class="view">View Recipe</button>
         </article>
         <!-- Card 4 -->
         <article class="card extra">
@@ -163,9 +161,8 @@
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
                 </ul>
-                <p>Description</p>
             </div>
-            <button>View Recipe</button>
+            <button class="view">View Recipe</button>
         </article>
         <!-- Card 5 -->
         <article class="card extra">
@@ -177,13 +174,12 @@
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
                 </ul>
-                <p>Description</p>
             </div>
-            <button>View Recipe</button>
+            <button class="view">View Recipe</button>
         </article>
     </div>
     <h2>Popular This Week</h2>
-    <div class="recipe grid" id="pupular">
+    <div class="recipe grid" id="popular">
         <!-- Card 1 -->
         <article class="card">
             <img src="images/" alt="Recipe placeholder Image">
@@ -193,8 +189,7 @@
                 <li>Number of Ingredients</li>
                 <li>Tags</li>
             </ul>
-            <p>Description</p>
-            <button>View Recipe</button>
+            <button class="view">View Recipe</button>
         </article>
         <!-- Card 2 -->
         <article class="card">
@@ -206,9 +201,8 @@
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
                 </ul>
-                <p>Description</p>
             </div>
-            <button>View Recipe</button>
+            <button class="view">View Recipe</button>
         </article>
         <!-- Card 3 -->
         <article class="card">
@@ -220,9 +214,8 @@
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
                 </ul>
-                <p>Description</p>
             </div>
-            <button>View Recipe</button>
+            <button class="view">View Recipe</button>
         </article>
         <!-- Card 4 -->
         <article class="card extra">
@@ -234,9 +227,8 @@
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
                 </ul>
-                <p>Description</p>
             </div>
-            <button>View Recipe</button>
+            <button class="view">View Recipe</button>
         </article>
         <!-- Card 5 -->
         <article class="card extra">
@@ -248,11 +240,26 @@
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
                 </ul>
-                <p>Description</p>
             </div>
-            <button>View Recipe</button>
+            <button class="view">View Recipe</button>
         </article>
     </div>
+    <!-- Modal -->
+    <dialog id="dialog">
+            <article class="card details center">
+                <div class="flex">
+                    <h3>Recipe Name</h3>
+                    <button>❌</button>
+                </div>  
+                <img src="images/" alt="Recipe placeholder Image">
+                <ul>
+                    <li>Category</li>
+                    <li>Number of Ingredients</li>
+                    <li>Tags</li>
+                </ul>
+                <p>Instructions</p>
+        </article>
+    </dialog>
 </main>
 <footer class="grid center">
     <div class="flex site-info">
