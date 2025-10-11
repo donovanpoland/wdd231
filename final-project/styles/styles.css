@@ -69,7 +69,7 @@ main.flex{
     padding: var(--around);
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
     font-family: var(--font1);
     color: var(--color1);
     font-weight: var(--weight);
@@ -87,8 +87,8 @@ h1, h2, h3{
     padding: .7rem;
     align-content: center;
     cursor: pointer;
-    transition: 
-        color 0.3s ease-in-out, 
+    transition:
+        color 0.3s ease-in-out,
         background-color 0.3s ease-in-out,
         box-shadow 0.3s ease-in-out,
         border-color 0.3s ease-in-out,
@@ -133,19 +133,11 @@ ul, ol{
 
 dialog{
     margin: auto auto;
-    border: none;
-    border-radius: var(--radius);
-    width: minmax(300px, 600px);
 }
 
-dialog div.flex{
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-dialog div button{
+dialog #close{
     width: 44px;
+    z-index: 10;
 }
 
 ::backdrop{

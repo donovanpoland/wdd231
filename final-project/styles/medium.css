@@ -49,8 +49,8 @@
     .hero h2, .hero p, .hero form{
         display: flex;
         position: absolute;
-        flex: 1 1 600px;
-        max-width: 550px;
+        flex: 1 1 500px;
+        max-width: 500px;
     }
 
     .hero h2, .hero p{
@@ -79,6 +79,32 @@
     main a, main button{
         border-radius: var(--radius);
         border: var(--border);
+    }
+
+    /* recipe and modals */
+    dialog[open] .card{
+        max-width: 608px;
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+    
+    .recipe .card #heading{
+        width: 588px;
+    }
+
+    dialog .card #info{
+        position: absolute;
+        top: 32rem;
+        left: 5%;
+        background-color: rgba(250, 250, 250, .9);
+        width: 200px;
+        border-radius: var(--radius);
+        border: var(--border);
+    }
+
+    .recipe .card .modal-image {
+        width: 588px;
+        height: auto;
     }
 
     /* Hover links and buttons */

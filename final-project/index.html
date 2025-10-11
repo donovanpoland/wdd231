@@ -100,24 +100,14 @@
             <button type="submit">Search</button>
         </form>
     </section>
-    <h2>Browse</h2>
-    <section class="category grid card">
-        <h3>Search By Category</h3>
-        <button>Breakfast</button>
-        <button>Lunch</button>
-        <button>Dinner</button>
-        <button>Dessert</button>
-        <button>Vegetarian</button>
-        <button>Quick Meals</button>
-    </section>
     <h2>Featured</h2>
     <div class="recipe grid" id="featured">
         <!-- Card 1 -->
         <article class="card">
-            <img src="images/" alt="Recipe placeholder Image">
+            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image" width="280" height="280">
             <div>
                 <h3>Recipe Name</h3>
-                <ul>
+                <ul class="info">
                     <li>Category</li>
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
@@ -127,10 +117,10 @@
         </article>
         <!-- Card 2 -->
         <article class="card">
-            <img src="images/" alt="Recipe placeholder Image">
+            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image">
             <div>
                 <h3>Recipe Name</h3>
-                <ul>
+                <ul class="info">
                     <li>Category</li>
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
@@ -140,36 +130,10 @@
         </article>
         <!-- Card 3 -->
         <article class="card">
-            <img src="images/" alt="Recipe placeholder Image">
+            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image">
             <div>
                 <h3>Recipe Name</h3>
-                <ul>
-                    <li>Category</li>
-                    <li>Number of Ingredients</li>
-                    <li>Tags</li>
-                </ul>
-            </div>
-            <button class="view">View Recipe</button>
-        </article>
-        <!-- Card 4 -->
-        <article class="card extra">
-            <img src="images/" alt="Recipe placeholder Image">
-            <div>
-                <h3>Recipe Name</h3>
-                <ul>
-                    <li>Category</li>
-                    <li>Number of Ingredients</li>
-                    <li>Tags</li>
-                </ul>
-            </div>
-            <button class="view">View Recipe</button>
-        </article>
-        <!-- Card 5 -->
-        <article class="card extra">
-            <img src="images/" alt="Recipe placeholder Image">
-            <div>
-                <h3>Recipe Name</h3>
-                <ul>
+                <ul class="info">
                     <li>Category</li>
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
@@ -182,9 +146,9 @@
     <div class="recipe grid" id="popular">
         <!-- Card 1 -->
         <article class="card">
-            <img src="images/" alt="Recipe placeholder Image">
+            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image">
             <h3>Recipe Name</h3>
-            <ul>
+            <ul class="info">
                 <li>Category</li>
                 <li>Number of Ingredients</li>
                 <li>Tags</li>
@@ -193,10 +157,10 @@
         </article>
         <!-- Card 2 -->
         <article class="card">
-            <img src="images/" alt="Recipe placeholder Image">
+            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image">
             <div>
                 <h3>Recipe Name</h3>
-                <ul>
+                <ul class="info">
                     <li>Category</li>
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
@@ -206,36 +170,10 @@
         </article>
         <!-- Card 3 -->
         <article class="card">
-            <img src="images/" alt="Recipe placeholder Image">
+            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image">
             <div>
                 <h3>Recipe Name</h3>
-                <ul>
-                    <li>Category</li>
-                    <li>Number of Ingredients</li>
-                    <li>Tags</li>
-                </ul>
-            </div>
-            <button class="view">View Recipe</button>
-        </article>
-        <!-- Card 4 -->
-        <article class="card extra">
-            <img src="images/" alt="Recipe placeholder Image">
-            <div>
-                <h3>Recipe Name</h3>
-                <ul>
-                    <li>Category</li>
-                    <li>Number of Ingredients</li>
-                    <li>Tags</li>
-                </ul>
-            </div>
-            <button class="view">View Recipe</button>
-        </article>
-        <!-- Card 5 -->
-        <article class="card extra">
-            <img src="images/" alt="Recipe placeholder Image">
-            <div>
-                <h3>Recipe Name</h3>
-                <ul>
+                <ul class="info">
                     <li>Category</li>
                     <li>Number of Ingredients</li>
                     <li>Tags</li>
@@ -246,19 +184,29 @@
     </div>
     <!-- Modal -->
     <dialog id="dialog">
-            <article class="card details center">
-                <div class="flex">
+            <article class="card center">
+                <div id="heading" class="flex">
                     <h3>Recipe Name</h3>
-                    <button>❌</button>
-                </div>  
-                <img src="images/" alt="Recipe placeholder Image">
-                <ul>
-                    <li>Category</li>
-                    <li>Number of Ingredients</li>
-                    <li>Tags</li>
-                </ul>
-                <p>Instructions</p>
-        </article>
+                    <button id="close" aria-label="Close">❌</button>
+                </div>
+                <img class="modal-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image">
+                <div id="info" class="flex">
+                    <h4>Info</h4>
+                    <ul class="info">
+                        <li>Category</li>
+                        <li>Number of Ingredients</li>
+                        <li>Tags</li>
+                    </ul>
+                </div>
+                <div id="ingredients">
+                    <h4>Ingredients</h4>
+                    <ul class="ingredients flex"></ul>
+                </div>
+                <div id="instructions">
+                    <h4>Instructions</h4>
+                    <p class="instructions"></p>
+                </div>
+            </article>
     </dialog>
 </main>
 <footer class="grid center">

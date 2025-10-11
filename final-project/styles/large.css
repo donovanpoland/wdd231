@@ -1,0 +1,6 @@
+/* 1024px */
+@media only screen and (min-width: 64em){
+    dialog[open] .card{
+        width: 900px;
+    }
+}
