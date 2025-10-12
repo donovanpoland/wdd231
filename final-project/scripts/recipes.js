@@ -18,15 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
-// Close modal on button press
-moreButton.addEventListener("click", async () => {
-    moreButton.disabled = true;
-    try {
-        await createNewCard();
-    }
-    catch (err) {
-         console.error("Button click error:", err);
-    }
-    moreButton.disabled = false;
-});
+if (moreButton) {
+    moreButton.addEventListener("click", async () => {
+        moreButton.disabled = true;
+        try {
+            await createNewCard();
+        }
+        catch (err) {
+            console.error("Button click error:", err);
+        }
+        moreButton.disabled = false;
+    }); 
+}
