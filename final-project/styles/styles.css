@@ -81,6 +81,7 @@ h1, h2, h3, h4{
     text-align: center;
     color: var(--text2);
     background-color: var(--btn-bg);
+    box-shadow: var(--shadow-less);
     border-radius: var(--radius);
     font-weight: var(--weight);
     min-height: 44px;

@@ -1,20 +1,24 @@
 // Imports
-import { displayRandomRecipe } from "./display-recipe.mjs";
-import { displayCategories } from "./display-categories.mjs";
-import { fetchRandomRecipe } from "./get-recipes.mjs";
+import { displayRandomRecipe, displayCategories } from "./display-recipe.mjs";
+import { displayCategoryButtons } from "./display-categories-list.mjs";
+import { fetchRandomRecipe, fetchCategories } from "./fetch-recipes.mjs";
 
 // document checks
 const dialogBox = document.querySelector("#dialog");
 const closeButton = document.querySelector("#dialog button");
-const categoryList = document.querySelector("#categories")
+const categoryList = document.querySelector("#categories-list");
+const categories = document.querySelector("#categories");
 
 document.addEventListener("DOMContentLoaded", () => {
     displayRandomRecipe();
     if (categoryList) {
+        displayCategoryButtons();
+    }
+    if (categories) {
         displayCategories();
     }
-    
 });
+
 
 fetchRandomRecipe();
 

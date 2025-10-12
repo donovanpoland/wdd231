@@ -1,4 +1,6 @@
-import { fetchRandomRecipe } from "./get-recipes.mjs"
+import { getCurrentCategory } from "./display-categories-list.mjs";
+import { fetchByCategory, fetchRandomRecipe, fetchById } from "./fetch-recipes.mjs"
+import { searchById } from "./url.mjs";
 
 
 export async function displayRandomRecipe() {
@@ -19,6 +21,63 @@ export async function displayRandomRecipe() {
     } catch (error) {
         console.error("Error displaying recipe:", error);
     }// End Try/Catch
+}
+
+export async function displayCategories() { 
+    try {
+        // Select all cards to display the recipe
+        const recipeCards = document.querySelectorAll("#categories .card");
+        const category = getCurrentCategory();
+
+        if (!category) {
+            console.warn("No category selected.");
+            return;
+        }
+
+        // Fetch all recipes in this category
+        const categoryData = await fetchByCategory();
+        if (!categoryData || !categoryData.meals) {
+            console.warn("No recipes found for category:", category);
+            return;
+        }
+
+        const meals = categoryData.meals; // each meal has idMeal, strMeal, strMealThumb, etc.
+
+        // Limit loop to number of placeholder cards
+        const totalCards = recipeCards.length;
+        const totalMeals = Math.min(totalCards, meals.length);
+
+        // Log to console - Debugging
+        console.log(`Displaying ${totalMeals} meals out of ${meals.length} for category: ${category}`);
+
+        // Loop through available cards
+        for (let i = 0; i < totalMeals; i++) {
+            const card = recipeCards[i];
+            const mealId = meals[i].idMeal;
+
+            // Show card if it was hidden
+            card.classList.remove("extra");
+
+            // Fetch full recipe details by ID
+            const fullMealData = await fetchById(mealId);
+
+            // Reuse your helper functions for clean updates
+            addName(fullMealData, card);
+            addImage(fullMealData, card);
+            addInfo(fullMealData, card);
+            addModal(fullMealData, card);
+        }
+
+        // If there are more placeholder cards than recipes, reset unused ones
+        for (let i = totalMeals; i < totalCards; i++) {
+            const card = recipeCards[i];
+            resetPlaceholderCard(card);
+            card.classList.add("extra");
+        }
+
+    } catch (error) {
+        console.error("Error displaying recipes by category:", error);
+    }
 }
 
 function addImage(meal, card) {
@@ -144,4 +203,18 @@ function addIngredientsMeasurements(meal, card) {
             ingredientsList.appendChild(listItem);
         }
     }
+}
+
+function resetPlaceholderCard(card) {
+    const placeholderImg = "images/logos/recipe-placeholder284.webp";
+    const recipeName = card.querySelector("h3");
+    const recipeImg = card.querySelector("img");
+    const infoItems = card.querySelectorAll(".info li");
+
+    recipeName.textContent = "Recipe Name";
+    recipeImg.src = placeholderImg;
+    recipeImg.alt = "Recipe placeholder Image";
+    infoItems[0].textContent = "Category";
+    infoItems[1].textContent = "Number of Ingredients";
+    infoItems[2].textContent = "Tags";
 }
