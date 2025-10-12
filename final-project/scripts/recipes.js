@@ -1,13 +1,12 @@
 // Imports
-import { displayRandomRecipe, displayCategories } from "./display-recipe.mjs";
+import { displayRandomRecipe, displayCategories,createNewCard } from "./display-recipe.mjs";
 import { displayCategoryButtons } from "./display-categories-list.mjs";
-import { fetchRandomRecipe, fetchCategories } from "./fetch-recipes.mjs";
+
 
 // document checks
-const dialogBox = document.querySelector("#dialog");
-const closeButton = document.querySelector("#dialog button");
 const categoryList = document.querySelector("#categories-list");
 const categories = document.querySelector("#categories");
+const moreButton = document.querySelector("#display-more");
 
 document.addEventListener("DOMContentLoaded", () => {
     displayRandomRecipe();
@@ -20,14 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-fetchRandomRecipe();
-
 // Close modal on button press
-closeButton.addEventListener("click", () => {
-    dialogBox.close();
-});
-
-// Close modal on scroll press
-window.addEventListener("scroll", () => {
-    dialogBox.close();
+moreButton.addEventListener("click", async () => {
+    moreButton.disabled = true;
+    try {
+        await createNewCard();
+    }
+    catch (err) {
+         console.error("Button click error:", err);
+    }
+    moreButton.disabled = false;
 });

@@ -1,5 +1,5 @@
 import { fetchCategories } from "./fetch-recipes.mjs";
-import { displayCategories } from "./display-recipe.mjs";
+import { createNewCard, displayCategories, resetLoadedCount } from "./display-recipe.mjs";
 
 const categoryList = document.querySelector("#categories-list");
 
@@ -27,10 +27,18 @@ function createButton(category) {
     // Add button to list item
     listItem.appendChild(button);
     // Add listener to button
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async  () => {
         // Filter and display recipes
-        setCurrentCategory(category);
-        displayCategories();
+        // Avoid double clicks
+        button.disabled = true;
+        try {
+            setCurrentCategory(category);
+            resetLoadedCount();
+            await createNewCard();
+        } catch (err) {
+            console.error("Category click error:", err);
+        }
+        button.disabled = false;
     });
     // Add list item to list
     categoryList.appendChild(listItem);
@@ -38,7 +46,7 @@ function createButton(category) {
 
 function setCurrentCategory(category) {
     sessionStorage.setItem("Current Category", category);
-    console.log(`Set new category: ${category}`)
+    // console.log(`Set new category: ${category}`)
 }
 
 export function getCurrentCategory() {

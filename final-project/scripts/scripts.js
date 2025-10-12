@@ -3,6 +3,9 @@
 // Add class for showing navigation on hamburger button click
 const navButton = document.querySelector('#ham-btn');
 const navBar = document.querySelector('#nav-bar');
+const dialogBox = document.querySelector("#dialog");
+const closeButton = document.querySelector("#dialog button");
+
 
 navButton.addEventListener('click', () => {
     navButton.classList.toggle('show');
@@ -14,4 +17,15 @@ window.addEventListener("resize", () => {
   navButton.classList.remove('show');
   navBar.classList.remove('show');
 });
+
+// Close modal on button press
+closeButton.addEventListener("click", () => {
+    dialogBox.close();
+});
+
+// Close modal on scroll press
+window.addEventListener("scroll", () => {
+    dialogBox.close();
+});
+
 

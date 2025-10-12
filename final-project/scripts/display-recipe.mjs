@@ -1,7 +1,8 @@
 import { getCurrentCategory } from "./display-categories-list.mjs";
 import { fetchByCategory, fetchRandomRecipe, fetchById } from "./fetch-recipes.mjs"
-import { searchById } from "./url.mjs";
 
+// track how many recipes have been shown
+let loadedCount = document.querySelectorAll("#categories .card").length;
 
 export async function displayRandomRecipe() {
     try {
@@ -41,7 +42,11 @@ export async function displayCategories() {
             return;
         }
 
-        const meals = categoryData.meals; // each meal has idMeal, strMeal, strMealThumb, etc.
+        // Set meals array
+        const meals = categoryData.meals;
+
+        const displayMore = document.getElementById("display-more");
+        displayMore.style.display = "block";
 
         // Limit loop to number of placeholder cards
         const totalCards = recipeCards.length;
@@ -148,7 +153,7 @@ function addInfo(meal, card) {
         tagsList = spacedTags.join(", ");
     } else {
         // Fallback text if no tags are provided
-        tagsList = "Standard Dish";
+        tagsList = "#Standard Dish";
     }
 
     category.textContent = `Category: ${meal.strCategory}`;
@@ -219,6 +224,78 @@ function resetPlaceholderCard(card) {
     infoItems[2].textContent = "Tags";
 }
 
-function createNewCard() {
-    
+export async function createNewCard() {
+    const recipeCards = document.querySelector("#categories");
+    const categoryData = await fetchByCategory();
+
+    const meals = categoryData.meals;
+    const totalMeals = meals.length;
+
+    const minimum = 12;
+    const remaining = totalMeals - loadedCount;
+    const loadAmount = Math.min(minimum, remaining);
+
+    for (let i = 0; i < loadAmount; i++) {
+        const meal = meals[loadedCount + i];
+        // Create article
+        const article = document.createElement("article");
+        article.classList.add("card", "center");
+
+        // Create image
+        const image = document.createElement("img");
+        image.classList.add("card-image");
+        image.src = meal.strMealThumb;
+        image.alt = meal.strMeal;
+
+        // Create h3
+        const heading = document.createElement("h3");
+
+        // Create list
+        const list = document.createElement("ul");
+        list.classList.add("info");
+        // Create list items
+        const category = document.createElement("li");
+        const ingredients = document.createElement("li");
+        const tags = document.createElement("li");
+        // Add list items to list
+        list.appendChild(category);
+        list.appendChild(ingredients);
+        list.appendChild(tags);
+
+        // Create button
+        const button = document.createElement("button");
+        button.classList.add("view");
+        button.textContent = "View Recipe"
+
+        // Add elements to article
+        article.append(image, heading, list, button);
+        // Add article to recipe section
+        recipeCards.appendChild(article);
+    }
+    // Update how many have been shown
+    loadedCount += loadAmount;
+
+    // Display the recipe info for new cards
+    await displayCategories();
+
+    // Hide the button if everything is loaded
+    const displayMore = document.getElementById("display-more");
+    if (loadedCount >= totalMeals) {
+        // console.log("Hiding button...");
+        displayMore.style.display = "none";
+    }
+}
+
+export function resetLoadedCount(preload = false) {
+    loadedCount = 0;
+    const recipeCards = document.querySelector("#categories");
+    if (recipeCards) recipeCards.innerHTML = "";
+
+    const displayMore = document.querySelector("#display-more");
+    if (displayMore) displayMore.style.display = "block";
+
+    // console.log("Loaded count reset and cards cleared.");
+
+    // Optionally load first batch
+    if (preload) createNewCard();
 }
