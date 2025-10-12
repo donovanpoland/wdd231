@@ -42,7 +42,7 @@ function setCurrentCategory(category) {
 }
 
 export function getCurrentCategory() {
-    const category = sessionStorage.getItem("Current Category");;
+    let category = sessionStorage.getItem("Current Category");;
     // If null or empty string, use default
     if (!category || category.trim() === "") {
         category = "Miscellaneous";

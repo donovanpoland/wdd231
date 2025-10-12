@@ -218,3 +218,7 @@ function resetPlaceholderCard(card) {
     infoItems[1].textContent = "Number of Ingredients";
     infoItems[2].textContent = "Tags";
 }
+
+function createNewCard() {
+    
+}
