@@ -30,7 +30,7 @@
     <meta property="og:image" content="https://donovanpoland.github.io/wdd231/final-project/images/hero/hero1400x788.webp">
     <meta property="og:locale" content="en_US">
     <!-- Favicon.ico -->
-    <link rel="icon" href="images/logos/favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
 <header>
@@ -55,8 +55,7 @@
                 width="100"
                 height="100"
                 loading="eager"
-                fetchpriority="high"
-                >
+                fetchpriority="high">
             </picture>
         </a>
         <!-- Hamburger button -->
@@ -169,7 +168,7 @@
         </article>
         <!-- Card 9 -->
         <article class="card">
-            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image">
+            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image" loading="lazy">
             <h3>Recipe Name</h3>
             <ul class="info">
                 <li>Category</li>
@@ -180,7 +179,7 @@
         </article>
         <!-- Card 10 -->
         <article class="card">
-            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image">
+            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image" loading="lazy">
             <h3>Recipe Name</h3>
             <ul class="info">
                 <li>Category</li>
@@ -191,7 +190,7 @@
         </article>
         <!-- Card 11 -->
         <article class="card">
-            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image">
+            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image" loading="lazy">
             <h3>Recipe Name</h3>
             <ul class="info">
                 <li>Category</li>
@@ -202,7 +201,7 @@
         </article>
         <!-- Card 12 -->
         <article class="card">
-            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image">
+            <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image" loading="lazy">
             <h3>Recipe Name</h3>
             <ul class="info">
                 <li>Category</li>
@@ -216,12 +215,12 @@
         <!-- Modal -->
     <dialog id="dialog">
             <article class="card center">
-                <div id="heading" class="flex">
+                <div id="heading" class="flex-row">
                     <h3>Recipe Name</h3>
                     <button id="close" aria-label="Close">❌</button>
                 </div>
                 <img class="modal-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image">
-                <div id="info" class="flex">
+                <div id="info" class="flex-column">
                     <h4>Info</h4>
                     <ul class="info">
                         <li>Category</li>
@@ -231,7 +230,7 @@
                 </div>
                 <div id="ingredients">
                     <h4>Ingredients</h4>
-                    <ul class="ingredients flex"></ul>
+                    <ul class="ingredients flex-row"></ul>
                 </div>
                 <div id="instructions">
                     <h4>Instructions</h4>

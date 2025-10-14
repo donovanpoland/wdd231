@@ -94,7 +94,6 @@ dialog .card img.modal-image {
 .recipe .card #heading h3{
     width: fit-content;
     align-self: baseline;
-    word-wrap: wrap;
 }
 
 .recipe .card #instructions{

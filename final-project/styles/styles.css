@@ -42,7 +42,7 @@
     /* Shadows */
     --shadow-dark: 10px 15px 20px #212121;
     --shadow-text: 5px 5px 15px #212121;
-    --shadow-light: 10px 15px 20px white;
+    --shadow-light: 10px 15px 20px #FFFFFF;
     --shadow-less: 0 2px 6px #212121;
 }
 
@@ -74,7 +74,6 @@ h1, h2, h3, h4, legend{
     font-family: var(--font1);
     color: var(--color1);
     font-weight: var(--weight);
-    text-shadow: var(--shadow-text);
 }
 
 

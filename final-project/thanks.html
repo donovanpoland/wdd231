@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Thank You - Recipe Explorer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="recipes, cooking, food, meals, international cuisine, easy recipes, healthy recipes, dinner ideas, desserts, meal planning, family meals, Recipe Explorer, home cooking, world flavors, food discovery">
+    <meta name="author" content="Donovan Poland">
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow">
+    <!-- Scripts -->
+    <script src="../scripts/last-modified.js" defer></script>
+    <script src="scripts/scripts.js" defer></script>
+    <!-- CSS style sheets -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/recipes.css">
+    <link rel="stylesheet" href="styles/favorites.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <!-- Font links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!-- Open Graph protocol meta tags -->
+    <meta property="og:title" content="Page Title goes here">
+    <meta property="og:description" content="replace with page description">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="link to image here">
+    <meta property="og:locale" content="en_US">
+    <!-- Favicon.ico -->
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+<header>
+    <div class="header grid">
+        <!-- Site logo and link to homepage when clicked, smaller image on mobile and larger on desktop-->
+        <a id="logo" href="index.html">
+            <picture>
+                <source
+                srcset="
+                    images/logos/logo-100.webp 100w,
+                    images/logos/logo-75.webp 75w,
+                    images/logos/logo-50.webp 50w
+                "
+                sizes="(max-width: 480px) 50px,
+                        (max-width: 1024px) 75px,
+                        100px"
+                type="image/webp"
+                >
+                <img
+                src="images/logos/logo-75.webp"
+                alt="Recipe Explorer logo"
+                width="100"
+                height="100"
+                loading="eager"
+                fetchpriority="high">
+            </picture>
+        </a>
+        <!-- Hamburger button -->
+        <button id="ham-btn" class="hamburger" aria-label="navigation" title="Menu">Menu</button>
+    </div>
+    <!-- Navigation -->
+    <nav id="nav-bar" class="navigation grid">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="flex-column">
+    <h1>Thank you for your submission</h1>
+    <section class="grid card">
+        <h2>We will review your recipe</h2>
+        <p class="indent">words go here</p>
+        <a href="recipes.html">Continue Browsing</a>
+    </section>
+</main>
+<footer>
+</footer>
+</body>
+</html>
