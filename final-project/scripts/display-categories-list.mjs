@@ -2,6 +2,7 @@ import { fetchCategories } from "./fetch-recipes.mjs";
 import { createNewCard, displayCategories, resetLoadedCount } from "./display-recipe.mjs";
 
 const categoryList = document.querySelector("#categories-list");
+const categorySelect = document.querySelector("#categories-select");
 
 export async function displayCategoryButtons() {
     try {
@@ -9,9 +10,19 @@ export async function displayCategoryButtons() {
         const categories = data.categories;
         
         // create a button for each category
-        categories.forEach((cat) => {
-            createButton(cat.strCategory);
-        });
+        if (categoryList) {
+            categories.forEach((cat) => {
+                createButton(cat.strCategory);
+        }); // end foreach loop
+        }// end if
+
+        // create an option for each category
+        if (categorySelect) {
+            categories.forEach((cat) => {
+                createOptions(cat.strCategory);
+        }); // end foreach loop
+        }// end if
+       
     } catch (error) {
         console.error("Error displaying categories:", error);
     }
@@ -56,4 +67,8 @@ export function getCurrentCategory() {
         category = "Miscellaneous";
     }
     return category;
+}
+
+function createOptions(category) {
+    
 }

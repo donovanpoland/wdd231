@@ -9,7 +9,7 @@
     <meta name="description" content="Discover and share delicious recipes from around the world. Recipe Explorer helps you find, save, and enjoy meals for every taste and occasion.">
     <meta name="robots" content="index, follow">
     <!-- Scripts -->
-    <script src="/scripts/last-modified.js" defer></script>
+    <script src="../scripts/last-modified.js" defer></script>
     <script src="scripts/scripts.js" defer></script>
     <script type="module" src="scripts/recipes.js"></script>
     <!-- CSS style sheets -->
@@ -72,9 +72,9 @@
         </ul>
     </nav>
 </header>
-<main class="flex">
+<main class="flex-column">
     <h1>Home</h1>
-    <section class="hero flex card">
+    <section class="hero flex-column card">
         <h2>Search, Cook, Eat, Love</h2>
         <p class="center">Find your next favorite dish from hundreds of recipes!</p>
         <picture>
@@ -95,7 +95,7 @@
                 loading="eager"
                 fetchpriority="high">
         </picture>
-        <form role="search" class="flex">
+        <form role="search" class="flex-column">
             <label for="search-bar"><input id="search-bar" name="search-bar" type="search" placeholder="Explore Recipes..." class="indent"></label>
             <button type="submit">Search</button>
         </form>
@@ -113,7 +113,7 @@
                     <li>Tags</li>
                 </ul>
             </div>
-            <button class="view">View Recipe</button>
+            <button class="view" aria-haspopup="dialog">View Recipe</button>
         </article>
         <!-- Card 2 -->
         <article class="card">
@@ -126,7 +126,7 @@
                     <li>Tags</li>
                 </ul>
             </div>
-            <button class="view">View Recipe</button>
+            <button class="view" aria-haspopup="dialog">View Recipe</button>
         </article>
         <!-- Card 3 -->
         <article class="card">
@@ -139,7 +139,7 @@
                     <li>Tags</li>
                 </ul>
             </div>
-            <button class="view">View Recipe</button>
+            <button class="view" aria-haspopup="dialog">View Recipe</button>
         </article>
         <!-- Card 4 -->
         <article class="card">
@@ -152,7 +152,7 @@
                     <li>Tags</li>
                 </ul>
             </div>
-            <button class="view">View Recipe</button>
+            <button class="view" aria-haspopup="dialog">View Recipe</button>
         </article>
     </section>
     <h2>Popular This Week</h2>
@@ -166,7 +166,7 @@
                 <li>Number of Ingredients</li>
                 <li>Tags</li>
             </ul>
-            <button class="view">View Recipe</button>
+            <button class="view" aria-haspopup="dialog">View Recipe</button>
         </article>
         <!-- Card 2 -->
         <article class="card">
@@ -179,7 +179,7 @@
                     <li>Tags</li>
                 </ul>
             </div>
-            <button class="view">View Recipe</button>
+            <button class="view" aria-haspopup="dialog">View Recipe</button>
         </article>
         <!-- Card 3 -->
         <article class="card">
@@ -192,7 +192,7 @@
                     <li>Tags</li>
                 </ul>
             </div>
-            <button class="view">View Recipe</button>
+            <button class="view" aria-haspopup="dialog">View Recipe</button>
         </article>
         <!-- Card 4 -->
         <article class="card">
@@ -205,18 +205,18 @@
                     <li>Tags</li>
                 </ul>
             </div>
-            <button class="view">View Recipe</button>
+            <button class="view" aria-haspopup="dialog">View Recipe</button>
         </article>
     </section>
     <!-- Modal -->
     <dialog id="dialog">
             <article class="card center">
-                <div id="heading" class="flex">
+                <div id="heading" class="flex-row">
                     <h3>Recipe Name</h3>
                     <button id="close" aria-label="Close">❌</button>
                 </div>
                 <img class="modal-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image">
-                <div id="info" class="flex">
+                <div id="info" class="flex-column">
                     <h4>Info</h4>
                     <ul class="info">
                         <li>Category</li>
@@ -226,7 +226,7 @@
                 </div>
                 <div id="ingredients">
                     <h4>Ingredients</h4>
-                    <ul class="ingredients flex"></ul>
+                    <ul class="ingredients flex-row"></ul>
                 </div>
                 <div id="instructions">
                     <h4>Instructions</h4>
@@ -236,7 +236,7 @@
     </dialog>
 </main>
 <footer class="grid center">
-    <div class="flex site-info">
+    <div class="flex-column site-info">
         <h3>WDD231 - Final project</h3>
         <a href="site-plan.html">Site Plan</a>
         <a href="proposal.html">Proposal</a>

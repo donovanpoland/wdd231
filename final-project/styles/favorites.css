@@ -1,0 +1,55 @@
+/* * {
+  outline: 1px solid red;
+} */
+
+.fav-grid{
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+form{
+    width: 100%;
+}
+
+legend{
+    width: fit-content;
+    padding: var(--small);
+    text-align: center;
+}
+
+fieldset{
+    gap: var(--medium);
+    border: none;
+    width: 100%;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+}
+
+
+input[type="file"]::file-selector-button{
+    margin-right: var(--medium);
+    margin: 0.5rem 2.5rem 0.5rem 0.5rem;
+}
+
+input[type="text"],
+input[type="number"],
+textarea, select{
+    min-height: var(--touch-target);
+    padding-left: var(--small);
+}
+
+textarea{
+    padding-top: var(--small);
+    height: 150px;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+textarea::placeholder,
+select:invalid {
+  color: rgba(42, 42, 42, 0.4);
+  background-color: var(--bg2);
+}

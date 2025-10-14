@@ -72,11 +72,6 @@
         justify-content: flex-end;
     }
 
-    main a, main button{
-        border-radius: var(--radius);
-        border: var(--border);
-    }
-
     /* recipe and modals */
     dialog[open] .card{
         max-width: 608px;
@@ -103,10 +98,28 @@
         height: auto;
     }
 
+    /* favorites / forms */
+    #add-recipe-btn, #fav-btn{
+        display: none;
+    }
+
+    .fav-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .measure{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
     /* Hover links and buttons */
-    .navigation a:hover, main a:hover, main button:hover{
+    .navigation a:hover,
+    main a:hover,
+    main button:hover,
+    input[type="file"]::file-selector-button:hover{
         background-color: var(--btn-bg-h);
         color: var(--text1);
+        border: var(--border);
         border-color: var(--color1);
         box-shadow: var(--shadow-light);
         scale: .97;
@@ -114,6 +127,6 @@
 
     /* Footer */
     footer{
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }

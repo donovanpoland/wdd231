@@ -9,12 +9,13 @@
     <meta name="description" content="">
     <meta name="robots" content="index, follow">
     <!-- Scripts -->
-    <script src="/scripts/last-modified.js" defer></script>
+    <script src="../scripts/last-modified.js" defer></script>
     <script src="scripts/scripts.js" defer></script>
     <!-- CSS style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/navigation.css">
     <link rel="stylesheet" href="styles/recipes.css">
+    <link rel="stylesheet" href="styles/favorites.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
@@ -70,15 +71,136 @@
         </ul>
     </nav>
 </header>
-<main class="flex">
+<main class="flex-column">
     <h1>Favorites</h1>
-    <section>
-        <form action="">
-            <fieldset>
+    <a id="add-recipe-btn" href="#add-recipe">Add Recipe Instead?</a>
+    <div class="grid fav-grid" >
+        <section id="favorites" class="flex">
+            <h2>A Reminder of What You Love!</h2>
+            <button>Previous</button>
+            <!-- Favorite items will be injected here -->
+            <div class="grid recipe" id="fav-container"></div>
+            <button>Next</button>
+        </section>
+        <section id="add-recipe">
+            <h2>Add Your Own Recipe!</h2>
+            <form method="get" class="flex-column">
+                <!-- first field -->
+                <fieldset class="flex-column card">
+                    <legend>Main Details</legend>
+                    <!-- Recipe Name -->
+                    <label for="recipe-name">
+                        <span class="required">Recipe Name</span>
+                        <input type="text" id="recipe-name" 
+                            name="recipe-name" 
+                            placeholder="Spaghetti and Meat Balls"
+                            required aria-required="true" >
+                    </label>
+                    <!-- Category -->
+                    <label for="category">
+                        <span class="required">Category</span>
+                          <select id="category" name="category" 
+                            required aria-required="true">
+                            <option value="" disabled selected>Select a category</option>
+                            <!-- Inject categories here -->
+                        </select>
+                    </label>
+                    <!-- Tags -->
+                    <label for="tags">
+                        <span>Tags</span>
+                        <input type="text" id="tags"
+                        name="tags"
+                        placeholder="Pasta, Dinner" 
+                        title="chicken, soup, dinner">
+                    </label>
+                </fieldset>
+                <!-- second field -->
+                <fieldset class="card">
+                    <legend>List Ingredients</legend>
+                    <label for="ingredient">
+                        <span class="required">Ingredient</span>
+                        <input type="text" placeholder="Noodles">
+                    </label>
+                    <div class="flex-column measure">
+                        <label for="measurement">
+                            <span class="required">Measurement</span>
+                            <input type="number" placeholder="1.5">
+                        </label>
+                        <label for="unit">
+                            <span class="required">Unit</span>
+                            <select  id="unit" name="unit"
+                                aria-required="true" required>
+                                <option value="" disabled selected>Select A Unit</option>
+                                <!-- Volume -->
+                                <option value="teaspoon">Teaspoon (tsp)</option>
+                                <option value="tablespoon">Tablespoon (tbsp)</option>
+                                <option value="cup">Cup</option>
+                                <option value="fluid_ounce">Fluid Ounce (fl oz)</option>
+                                <option value="pint">Pint (pt)</option>
+                                <option value="quart">Quart (qt)</option>
+                                <option value="gallon">Gallon (gal)</option>
+                                <option value="milliliter">Milliliter (mL)</option>
+                                <option value="liter">Liter (L)</option>
 
-            </fieldset>
-        </form>
-    </section>
+                                <!-- Weight -->
+                                <option value="milligram">Milligram (mg)</option>
+                                <option value="gram">Gram (g)</option>
+                                <option value="kilogram">Kilogram (kg)</option>
+                                <option value="ounce">Ounce (oz)</option>
+                                <option value="pound">Pound (lb)</option>
+
+                                <!-- Length -->
+                                <option value="inch">Inch (in)</option>
+                                <option value="centimeter">Centimeter (cm)</option>
+                                <option value="millimeter">Millimeter (mm)</option>
+                                <option value="meter">Meter (m)</option>
+
+                                <!-- Temperature -->
+                                <option value="celsius">Celsius (°C)</option>
+                                <option value="fahrenheit">Fahrenheit (°F)</option>
+
+                                <!-- Miscellaneous -->
+                                <option value="pinch">Pinch</option>
+                                <option value="dash">Dash</option>
+                                <option value="clove">Clove</option>
+                                <option value="slice">Slice</option>
+                                <option value="piece">Piece</option>
+                                <option value="can">Can</option>
+                                <option value="package">Package</option>
+                                <option value="bunch">Bunch</option>
+                                <option value="stick">Stick</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label>
+                        <span>Ingredient List:</span>
+                        <div id="ingredient-list">
+                        <!-- list of Ingredients injected here -->
+                        </div>
+                    </label>
+                </fieldset>
+                <fieldset class="card">
+                    <legend>Preparation Steps</legend>
+                    <label for="instructions">
+                        <span class="required">Instructions</span>
+                        <textarea placeholder="Add water to pan and set to high and allow to boil for...."></textarea>
+                    </label>
+                </fieldset>
+                <fieldset class="card">
+                    <legend>Photo</legend>
+                    <span class="required">Upload</span>
+                    <label for="image-upload">
+                        <input type="file" id="image-upload" name="image-upload" accept="image/*">
+                    </label>
+                </fieldset>
+
+
+
+                <button type="submit">Add Recipe</button>
+            </form>
+        </section>
+        <a id="fav-btn" href="#favorites">Back to Favorites</a>
+    </div>
 </main>
 <footer>
 </footer>

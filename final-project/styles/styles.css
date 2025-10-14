@@ -18,6 +18,7 @@
 
     /* Buttons / Links */
     --btn-bg: var(--color2);
+    --touch-target: 48px;
     /* Hover */
     --btn-bg-h: var(--highlight);
 
@@ -64,27 +65,32 @@ body{
 
 }
 
-main.flex{
+main.flex-column{
     gap: var(--large);
     padding: var(--around);
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4, legend{
     font-family: var(--font1);
     color: var(--color1);
     font-weight: var(--weight);
     text-shadow: var(--shadow-text);
 }
 
-.navigation a, main a, main button{
+
+.navigation a, 
+main a, 
+main button, 
+input[type="file"]::file-selector-button{
     text-decoration: none;
     text-align: center;
     color: var(--text2);
     background-color: var(--btn-bg);
     box-shadow: var(--shadow-less);
     border-radius: var(--radius);
+    border: var(--border);
     font-weight: var(--weight);
-    min-height: 44px;
+    min-height: var(--touch-target);
     padding: .7rem;
     align-content: center;
     cursor: pointer;
@@ -96,18 +102,25 @@ h1, h2, h3, h4{
         scale 0.3s ease-in-out;
 }
 
-/* Prevent natural button radius to effect nav in mobile */
+/* Prevent natural button radius to effect nav*/
 .navigation a{
     border-radius: 0;
+    border: none;
 }
 
 ul, ol{
     list-style: none;
 }
 
-.flex{
+.flex-column{
     display: flex;
     flex-direction: column;
+    gap: var(--small);
+}
+
+.flex-row{
+    display: flex;
+    justify-content: center;
     gap: var(--small);
 }
 
@@ -124,6 +137,13 @@ ul, ol{
     text-indent: 1rem;
 }
 
+.required::after{
+    content: "*";
+    color: var(--alert);
+    font-size: 1.5rem;
+    margin-left: var(--small);
+}
+
 .card{
     border: var(--border);
     border-radius: var(--radius);
@@ -137,7 +157,7 @@ dialog{
 }
 
 dialog #close{
-    width: 44px;
+    width: var(--touch-target);
     z-index: 10;
 }
 
@@ -147,8 +167,14 @@ dialog #close{
 
 footer{
     gap: var(--medium);
+    padding: var(--large);
 }
 
+.site-info{
+    gap: 0;
+}
+
+/* class from last-modified script */
 .modified{
     text-align: center;
 }
