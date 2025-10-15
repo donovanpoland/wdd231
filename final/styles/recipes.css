@@ -121,3 +121,13 @@ dialog .card img.modal-image {
 #categories-list li button{
     width: 112px;
 }
+
+#modal-image{
+    position: relative;
+}
+
+#add-fav{
+    position: absolute;
+    bottom: var(--small);
+    right: var(--small);
+}

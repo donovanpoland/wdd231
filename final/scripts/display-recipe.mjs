@@ -24,6 +24,27 @@ export async function displayRandomRecipe() {
     }// End Try/Catch
 }
 
+export async function displayFavorites(){
+    try {
+                // Select all cards to display the recipe
+        const recipeCards = document.querySelectorAll("#favorites");
+        const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+        // Loop through each card, fetch a different random meal for each // not always unique
+        for (const card of recipeCards) {
+            const data = await fetchById();
+            const meal = data.meals[0];
+            
+            addName(meal, card);
+            addImage(meal, card);
+            addInfo(meal, card);
+            addModal(meal, card);
+        }
+    } catch (error) {
+        console.error("Error displaying recipe:", error);
+    }
+}
+
 export async function displayCategories() { 
     try {
         // Select all cards to display the recipe
@@ -84,6 +105,13 @@ export async function displayCategories() {
         console.error("Error displaying recipes by category:", error);
     }
 }
+
+function addName(meal, card) {
+    // Get header element
+    const recipeName = card.querySelector("h3");
+    recipeName.textContent = meal.strMeal;
+}
+
 
 function addImage(meal, card) {
     //Get image element 
@@ -161,12 +189,6 @@ function addInfo(meal, card) {
     tags.textContent = tagsList;
 }
 
-function addName(meal, card) {
-    // Get header element
-    const recipeName = card.querySelector("h3");
-    recipeName.textContent = meal.strMeal;
-}
-
 function addModal(meal, card) {
     // Get the button from the card
     const viewButton = card.querySelector("button.view");
@@ -181,6 +203,7 @@ function addModal(meal, card) {
             // add data to dialog box card from same meal data
             addName(meal, dialogBoxCard);
             addModalImage(meal, dialogBoxCard);
+            addToFavorite(meal, dialogBoxCard);
             addInfo(meal, dialogBoxCard);
             addInstructions(meal, dialogBoxCard);
             addIngredientsMeasurements(meal, dialogBoxCard);
@@ -298,4 +321,41 @@ export function resetLoadedCount(preload = false) {
 
     // Optionally load first batch
     if (preload) createNewCard();
+}
+
+function addToFavorite(meal, card) {
+    const addFavorite = card.querySelector("#add-fav");
+
+    addFavorite.addEventListener("click", () => {
+        // Get existing favorites convert to JSON or to an empty array
+        const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+        // Check if meal already exists
+        const exists = favorites.some(fav => fav.idMeal === meal.idMeal);
+        if (exists) {
+            alert(`${meal.strMeal} already in favorites`);
+        return;
+        }
+
+        // Add new favorite
+        favorites.push({
+        idMeal: meal.idMeal,
+        strMeal: meal.strMeal,
+        });
+
+        // Save back to localStorage
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+
+        console.log("Favorites updated:", favorites);
+    });
+}
+
+function removeFromFavorite(idMeal, card) {
+    const removeFavorite = card.querySelector("#remove-fav");
+
+    removeFavorite.addEventListener("click", () => {
+        const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        const updated = favorites.filter(fav => fav.idMeal !== idMeal);
+        localStorage.setItem("favorites", JSON.stringify(updated));
+        });
 }

@@ -14,18 +14,18 @@ navButton.addEventListener('click', () => {
 
 // Listen for window resize and remove show class
 window.addEventListener("resize", () => {
-  navButton.classList.remove('show');
-  navBar.classList.remove('show');
+    navButton.classList.remove('show');
+    navBar.classList.remove('show');
 });
 
 // Close modal on button press
 closeButton.addEventListener("click", () => {
+    //close dialog box
     dialogBox.close();
+    // Clear data
+    // dialogBox.innerHTML = "";
 });
 
-// Close modal on scroll press
-window.addEventListener("scroll", () => {
-    dialogBox.close();
-});
+
 
 

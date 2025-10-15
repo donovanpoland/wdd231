@@ -3,6 +3,10 @@
     width: 100%;
 }
 
+#favorites h2{
+    text-align: left;
+}
+
 form{
     width: 100%;
 }
@@ -11,6 +15,7 @@ legend{
     width: fit-content;
     padding: var(--small);
     text-align: center;
+    font-size: 1.5rem;
 }
 
 fieldset{
@@ -27,7 +32,7 @@ label{
 
 input[type="file"]::file-selector-button{
     margin-right: var(--medium);
-    margin: 0.5rem 2.5rem 0.5rem 0.5rem;
+    margin: var(--small) var(--medium) var(--small) var(--small);
 }
 
 input[type="text"],

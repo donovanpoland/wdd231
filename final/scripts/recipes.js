@@ -1,11 +1,12 @@
 // Imports
-import { displayRandomRecipe, displayCategories,createNewCard } from "./display-recipe.mjs";
+import { displayRandomRecipe, displayCategories, createNewCard, displayFavorites } from "./display-recipe.mjs";
 import { displayCategoryButtons } from "./display-categories-list.mjs";
 
 
 // document checks
 const categoryList = document.querySelector("#categories-list");
 const categories = document.querySelector("#categories");
+const favorites = document.querySelector("#fav-container");
 const moreButton = document.querySelector("#display-more");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,6 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (categories) {
         displayCategories();
+    }
+    if (favorites) {
+        displayFavorites();
     }
 });
 
@@ -30,3 +34,5 @@ if (moreButton) {
         moreButton.disabled = false;
     }); 
 }
+
+
