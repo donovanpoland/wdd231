@@ -1,23 +1,36 @@
 import { fetchCategories } from "./fetch-recipes.mjs";
 import { createNewCard, displayCategories, resetLoadedCount } from "./display-recipe.mjs";
 
-const categoryList = document.querySelector("#categories-list");
-const categorySelect = document.querySelector("#categories-select");
+
+
 
 export async function displayCategoryButtons() {
+    const categoryButtons = document.querySelector("#categories-buttons");
     try {
         const data = await fetchCategories();
         const categories = data.categories;
-        
+
         // create a button for each category
-        if (categoryList) {
+        if (categoryButtons) {
             categories.forEach((cat) => {
                 createButton(cat.strCategory);
         }); // end foreach loop
         }// end if
 
+       
+    } catch (error) {
+        console.error("Error displaying categories:", error);
+    }
+}
+
+export async function displayCategoryOptions() {
+    const categorySelect = document.querySelector("#categories-select");
+    try {
+        const data = await fetchCategories();
+        const categories = data.categories;
+
         // create an option for each category
-        if (categorySelect) {
+        if (categorySelect && categories) {
             categories.forEach((cat) => {
                 createOptions(cat.strCategory);
         }); // end foreach loop
@@ -29,6 +42,7 @@ export async function displayCategoryButtons() {
 }
 
 function createButton(category) {
+    const categoryButtons = document.querySelector("#categories-buttons");
     // Create list item
     const listItem = document.createElement("li");
     // Create button
@@ -52,7 +66,7 @@ function createButton(category) {
         button.disabled = false;
     });
     // Add list item to list
-    categoryList.appendChild(listItem);
+    categoryButtons.appendChild(listItem);
 }
 
 function setCurrentCategory(category) {
@@ -70,5 +84,13 @@ export function getCurrentCategory() {
 }
 
 function createOptions(category) {
-    
+    const categorySelect = document.querySelector("#categories-select");
+    if (!categorySelect) return;
+    // Create option
+    const option = document.createElement("option");
+    // Add category
+    option.value = category;
+    option.textContent = category;
+    // Add option to select
+    categorySelect.appendChild(option);
 }

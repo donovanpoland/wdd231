@@ -25,24 +25,60 @@ export async function displayRandomRecipe() {
 }
 
 export async function displayFavorites(){
-    try {
-                // Select all cards to display the recipe
-        const recipeCards = document.querySelectorAll("#favorites");
-        const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+try {
+    // Select all favorite placeholder cards
+    const recipeCards = document.querySelectorAll("#favorites .card");
+    // Load saved favorites from localStorage
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-        // Loop through each card, fetch a different random meal for each // not always unique
-        for (const card of recipeCards) {
-            const data = await fetchById();
-            const meal = data.meals[0];
-            
-            addName(meal, card);
-            addImage(meal, card);
-            addInfo(meal, card);
-            addModal(meal, card);
-        }
-    } catch (error) {
-        console.error("Error displaying recipe:", error);
+    // If there are no favorites, hide unused cards and show message
+    if (favorites.length === 0) {
+      recipeCards.forEach(card => card.classList.add("extra"));
+      console.warn("No favorites found in localStorage.");
+      return;
     }
+
+    // Loop through placeholder cards and fill them with favorites
+    for (let i = 0; i < recipeCards.length; i++) {
+      const card = recipeCards[i];
+      const fav = favorites[i];
+
+      // If we’ve run out of favorites, hide remaining cards
+      if (!fav) {
+        card.classList.add("extra");
+        continue;
+      }
+
+      // Fetch full recipe data for this favorite
+      const data = await fetchById(fav.idMeal);
+      const meal = data?.meals?.[0];
+
+      if (!meal) {
+        console.warn(`Failed to fetch details for ID: ${fav.idMeal}`);
+        card.classList.add("extra");
+        continue;
+      }
+
+      // Fill in card content
+      addName(meal, card);
+      addImage(meal, card);
+      addInfo(meal, card);
+      addModal(meal, card);
+
+      // Make sure the card is visible
+      card.classList.remove("extra");
+    }
+
+    // Hide any remaining placeholder cards after favorites are displayed
+    for (let j = favorites.length; j < recipeCards.length; j++) {
+      recipeCards[j].classList.add("extra");
+    }
+
+    console.log(`Displayed ${favorites.length} favorite(s).`);
+
+  } catch (error) {
+    console.error("Error displaying favorites:", error);
+  }
 }
 
 export async function displayCategories() { 
@@ -51,17 +87,8 @@ export async function displayCategories() {
         const recipeCards = document.querySelectorAll("#categories .card");
         const category = getCurrentCategory();
 
-        if (!category) {
-            console.warn("No category selected.");
-            return;
-        }
-
         // Fetch all recipes in this category
         const categoryData = await fetchByCategory();
-        if (!categoryData || !categoryData.meals) {
-            console.warn("No recipes found for category:", category);
-            return;
-        }
 
         // Set meals array
         const meals = categoryData.meals;
@@ -112,17 +139,23 @@ function addName(meal, card) {
     recipeName.textContent = meal.strMeal;
 }
 
-
 function addImage(meal, card) {
     //Get image element 
     const recipeImg = card.querySelector("img");
+    // Not all recipes have an image, create a fallback
+    const fallback = "images/logos/recipe-placeholder284.webp";
     // Get image Url 
     const originalUrl = meal.strMealThumb; 
 
     //Optimize image with wsrv.nl at https://images.weserv.nl/ 
-    const optimizedUrl = `https://images.weserv.nl/?url=${originalUrl}&w=284&h=284&output=webp`;
+    let optimizedUrl;
+      if (originalUrl && originalUrl.startsWith("https")) {
+        optimizedUrl = `https://images.weserv.nl/?url=${encodeURIComponent(originalUrl)}&w=284&output=webp`;
+    } else {
+        optimizedUrl = fallback;
+    }
 
-    // Update source and alt
+    // Update image element
     recipeImg.src = optimizedUrl;
     recipeImg.alt = meal.strMeal;
 }
@@ -140,7 +173,7 @@ function addModalImage(meal, card) {
     // Pick image size based on current screen width
     if (mediaQuery.matches) {
         // Large screen (≥ 38em)
-        modalImg.src = `https://images.weserv.nl/?url=${originalUrl}&w=588&h=588&output=webp`;
+        modalImg.src = `https://images.weserv.nl/?url=${originalUrl}&w=588&output=webp`;
     } else {
         // Small screen (< 38em)
         modalImg.src = `https://images.weserv.nl/?url=${originalUrl}&w=284&output=webp`;
@@ -153,7 +186,7 @@ function addModalImage(meal, card) {
     mediaQuery.addEventListener("change", (element) => {
         if (element.matches) {
         // Switched to large screen
-        modalImg.src = `https://images.weserv.nl/?url=${originalUrl}&w=588&h=588&output=webp`;
+        modalImg.src = `https://images.weserv.nl/?url=${originalUrl}&w=588&output=webp`;
         } else {
         // Switched to small screen
         modalImg.src = `https://images.weserv.nl/?url=${originalUrl}&w=284&output=webp`;
@@ -203,7 +236,9 @@ function addModal(meal, card) {
             // add data to dialog box card from same meal data
             addName(meal, dialogBoxCard);
             addModalImage(meal, dialogBoxCard);
-            addToFavorite(meal, dialogBoxCard);
+            // Take any old event listeners off
+            addFavorite.removeEventListener("click", addToFavorite(meal, dialogBoxCard));
+
             addInfo(meal, dialogBoxCard);
             addInstructions(meal, dialogBoxCard);
             addIngredientsMeasurements(meal, dialogBoxCard);
@@ -324,7 +359,8 @@ export function resetLoadedCount(preload = false) {
 }
 
 function addToFavorite(meal, card) {
-    const addFavorite = card.querySelector("#add-fav");
+    const addFavorite = card.querySelector(".add-fav");
+
 
     addFavorite.addEventListener("click", () => {
         // Get existing favorites convert to JSON or to an empty array
@@ -351,7 +387,7 @@ function addToFavorite(meal, card) {
 }
 
 function removeFromFavorite(idMeal, card) {
-    const removeFavorite = card.querySelector("#remove-fav");
+    const removeFavorite = card.querySelector(".remove-fav");
 
     removeFavorite.addEventListener("click", () => {
         const favorites = JSON.parse(localStorage.getItem("favorites")) || [];

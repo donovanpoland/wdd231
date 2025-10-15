@@ -15,7 +15,7 @@ legend{
     width: fit-content;
     padding: var(--small);
     text-align: center;
-    font-size: 1.5rem;
+    font-size: calc(var(--small) + var(--medium));
 }
 
 fieldset{
@@ -41,21 +41,34 @@ input[type="email"],
 textarea, select{
     min-height: var(--touch-target);
     padding-left: var(--small);
+    border: var(--border);
+    border-radius: var(--radius);
 }
 
 textarea{
     padding-top: var(--small);
-    height: 150px;
+    height: 10rem;
 }
 
 input[type="text"]::placeholder,
 input[type="number"]::placeholder,
 textarea::placeholder,
 select:invalid {
-  color: rgba(42, 42, 42, 0.4);
+  color: var(--placeholder);
   background-color: var(--bg2);
 }
 
-select:valid { 
-    color: var(--text2);
+select {
+  color: var(--placeholder);
+  background-color: var(--bg2);
+}
+
+
+option {
+  color: var(--placeholder);
+}
+
+#more{
+    margin: 0 auto;
+    min-width: 288px;
 }

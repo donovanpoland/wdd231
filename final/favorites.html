@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="recipes, cooking, food, meals, international cuisine, easy recipes, healthy recipes, dinner ideas, desserts, meal planning, family meals, Recipe Explorer, home cooking, world flavors, food discovery">
     <meta name="author" content="Donovan Poland">
-    <meta name="description" content="">
+    <meta name="description" content="Revisit your favorite recipes and add your own creations with ease! The Favorites page of Recipe Explorer lets you view saved dishes, organize ingredients, and share your personal recipes. Whether you're recalling past favorites or crafting new meals, this is your personal recipe collection hub.">
     <meta name="robots" content="index, follow">
     <!-- Scripts -->
     <script src="../scripts/last-modified.js" defer></script>
     <script src="scripts/scripts.js" defer></script>
+    <script type="module" src="scripts/recipes.js"></script>
     <!-- CSS style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/navigation.css">
@@ -23,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <!-- Open Graph protocol meta tags -->
     <meta property="og:title" content="Recipes - Recipe Explorer">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="Revisit your favorite recipes and add your own creations with ease! The Favorites page of Recipe Explorer lets you view saved dishes, organize ingredients, and share your personal recipes. Whether you're recalling past favorites or crafting new meals, this is your personal recipe collection hub.">
     <meta property="og:url" content="https://donovanpoland.github.io/wdd231/final-project/images/logos/recipe-explorer-logo100.webp">
     <meta property="og:image" content="link to image here">
     <meta property="og:locale" content="en_US">
@@ -75,7 +76,6 @@
         <div class="flex-column">
         <section class="grid recipe" id="favorites">
             <h2>A Reminder of What You Love!</h2>
-            <button>Previous</button>
             <!-- Card 1 -->
             <article class="card">
                 <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image" loading="lazy">
@@ -126,7 +126,33 @@
                 </div>
                 <button class="view" aria-haspopup="dialog">View Recipe</button>
             </article>
-            <button>Next</button>
+            <!-- Card 5 -->
+            <article class="card">
+                <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image" loading="lazy">
+                <div>
+                    <h3>Recipe Name</h3>
+                    <ul class="info">
+                        <li>Category</li>
+                        <li>Number of Ingredients</li>
+                        <li>Tags</li>
+                    </ul>
+                </div>
+                <button class="view" aria-haspopup="dialog">View Recipe</button>
+            </article>
+            <!-- Card 6 -->
+            <article class="card">
+                <img class="card-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image" loading="lazy">
+                <div>
+                    <h3>Recipe Name</h3>
+                    <ul class="info">
+                        <li>Category</li>
+                        <li>Number of Ingredients</li>
+                        <li>Tags</li>
+                    </ul>
+                </div>
+                <button class="view" aria-haspopup="dialog">View Recipe</button>
+            </article>
+            <button id="more">More</button>
         </section>
         </div>
         <section id="add-recipe">
@@ -144,9 +170,9 @@
                             required aria-required="true" >
                     </label>
                     <!-- Category -->
-                    <label for="category">
+                    <label for="categories-select">
                         <span class="required">Category</span>
-                          <select id="category" name="category" 
+                          <select id="categories-select" name="categories-select" 
                             required aria-required="true">
                             <option value="" disabled selected>Select a category</option>
                             <!-- Inject categories here -->
@@ -165,10 +191,12 @@
                 <!-- second field -->
                 <fieldset class="flex-column card">
                     <legend>List Ingredients</legend>
+                    <!-- ingredients -->
                     <label for="ingredient">
                         <span class="required">Ingredient</span>
                         <input type="text" placeholder="Noodles" id="ingredient" name="ingredient">
                     </label>
+                    <!-- Measurements -->
                     <div class="flex-column measure">
                         <label for="measurement">
                             <span class="required">Measurement</span>
@@ -220,18 +248,20 @@
                 <!-- 3rd field -->
                 <fieldset class="card">
                     <legend>Preparation Steps</legend>
-                    <label for="instructions">
+                    <label for="steps">
                         <span class="required">Instructions</span>
-                        <textarea placeholder="Add water to pan and set to high and allow to boil for...." id="instructions" name="instructions"></textarea>
+                        <textarea placeholder="Add water to pan and set to high and allow to boil for...." id="steps" name="steps"></textarea>
                     </label>
                 </fieldset>
+                <!-- 4th field -->
                 <fieldset class="card">
                     <legend>Photo</legend>
                     <span class="required">Upload</span>
-                    <label for="image-upload">
-                        <input type="file" id="image-upload" name="image-upload" accept="image/*">
+                    <label for="upload-image">
+                        <input type="file" id="upload-image" name="upload-image" accept="image/*">
                     </label>
                 </fieldset>
+                <!-- 5th field -->
                 <fieldset class="card">
                     <legend>In Case We Need to Reach You!</legend>
                     <label for="fname">
@@ -257,7 +287,7 @@
                 </div>
                 <div id="modal-image">
                     <img class="modal-image" src="images/logos/recipe-placeholder284.webp" alt="Recipe placeholder Image">
-                    <button id="remove-fav">Remove Favorite</button>
+                    <button class="remove-fav">Remove Favorite</button>
                 </div>
                 <div id="info" class="flex-column">
                     <h4>Info</h4>

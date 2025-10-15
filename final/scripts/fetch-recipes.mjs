@@ -26,7 +26,7 @@ export async function fetchCategories() {
         // Store the data
         const categories = await apiResponse.json();
         // Log to console - Debugging
-        // console.log("Category List API Response:", categories);
+        console.log("Category List API Response:", categories);
         return categories;
     } catch (error) {
         console.error("Error Fetching Data: ", error);
