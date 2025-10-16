@@ -24,58 +24,57 @@ export async function displayRandomRecipe() {
     }// End Try/Catch
 }
 
-export async function displayFavorites(){
-try {
-    // Select all favorite placeholder cards
+export async function displayFavorites() {
+  try {
     const recipeCards = document.querySelectorAll("#favorites .card");
-    // Load saved favorites from localStorage
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-    // If there are no favorites, hide unused cards and show message
     if (favorites.length === 0) {
-      recipeCards.forEach(card => card.classList.add("extra"));
+      recipeCards.forEach(card => {
+        card.classList.add("extra");
+      });
       console.warn("No favorites found in localStorage.");
       return;
     }
 
-    // Loop through placeholder cards and fill them with favorites
+    // Loop through placeholders and fill in data
     for (let i = 0; i < recipeCards.length; i++) {
       const card = recipeCards[i];
       const fav = favorites[i];
 
-      // If we’ve run out of favorites, hide remaining cards
+      // If there are fewer favorites than cards, hide extra placeholders
       if (!fav) {
         card.classList.add("extra");
+        resetPlaceholderCard(card);
         continue;
       }
 
-      // Fetch full recipe data for this favorite
       const data = await fetchById(fav.idMeal);
       const meal = data?.meals?.[0];
 
       if (!meal) {
         console.warn(`Failed to fetch details for ID: ${fav.idMeal}`);
+        resetPlaceholderCard(card);
         card.classList.add("extra");
         continue;
       }
 
-      // Fill in card content
+      // Fill in visible favorite card
+      card.classList.remove("extra");
       addName(meal, card);
       addImage(meal, card);
       addInfo(meal, card);
       addModal(meal, card);
-
-      // Make sure the card is visible
-      card.classList.remove("extra");
     }
 
-    // Hide any remaining placeholder cards after favorites are displayed
+    // Hide remaining placeholders if there are fewer favorites
     for (let j = favorites.length; j < recipeCards.length; j++) {
-      recipeCards[j].classList.add("extra");
+      const card = recipeCards[j];
+      resetPlaceholderCard(card);
+      card.classList.add("extra");
     }
 
-    console.log(`Displayed ${favorites.length} favorite(s).`);
-
+    // console.log(`Displayed ${favorites.length} favorite(s).`);
   } catch (error) {
     console.error("Error displaying favorites:", error);
   }
@@ -85,8 +84,7 @@ export async function displayCategories() {
     try {
         // Select all cards to display the recipe
         const recipeCards = document.querySelectorAll("#categories .card");
-        const category = getCurrentCategory();
-
+        
         // Fetch all recipes in this category
         const categoryData = await fetchByCategory();
 
@@ -101,7 +99,8 @@ export async function displayCategories() {
         const totalMeals = Math.min(totalCards, meals.length);
 
         // Log to console - Debugging
-        console.log(`Displaying ${totalMeals} meals out of ${meals.length} for category: ${category}`);
+        // const category = getCurrentCategory();
+        // console.log(`Displaying ${totalMeals} meals out of ${meals.length} for category: ${category}`);
 
         // Loop through available cards
         for (let i = 0; i < totalMeals; i++) {
@@ -112,13 +111,14 @@ export async function displayCategories() {
             card.classList.remove("extra");
 
             // Fetch full recipe details by ID
-            const fullMealData = await fetchById(mealId);
+            const data = await fetchById(mealId);
+            const meal = data?.meals?.[0];
 
             // Reuse your helper functions for clean updates
-            addName(fullMealData, card);
-            addImage(fullMealData, card);
-            addInfo(fullMealData, card);
-            addModal(fullMealData, card);
+            addName(meal, card);
+            addImage(meal, card);
+            addInfo(meal, card);
+            addModal(meal, card);
         }
 
         // If there are more placeholder cards than recipes, reset unused ones
@@ -230,6 +230,9 @@ function addModal(meal, card) {
         const dialogBox = document.querySelector("#dialog");
         // Get dialog box card
         const dialogBoxCard = document.querySelector("#dialog .card");
+        // Get fav button
+        const addFavorite = dialogBoxCard.querySelector(".add-fav");
+        const removeFavorite = dialogBoxCard.querySelector(".remove-fav");
         // Add listener to button for modal display
         viewButton.addEventListener("click", async () => {
             dialogBox.showModal();
@@ -237,7 +240,15 @@ function addModal(meal, card) {
             addName(meal, dialogBoxCard);
             addModalImage(meal, dialogBoxCard);
             // Take any old event listeners off
-            addFavorite.removeEventListener("click", addToFavorite(meal, dialogBoxCard));
+           if (addFavorite) {
+                addFavorite.onclick = null;
+                addFavorite.onclick = () => addToFavorite(meal, dialogBoxCard);
+            }
+            if (removeFavorite) {
+                removeFavorite.onclick = null;
+                removeFavorite.onclick = () => removeFromFavorite(meal.idMeal);
+            }
+            
 
             addInfo(meal, dialogBoxCard);
             addInstructions(meal, dialogBoxCard);
@@ -359,39 +370,25 @@ export function resetLoadedCount(preload = false) {
 }
 
 function addToFavorite(meal, card) {
-    const addFavorite = card.querySelector(".add-fav");
-
-
-    addFavorite.addEventListener("click", () => {
-        // Get existing favorites convert to JSON or to an empty array
-        const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
-        // Check if meal already exists
-        const exists = favorites.some(fav => fav.idMeal === meal.idMeal);
-        if (exists) {
-            alert(`${meal.strMeal} already in favorites`);
-        return;
-        }
-
-        // Add new favorite
-        favorites.push({
-        idMeal: meal.idMeal,
-        strMeal: meal.strMeal,
-        });
-
-        // Save back to localStorage
-        localStorage.setItem("favorites", JSON.stringify(favorites));
-
-        console.log("Favorites updated:", favorites);
-    });
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    if (favorites.some(f => f.idMeal === meal.idMeal))
+    return alert(`${meal.strMeal} already in favorites`);
+    favorites.push({ idMeal: meal.idMeal, strMeal: meal.strMeal });
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+    const addFavoriteButton = card.querySelector(".add-fav");
+    addFavoriteButton.textContent = "Added";
 }
 
-function removeFromFavorite(idMeal, card) {
-    const removeFavorite = card.querySelector(".remove-fav");
+function removeFromFavorite(idMeal) {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const updated = favorites.filter(fav => fav.idMeal !== idMeal);
+    localStorage.setItem("favorites", JSON.stringify(updated));
+    console.log(`Removed favorite ID: ${idMeal}`);
 
-    removeFavorite.addEventListener("click", () => {
-        const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-        const updated = favorites.filter(fav => fav.idMeal !== idMeal);
-        localStorage.setItem("favorites", JSON.stringify(updated));
-        });
+    const dialog = document.querySelector("#dialog");
+    if (dialog?.open) dialog.close();
+
+    if (window.location.pathname.includes("favorites.html")) {
+        displayFavorites();
+    }
 }

@@ -26,7 +26,7 @@ export async function fetchCategories() {
         // Store the data
         const categories = await apiResponse.json();
         // Log to console - Debugging
-        console.log("Category List API Response:", categories);
+        // console.log("Category List API Response:", categories);
         return categories;
     } catch (error) {
         console.error("Error Fetching Data: ", error);
@@ -72,14 +72,11 @@ export async function fetchRecipeByName() {
 // Fetch recipe by id
 export async function fetchById(id) { 
     try {
-        if (!id) throw new Error("fetchById: Missing recipe ID.");
-
         // Fetch recipe data from the MealDB API
         const url = `${searchById}${id}`;
         // Log to console - Debugging
         // console.log(url);
         const apiResponse = await fetch(url);
-
         // Store the data
         const data = await apiResponse.json();
 
@@ -88,7 +85,7 @@ export async function fetchById(id) {
         }
         // Log to console - Debugging
         // console.log("Recipe by ID API Response:", data.meals[0]);
-        return data.meals[0];
+        return data;
     } catch (error) {
         console.error("Error fetching recipe by ID:", error);
     }

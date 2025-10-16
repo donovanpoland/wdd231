@@ -1,7 +1,6 @@
 // Imports
 import { displayRandomRecipe, displayCategories, createNewCard, displayFavorites } from "./display-recipe.mjs";
 import { displayCategoryButtons, displayCategoryOptions } from "./display-categories-list.mjs";
-import { fetchCategories } from "./fetch-recipes.mjs";
 
 // document checks
 const categoryList = document.querySelector("#categories-buttons");

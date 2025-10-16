@@ -5,6 +5,7 @@ const navButton = document.querySelector('#ham-btn');
 const navBar = document.querySelector('#nav-bar');
 const dialogBox = document.querySelector("#dialog");
 const closeButton = document.querySelector("#dialog button");
+const addFavorite = document.querySelector(".add-fav");
 
 
 navButton.addEventListener('click', () => {
@@ -20,10 +21,11 @@ window.addEventListener("resize", () => {
 
 // Close modal on button press
 closeButton.addEventListener("click", () => {
+
     //close dialog box
     dialogBox.close();
-    // Clear data
-    // dialogBox.innerHTML = "";
+    // re-update favorite button to default text
+    addFavorite.textContent = "Add Favorite"
 });
 
 

@@ -123,7 +123,7 @@ dialog .card img.modal-image {
     position: relative;
 }
 
-#add-fav{
+.add-fav, .remove-fav{
     position: absolute;
     bottom: var(--small);
     right: var(--small);

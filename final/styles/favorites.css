@@ -67,8 +67,3 @@ select {
 option {
   color: var(--placeholder);
 }
-
-#more{
-    margin: 0 auto;
-    min-width: 288px;
-}
