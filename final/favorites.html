@@ -12,6 +12,7 @@
     <script src="../scripts/last-modified.js" defer></script>
     <script src="scripts/scripts.js" defer></script>
     <script type="module" src="scripts/recipes.js"></script>
+    <script src="scripts/ingredients.js" defer></script>
     <!-- CSS style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/navigation.css">
@@ -192,19 +193,18 @@
                     <legend>List Ingredients</legend>
                     <!-- ingredients -->
                     <label for="ingredient">
-                        <span class="required">Ingredient</span>
-                        <input type="text" placeholder="Noodles" id="ingredient" name="ingredient" required aria-required="true">
+                        <span>Ingredient</span>
+                        <input type="text" placeholder="Noodles" id="ingredient" name="ingredient">
                     </label>
                     <!-- Measurements -->
                     <div class="flex-column measure">
                         <label for="measurement">
-                            <span class="required">Measurement</span>
-                            <input type="number"  id="measurement" name="measurement" required aria-required="true">
+                            <span>Measurement</span>
+                            <input type="number"  id="measurement" name="measurement">
                         </label>
                         <label for="unit">
-                            <span class="required">Unit</span>
-                            <select  id="unit" name="unit"
-                                aria-required="true" required>
+                            <span>Unit</span>
+                            <select  id="unit" name="unit">
                                 <option value="" disabled selected>Select A Unit</option>
                                 <!-- Volume -->
                                 <option value="teaspoon">Teaspoon (tsp)</option>
@@ -237,8 +237,9 @@
                             </select>
                         </label>
                     </div>
+                    <button type="button" id="add-ingredient">Add Ingredient</button>
                     <div>
-                        <p>Ingredients:</p>
+                        <p class="required">Ingredients:</p>
                         <ul id="ingredient-list" class="flex-row">
                         <!-- list of Ingredients injected here -->
                         </ul>
@@ -249,11 +250,10 @@
                     <legend>Preparation Steps</legend>
                     <label for="steps">
                         <span class="required">Instructions</span>
-                        <textarea 
-                            placeholder="Add water to pan and set to high and allow to boil for...." 
+                        <textarea placeholder="Add water to pan and set to high and allow to boil for...." 
                             id="steps" name="steps"
-                            required aria-required="true">
-                        </textarea>
+                            required aria-required="true"
+                            autocomplete="off"></textarea>
                     </label>
                 </fieldset>
                 <!-- 4th field -->

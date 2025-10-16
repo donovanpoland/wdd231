@@ -41,12 +41,3 @@
     color: var(--text1);
     opacity: .7;
 }
-
-.category{
-    grid-template-columns: 1fr 1fr;
-}
-
-.category :first-child{
-    grid-column: 1/-1;
-    text-align: center;
-}

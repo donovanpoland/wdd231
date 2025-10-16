@@ -6,14 +6,14 @@ const getFormData = new URLSearchParams(window.location.search);
 // Required
 const recipeName = getFormData.get("recipe-name");
 const category = getFormData.get("categories-select");
-const ingredientItem = getFormData.get("ingredient");
-const measurement = getFormData.get("measurement");
-const unit = getFormData.get("unit");
+const ingredients = getFormData.get("ingredients");
+// const measurement = getFormData.get("measurement");
+// const unit = getFormData.get("unit");
 const steps = getFormData.get("steps");
 const firstName = getFormData.get("fname");
 const email = getFormData.get("email");
 
-const fullIngredient = `${ingredientItem} -- ${measurement} ${unit}`
+// const fullIngredient = `${ingredientItem} -- ${measurement} ${unit}`
 
 // Optional
 const tags = getFormData.get("tags") || "None";
@@ -30,7 +30,7 @@ const imageName = getFormData.get("upload-image") || "No image uploaded";
 function logParamsListener() {
   console.log(recipeName);
   console.log(category);
-  console.log(fullIngredient);
+  console.log(ingredients);
   console.log(steps);
   console.log(firstName);
   console.log(email);
@@ -45,15 +45,15 @@ displayInfo();
 function displayInfo() { 
   const thanksParagraph = document.querySelector("#thanks");
   thanksParagraph.innerHTML = `
-    <h2>Thank You, ${firstName}!</h2>
+    <h2>Thank You, ${capitalizeWords(firstName)}!</h2>
     <p>Your recipe has been successfully submitted.</p>
 
     <h3>Recipe Details</h3>
     <ul>
-      <li><strong>Recipe Name:</strong> ${recipeName}</li>
+      <li><strong>Recipe Name:</strong> ${capitalizeWords(recipeName)}</li>
       <li><strong>Category:</strong> ${category}</li>
-      <li><strong>Tags:</strong> ${tags}</li>
-      <li><strong>Ingredient:</strong> ${fullIngredient}</li>
+      <li><strong>Tags:</strong> ${capitalizeWords(tags)}</li>
+      <li><strong>Ingredient:</strong> ${capitalizeWords(ingredients)}</li>
       <li><strong>Instructions:</strong> ${steps}</li>
       <li><strong>Image File:</strong> ${imageName}</li>
     </ul>

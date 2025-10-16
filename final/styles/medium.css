@@ -17,7 +17,7 @@
         position: relative;
     }
     .header{
-        grid-template-columns: minmax(75px, 100px) 44px;
+        grid-template-columns: minmax(75px, 100px) var(--touch-target);
         grid-area: header;
     }
 
@@ -46,7 +46,7 @@
     }
 
     /* Hero */
-    .hero h2, .hero p, .hero form{
+    .hero h2, .hero p, .hero a{
         display: flex;
         position: absolute;
         flex: 1 1 500px;
@@ -67,7 +67,7 @@
         top: 45%;
     }
 
-    .hero form{
+    .hero a{
         bottom: 10%;
         justify-content: flex-end;
     }
