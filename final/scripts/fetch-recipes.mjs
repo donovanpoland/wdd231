@@ -1,4 +1,4 @@
-import { searchByName, searchByCategory, searchById, randomMeal, mealCategories} from "./url.mjs";
+import { searchByCategory, searchById, randomMeal, mealCategories} from "./url.mjs";
 import { getCurrentCategory } from "./display-categories-list.mjs";
 
 // Fetch full recipe at random
@@ -48,22 +48,6 @@ export async function fetchByCategory() {
         // Log to console - Debugging
         // console.log("Search by Category API Response:", data);
         return data;
-    } catch (error) {
-        console.error("Error Fetching Data: ", error);
-    }
-}
-
-// Fetch recipe by name
-export async function fetchRecipeByName() { 
-    try {
-        // Fetch recipe data from the  MealDB API
-        const apiResponse = await fetch(searchByName);
-
-        // Store the data
-        const mealName = await apiResponse.json();
-        // Log to console - Debugging
-        console.log("Recipe by Name API Response:", mealName);
-        return mealName;
     } catch (error) {
         console.error("Error Fetching Data: ", error);
     }
