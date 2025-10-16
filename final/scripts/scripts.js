@@ -20,14 +20,15 @@ window.addEventListener("resize", () => {
 });
 
 // Close modal on button press
-closeButton.addEventListener("click", () => {
+if (closeButton) {
+    closeButton.addEventListener("click", () => {
 
-    //close dialog box
-    dialogBox.close();
-    // re-update favorite button to default text
-    addFavorite.textContent = "Add Favorite"
-});
-
+        //close dialog box
+        dialogBox.close();
+        // re-update favorite button to default text
+        addFavorite.textContent = "Add Favorite"
+    });
+}
 
 
 
